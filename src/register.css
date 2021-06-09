@@ -1,0 +1,44 @@
+.registerContainer {
+  width: auto;
+  height: 120px;
+}
+
+.navbarRegister {
+  padding: 28px 0px 28px 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonFlexNav{
+    display: flex;
+    justify-content: space-around;
+}
+
+.navButtonPrimary1 {
+  border: 1.5px solid #00a69c;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: transparent;
+  padding: 12px 32px;
+  align-items: center;
+}
+
+.navButtonPrimary2 {
+  background-color: #00a69c;
+  border: 1.5px solid #00a69c;
+  border-radius: 8px;
+  padding: 12px 32px;
+  align-items: center;
+}
+
+.textButton {
+  line-height: 24px;
+  font-size: 19px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.buttonDesc{
+    padding: 48px;
+}
