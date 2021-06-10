@@ -1,6 +1,18 @@
-.registerContainer {
+.backgroundRegister {
+  background: url(https://i.ibb.co/Y7cjbJq/image.png);
+  background-repeat: no-repeat;
+  background-position-y: 200px;
+  height: auto;
+}
+
+.registerContainer,
+.boxContainer {
   width: auto;
   height: 120px;
+}
+
+.registerContainer {
+  box-shadow: 0px 4px 24px 0px rgba(196, 196, 196, 0.24);
 }
 
 .navbarRegister {
@@ -9,26 +21,43 @@
   justify-content: space-between;
 }
 
-.buttonFlexNav{
-    display: flex;
-    justify-content: space-around;
+.buttonFlexNav,
+.boxFlex {
+  display: flex;
+  justify-content: space-around;
 }
 
-.navButtonPrimary1 {
-  border: 1.5px solid #00a69c;
-  box-sizing: border-box;
+.boxGrid {
+  display: grid;
+}
+
+.navButton {
   border-radius: 8px;
-  background-color: transparent;
   padding: 12px 32px;
   align-items: center;
+  box-sizing: border-box;
 }
 
-.navButtonPrimary2 {
+.Secondary {
+  border: 1.5px solid #00a69c;
+  background-color: transparent;
+  color: #00a69c;
+}
+
+.Secondary:hover {
   background-color: #00a69c;
   border: 1.5px solid #00a69c;
-  border-radius: 8px;
-  padding: 12px 32px;
-  align-items: center;
+  color: #ffffff;
+}
+
+.Primary {
+  background-color: #00a69c;
+  border: 1.5px solid #00a69c;
+  color: #ffffff;
+}
+
+.Primary:hover {
+  background-color: #00857d;
 }
 
 .textButton {
@@ -39,6 +68,62 @@
   align-items: center;
 }
 
-.buttonDesc{
-    padding: 48px;
+.buttonDesc {
+  padding: 48px;
+}
+
+.boxSize {
+  /* width: 1106px; */
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  align-items: center;
+  font-size: 24px;
+  color: #c4c4c4;
+}
+
+.contentPosition {
+  display: flex;
+  justify-content: center;
+}
+
+.contentColor {
+  color: #00a69c;
+  fill: #00a69c;
+}
+
+.textPosition {
+  color: #404041;
+  text-align: justify;
+  font-size: 20px;
+}
+
+form {
+  font-family: "Inter", sans-serif;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  /* margin: 8px 0; */
+  background: #ffffff;
+  display: inline-block;
+  border: 1px solid #949494;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label {
+  size: 14px;
+  color: #767676;
+  font-style: normal;
+}
+
+.formButton {
+  text-align: center;
+  color: #ffffff;
+  padding: 12px 48px;
+  border-radius: 8px;
+  font-size: 16px;
 }
