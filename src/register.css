@@ -44,6 +44,7 @@
   }
   
 /*==============================*/
+/*source: https://www.youtube.com/watch?v=cFgoSrOui2M*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -59,7 +60,7 @@
     color: #fff;
     font-size: 16px;
     letter-spacing: 1px;
-    background: #603bbb;
+    background: #00A69C;
     cursor: pointer;
   }
   
@@ -104,6 +105,7 @@
     outline: none; */
     font-size: 19px;
     padding: 10px;
+    margin-bottom: 10px;
     background: rgba(255, 255, 255, 0.1);
     color: #343A3F;
     letter-spacing: 1px;
@@ -136,35 +138,5 @@
   .login .loginContainer .errorMsg {
     color: red;
     font-size: 16px;
-  }
-  
-  .hero {
-    width: 100%;
-    min-height: 100vh;
-    background: radial-gradient(
-      ellipse at left bottom,
-      rgba(22, 24, 47, 1) 0%,
-      rgba(38, 20, 72, 0.9) 59%,
-      rgba(17, 27, 75, 0.9) 100%
-    );
-  }
-  
-  .hero nav {
-    background: #603bbb;
-    width: 100%;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .hero nav h2 {
-    color: #fff;
-  }
-  
-  .hero nav button {
-    width: 86px;
-    padding: 8px 0;
-    background: #3a2b58;
   }
   

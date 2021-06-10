@@ -66,6 +66,7 @@ function App() {
         </div>
       <section className="login">
         <div className="loginContainer">
+          <h1>Login</h1>
           <label>Email</label>
           <input
             type="text"
@@ -73,8 +74,8 @@ function App() {
             required
           />
           <label>Kata Sandi</label>
-          <input
-            type="password" required/>
+          <input type="password" required/>
+          <button>Login</button>
         </div>
       </section>
     
