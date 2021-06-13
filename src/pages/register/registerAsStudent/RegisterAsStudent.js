@@ -48,7 +48,7 @@ const RegisterAsStudent = () => {
                       id="password"
                       type={passwordShown ? "text" : "password"}
                       placeholder="************"
-                    ></input>{" "}
+                    ></input>
                     <i
                       style={{ marginLeft: "-30px", cursor: "pointer" }}
                       onClick={togglePasswordVisiblity}
