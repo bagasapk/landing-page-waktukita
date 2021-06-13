@@ -5,7 +5,7 @@ import "./RegisterAsEducator.css";
 import "../Register.css";
 import NavbarRegister2 from "../navbar/NavbarRegister2";
 
-const RegisterAsEducator2 = (props) => {
+const RegisterAsEducator3 = (props) => {
   const [isFileUploaded, setFileUploaded] = useState(false);
   const hiddenFileInput = React.useRef(null);
   const handleClick = () => {
@@ -35,9 +35,9 @@ const RegisterAsEducator2 = (props) => {
           <img
             alt="symbol"
             style={{ width: "20px", height: "45px" }}
-            src={symbol}
+            src={symbolActive}
           ></img>
-          <span>Lengkapi Informasi</span>
+          <span className="contentColor">Lengkapi Informasi</span>
           <img
             alt="symbol"
             style={{ width: "20px", height: "45px" }}
@@ -47,11 +47,11 @@ const RegisterAsEducator2 = (props) => {
         </div>
       </div>
       <p className="mx-auto col-md-7 textPosition">
-        Informasi ini akan digunakan oleh tim Waktukita dalam{" "}
-        <span style={{ color: "#00A69C", fontWeight: "bold" }}>
-          proses pengecekan kelengkapan persyaratan
-        </span>{" "}
-        yang diperlukan untuk mendaftar sebagai Lembaga Pelatihan atau Educator.
+      Informasi ini akan digunakan oleh tim Waktukita dalam
+        <span style={{ color: "#00A69C", fontWeight: "bold" }}>{" "}
+        proses pembayaran
+        </span>
+        , dimohon untuk mengisi informasi dengan data terbaru milik Lembaga Pelatihan anda.
       </p>
       <form>
         <div
@@ -59,51 +59,11 @@ const RegisterAsEducator2 = (props) => {
           className="col-md-5 mx-auto d-flex flex-column"
         >
           <div className="pt-4 pb-3">
-            <label className="m-0">Nama lembaga</label>
-            <input type="text" placeholder="John Doe"></input>
-          </div>
-          <div className="pb-3">
-            <label className="m-0">Lembaga</label>
-            <select style={{ color: "#CACACA" }} id="lembaga" name="lembaga">
-              <option value="" disabled selected>
-                Swasta, BUMN, BUMD
-              </option>
-              <option value="volvo">Volvo</option>
-            </select>
-          </div>
-          <div className="pb-3">
-            <label className="m-0">
-              Alamat domisili{" "}
-              <span style={{ color: "#C4c4c4" }}>
-                (sesuai alamat yang tertera di NIB)
-              </span>
-            </label>
+            <label className="m-0">Nomor NPWP</label>
             <input type="text"></input>
           </div>
           <div className="pb-3">
-            <label className="m-0">Kode pos</label>
-            <input type="text" placeholder="+62xxxxxxxxxxx"></input>
-          </div>
-          <div className="pb-3">
-            <label className="m-0">Negara</label>
-            <select style={{ color: "#CACACA" }} id="negara" name="negara">
-              <option value="" disabled selected>
-                Indonesia
-              </option>
-              <option value="volvo">Volvo</option>
-            </select>
-          </div>
-          <div className="pb-3">
-            <label className="m-0">Provinsi</label>
-            <select style={{ color: "#CACACA" }} id="provinsi" name="provinsi">
-              <option value="" disabled selected>
-                DKI Jakarta
-              </option>
-              <option value="volvo">Volvo</option>
-            </select>
-          </div>
-          <div className="pb-3">
-            <label className="m-0">Logo lembaga</label>
+            <label className="m-0">Scan NPWP</label>
             <div className="buttonFile">
               <button className="buttonDesign" onClick={handleClick}>
                 <span className="buttonText">Pilih File</span>
@@ -118,30 +78,42 @@ const RegisterAsEducator2 = (props) => {
               ></input>
               <span style={{ color: "#CACACA" }}> Belum ada file yang dipilih</span>
             </div>
-          </div>
-          <p className="textPosition">
-            Silakan isi dengan data penanggung jawab
-          </p>
+          </div>  
           <div className="pb-3">
-            <label className="m-0">Nama lengkap</label>
-            <input type="text" placeholder="John Doe"></input>
-          </div>
-          <div className="pb-3">
-            <label className="m-0">Jabatan</label>
-            <select style={{ color: "#CACACA" }} id="jabatan" name="jabatan">
+            <label className="m-0">Status pajak</label>
+            <select style={{ color: "#767676" }} id="Status pajak" name="Status pajak">
               <option value="" disabled selected>
-                CEO, COO, Manager, Staff
               </option>
               <option value="volvo">Volvo</option>
             </select>
           </div>
           <div className="pb-3">
-            <label className="m-0">Email</label>
-            <input type="email" placeholder="info@company.com"></input>
+            <label className="m-0">
+              Nomor rekening
+            </label>
+            <input type="text"></input>
           </div>
           <div className="pb-3">
-            <label className="m-0">Nomer ponsel</label>
-            <input type="text" placeholder="+62xxxxxxxxxxx"></input>
+            <label className="m-0">Nama rekening</label>
+            <input type="text"></input>
+          </div>
+          <div className="pb-3">
+            <label className="m-0">Nama bank</label>
+            <select style={{ color: "#CACACA" }} id="Nama bank" name="Nama bank">
+              <option value="" disabled selected>
+                Bank Central Asia (BCA)
+              </option>
+              <option value="volvo">Volvo</option>
+            </select>
+          </div>
+          <div className="pb-3">
+            <label className="m-0">
+              Email tim keuangan{" "}
+              <span style={{ color: "#C4c4c4" }}>
+                (untuk pemberitahuan pembayaran)
+              </span>
+            </label>
+            <input type="text" placeholder="john.doe@company.com"></input>
           </div>
           <div className="pt-2"></div>
         </div>
@@ -152,4 +124,4 @@ const RegisterAsEducator2 = (props) => {
     </div>
   );
 };
-export default RegisterAsEducator2;
+export default RegisterAsEducator3;

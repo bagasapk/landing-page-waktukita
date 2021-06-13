@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RegisterAsEducator1 from "./pages/register/registerAsEducator/RegisterAsEducator1";
 import RegisterAsEducator2 from "./pages/register/registerAsEducator/RegisterAsEducator2";
 import RegisterAsStudent from "./pages/register/registerAsStudent/RegisterAsStudent";
+import RegisterAsEducator3 from "./pages/register/registerAsEducator/RegisterAsEducator3";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           <Route path="/register/educator/2">
             <RegisterAsEducator2 />
           </Route>
+          <Router path="/register/educator/3">
+            <RegisterAsEducator3 />
+          </Router>
         </Switch>
       </Router>
     </div>
