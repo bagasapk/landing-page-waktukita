@@ -1,0 +1,29 @@
+form {
+  font-family: "Inter", sans-serif;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  /* margin: 8px 0; */
+  background: #ffffff;
+  display: inline-block;
+  border: 1px solid #949494;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label {
+  size: 14px;
+  color: #767676;
+  font-style: normal;
+}
+
+.formButton {
+  text-align: center;
+  color: #ffffff;
+  padding: 12px 48px;
+  border-radius: 8px;
+  font-size: 16px;
+}
