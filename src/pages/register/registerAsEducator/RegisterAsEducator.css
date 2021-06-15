@@ -90,3 +90,20 @@
   text-align: justify;
   font-size: 20px;
 }
+
+.OtpButton {
+  border-radius: 8px;
+  border: 1px solid #00a69c;
+  padding: 8px 40px;
+}
+
+.digit-group {
+  /* padding: 12px 20px; */
+  justify-content: space-around;
+}
+
+input[id="digit"] {
+  width: 66px !important;
+  height: 66px !important;
+  text-align: center;
+}
