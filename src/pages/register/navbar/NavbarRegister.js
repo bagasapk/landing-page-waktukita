@@ -1,11 +1,14 @@
 import React from "react";
+// import { Link } from "react-router-dom";
 import logo1 from "../../../logo1.svg";
 
 const NavbarRegister = () => {
   return (
     <div className="registerContainer">
       <div className="navbarRegister">
-        <img alt="logo" src={logo1}></img>
+        <a href="/">
+          <img alt="logo" src={logo1}></img>
+        </a>
         <div className="col-lg-5">
           <div className="buttonFlexNav">
             <span
@@ -16,12 +19,12 @@ const NavbarRegister = () => {
             </span>
             <div className="col-lg-7">
               <div className="buttonFlexNav">
-                <button className="navButton Secondary">
+                <a href="/register/student" className="navButton Secondary">
                   <span className="textButton">Student</span>
-                </button>
-                <button className="navButton Primary">
+                </a>
+                <a href="/register/educator/1" className="navButton Primary">
                   <span className="textButton">Educator</span>
-                </button>
+                </a>
               </div>
             </div>
           </div>

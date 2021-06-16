@@ -41,16 +41,19 @@
   background-color: #00a69c;
   border: 1.5px solid #00a69c;
   color: #ffffff;
+  text-decoration:none !important;
 }
 
 .Primary {
   background-color: #00a69c;
   border: 1.5px solid #00a69c;
   color: #ffffff;
+  text-decoration:none !important;
 }
 
 .Primary:hover {
   background-color: #00857d;
+  color: #FFF;
 }
 
 .textButton {
@@ -59,6 +62,7 @@
   line-height: 24px;
   display: flex;
   align-items: center;
+  
 }
 
 .buttonDesc {

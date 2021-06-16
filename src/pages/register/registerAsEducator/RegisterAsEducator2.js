@@ -6,11 +6,27 @@ import "../Register.css";
 import NavbarRegister2 from "../navbar/NavbarRegister2";
 
 const RegisterAsEducator2 = (props) => {
+  const [setNegara] = useState("Admin");
+  const [addrtype] = useState(["Indonesia", "Belanda", "Jepang"]);
+  const Add = addrtype.map((Add) => Add);
+  const handleAddrTypeChange = (e) => {
+    console.log(addrtype[e.target.value]);
+    setNegara(addrtype[e.target.value]);
+  };
   const [isFileUploaded, setFileUploaded] = useState(false);
+  const [isIndonesia, setIndonesia] = useState(false);
   const hiddenFileInput = React.useRef(null);
   const handleClick = () => {
     hiddenFileInput.current.click();
   };
+  const dropboxHandler = (e) => {
+    if (addrtype[e.target.value] === "Indonesia") {
+      setIndonesia(isIndonesia ? false : true);
+    } else {
+      setIndonesia(isIndonesia ? false : false);
+    }
+  };
+
   const handleChange = (event) => {
     // var fileUploaded = false;
     const fileUploads = event.target.files[0];
@@ -86,22 +102,33 @@ const RegisterAsEducator2 = (props) => {
           </div>
           <div className="pb-3">
             <label className="m-0">Negara</label>
-            <select style={{ color: "#CACACA" }} id="negara" name="negara">
-              <option value="" disabled selected>
-                Indonesia
-              </option>
-              <option value="volvo">Volvo</option>
+            <select
+              style={{ color: "#CACACA" }}
+              onChange={((e) => handleAddrTypeChange(e), dropboxHandler)}
+              // className="browser-default custom-select"
+            >
+              {Add.map((address, key) => (
+                <option key={key} value={key}>
+                  {address}
+                </option>
+              ))}
             </select>
           </div>
-          <div className="pb-3">
-            <label className="m-0">Provinsi</label>
-            <select style={{ color: "#CACACA" }} id="provinsi" name="provinsi">
-              <option value="" disabled selected>
-                DKI Jakarta
-              </option>
-              <option value="volvo">Volvo</option>
-            </select>
-          </div>
+          {isIndonesia ? (
+            <div className="pb-3">
+              <label className="m-0">Provinsi</label>
+              <select
+                style={{ color: "#CACACA" }}
+                id="provinsi"
+                name="provinsi"
+              >
+                <option value="" disabled selected>
+                  DKI Jakarta
+                </option>
+                <option value="volvo">Volvo</option>
+              </select>
+            </div>
+          ) : null}
           <div className="pb-3">
             <label className="m-0">Logo lembaga</label>
             <div className="buttonFile">
@@ -116,7 +143,10 @@ const RegisterAsEducator2 = (props) => {
                 ref={hiddenFileInput}
                 onChange={handleChange}
               ></input>
-              <span style={{ color: "#CACACA" }}> Belum ada file yang dipilih</span>
+              <span style={{ color: "#CACACA" }}>
+                {" "}
+                Belum ada file yang dipilih
+              </span>
             </div>
           </div>
           <p className="textPosition">

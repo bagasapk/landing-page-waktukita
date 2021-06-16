@@ -62,7 +62,7 @@ const RegisterAsStudent = () => {
                   Lanjutkan
                 </button>
               </form>
-                <p style={{color:"#404041", fontSize:'14px'}} className="pt-3">Sudah punya akun? <a style={{color:'#00A69C'}} href="/">Login disini</a></p>
+                <p style={{color:"#404041", fontSize:'14px'}} className="pt-3">Sudah punya akun? <a style={{color:'#00A69C'}} href="/login">Login disini</a></p>
             </div>
           </div>
         </section>
