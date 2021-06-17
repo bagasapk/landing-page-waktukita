@@ -6,20 +6,16 @@ import "../Register.css";
 import NavbarRegister2 from "../navbar/NavbarRegister2";
 
 const RegisterAsEducator2 = (props) => {
-  const [setNegara] = useState("Admin");
-  const [addrtype] = useState(["Indonesia", "Belanda", "Jepang"]);
+  //Dropdown Negara
+  const [isNegara, setNegara] = useState("");
+  const [isIndonesia, setIndonesia] = useState(false);
+  const [isSetNegara, setNegaraColor] = useState(false);
+  const [addrtype] = useState(["Belanda", "Indonesia", "Jepang"]);
   const Add = addrtype.map((Add) => Add);
   const handleAddrTypeChange = (e) => {
     console.log(addrtype[e.target.value]);
     setNegara(addrtype[e.target.value]);
-  };
-  const [isFileUploaded, setFileUploaded] = useState(false);
-  const [isIndonesia, setIndonesia] = useState(false);
-  const hiddenFileInput = React.useRef(null);
-  const handleClick = () => {
-    hiddenFileInput.current.click();
-  };
-  const dropboxHandler = (e) => {
+    setNegaraColor(isSetNegara ? true : true);
     if (addrtype[e.target.value] === "Indonesia") {
       setIndonesia(isIndonesia ? false : true);
     } else {
@@ -27,12 +23,33 @@ const RegisterAsEducator2 = (props) => {
     }
   };
 
+  //Upload File Button
+  const [selectedFile, setSelectedFile] = useState([]);
+  const [fileName, setFileName] = useState("");
+  const [isFilePicked, setIsFilePicked] = useState(false);
   const handleChange = (event) => {
-    // var fileUploaded = false;
-    const fileUploads = event.target.files[0];
-    props.handleFile(fileUploads);
-    // fileUploaded = true;
-    setFileUploaded(isFileUploaded ? false : true);
+    setSelectedFile([...selectedFile, event.target.files[0]]);
+    console.log("files :", selectedFile);
+    setIsFilePicked(isFilePicked ? false : true);
+    setFileName([...fileName, event.target.files[0].name]);
+  };
+
+  //Lembaga Set Color
+  const [isSetValueLembaga, setValueLembaga] = useState(false);
+  const setValueLembagaHandler = () => {
+    setValueLembaga(isSetValueLembaga ? false : true);
+  };
+
+  //Jabatan set Color
+  const [isSetValueJabatan, setValueJabatan] = useState(false);
+  const setValueJabatanHandler = () => {
+    setValueJabatan(isSetValueJabatan ? false : true);
+  };
+
+  //Provinsi set Color
+  const [isSetProvinsi, setProvinsi] = useState(false);
+  const setProvinsiHandler = () => {
+    setProvinsi(isSetProvinsi ? false : true);
   };
 
   return (
@@ -80,7 +97,14 @@ const RegisterAsEducator2 = (props) => {
           </div>
           <div className="pb-3">
             <label className="m-0">Lembaga</label>
-            <select style={{ color: "#CACACA" }} id="lembaga" name="lembaga">
+            <select
+              style={
+                isSetValueLembaga ? { color: "black" } : { color: "#CACACA" }
+              }
+              id="lembaga"
+              name="lembaga"
+              onChange={setValueLembagaHandler}
+            >
               <option value="" disabled selected>
                 Swasta, BUMN, BUMD
               </option>
@@ -103,8 +127,8 @@ const RegisterAsEducator2 = (props) => {
           <div className="pb-3">
             <label className="m-0">Negara</label>
             <select
-              style={{ color: "#CACACA" }}
-              onChange={((e) => handleAddrTypeChange(e), dropboxHandler)}
+              style={isSetNegara ? { color: "black" } : { color: "#CACACA" }}
+              onChange={(e) => handleAddrTypeChange(e)}
               // className="browser-default custom-select"
             >
               {Add.map((address, key) => (
@@ -112,15 +136,21 @@ const RegisterAsEducator2 = (props) => {
                   {address}
                 </option>
               ))}
+              <option value="" disabled>
+                Negara
+              </option>
             </select>
           </div>
           {isIndonesia ? (
             <div className="pb-3">
               <label className="m-0">Provinsi</label>
               <select
-                style={{ color: "#CACACA" }}
+                style={
+                  isSetProvinsi ? { color: "black" } : { color: "#CACACA" }
+                }
                 id="provinsi"
                 name="provinsi"
+                onChange={setProvinsiHandler}
               >
                 <option value="" disabled selected>
                   DKI Jakarta
@@ -132,20 +162,25 @@ const RegisterAsEducator2 = (props) => {
           <div className="pb-3">
             <label className="m-0">Logo lembaga</label>
             <div className="buttonFile">
-              <button className="buttonDesign" onClick={handleClick}>
+              {/* <button className="buttonDesign" onClick={handleClick}>
                 <span className="buttonText">Pilih File</span>
-              </button>
+              </button> */}
+              <label for="file-upload" class="buttonDesign m-0 p-1">
+                <span className="buttonText">Pilih File</span>
+              </label>
               <input
-                style={
-                  isFileUploaded ? { position: "static" } : { display: "none" }
-                }
+                style={{ display: "none" }}
+                id="file-upload"
                 type="file"
-                ref={hiddenFileInput}
-                onChange={handleChange}
+                // ref={hiddenFileInput}
+                onChange={(event) => handleChange(event)}
               ></input>
-              <span style={{ color: "#CACACA" }}>
-                {" "}
-                Belum ada file yang dipilih
+              {/* {isFilePicked ? ( */}
+              <span
+                className="pl-3"
+                style={isFilePicked ? { color: "black" } : { color: "#CACACA" }}
+              >
+                {isFilePicked ? fileName : " Belum ada file yang dipilih"}
               </span>
             </div>
           </div>
@@ -158,7 +193,14 @@ const RegisterAsEducator2 = (props) => {
           </div>
           <div className="pb-3">
             <label className="m-0">Jabatan</label>
-            <select style={{ color: "#CACACA" }} id="jabatan" name="jabatan">
+            <select
+              style={
+                isSetValueJabatan ? { color: "black" } : { color: "#CACACA" }
+              }
+              id="jabatan"
+              name="jabatan"
+              onChange={setValueJabatanHandler}
+            >
               <option value="" disabled selected>
                 CEO, COO, Manager, Staff
               </option>
