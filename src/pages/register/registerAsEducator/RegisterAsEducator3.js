@@ -82,7 +82,7 @@ const RegisterAsEducator3 = (props) => {
           <div className="pb-3">
             <label className="m-0">Scan NPWP</label>
             <div className="buttonFile">
-              <label for="file-upload" class="buttonDesign m-0 p-1">
+              <label htmlFor="file-upload" className="buttonDesign m-0 p-1">
                 <span className="buttonText">Pilih File</span>
               </label>
               <input
@@ -110,8 +110,9 @@ const RegisterAsEducator3 = (props) => {
               id="Status pajak"
               name="Status pajak"
               onChange={setValueStatusPajakHandler}
+              defaultValue=""
             >
-              <option value="" disabled selected></option>
+              <option value="" disabled></option>
               <option value="volvo">Volvo</option>
             </select>
           </div>
@@ -130,8 +131,9 @@ const RegisterAsEducator3 = (props) => {
               id="Nama bank"
               name="Nama bank"
               onChange={setValueBankHandler}
+              defaultValue=""
             >
-              <option value="" disabled selected>
+              <option value="" disabled>
                 Bank Central Asia (BCA)
               </option>
               <option value="volvo">Volvo</option>
@@ -147,21 +149,38 @@ const RegisterAsEducator3 = (props) => {
             <input type="text" placeholder="john.doe@company.com"></input>
           </div>
           <div className="pt-2"></div>
+          <div className="">
+            <input required type="checkbox"></input>
+            <label className="pl-2">
+              Informasi yang saya berikan adalah benar dan terpercaya
+            </label>
+          </div>
+          <div>
+            <input required type="checkbox"></input>
+            <label className="pl-2 pb-3">
+              Saya sudah membaca dan setuju dengan peraturan yang ada
+            </label>
+          </div>
         </div>
-        <button
-          type="button"
-          style={{ cursor: "pointer" }}
-          onClick={() => setPopUp(true)}
-          className="col-md-3 mx-auto d-flex justify-content-center Primary formButton"
-        >
-          Lanjutkan
-        </button>
+        <div className="pb-5">
+          <button
+            type="button"
+            style={{ cursor: "pointer" }}
+            onClick={() => setPopUp(true)}
+            className="col-md-3 mx-auto d-flex justify-content-center Primary formButton"
+          >
+            Lanjutkan
+          </button>
+        </div>
         <PopUpRegister trigger={popUp}>
           <div>
             <div className="pb-3">
               <img alt="symbol" src={symbolPopUp}></img>
             </div>
-            <p style={{color:'#404041',fontSize:'20px'}} className="col-md-10 mx-auto">
+            <p
+              style={{ color: "#404041", fontSize: "20px" }}
+              className="col-md-10 mx-auto"
+            >
               Pastikan email sudah benar, dan email yang dicantumkan sudah dapat
               menerima verifikasi
             </p>

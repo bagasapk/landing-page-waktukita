@@ -104,8 +104,9 @@ const RegisterAsEducator2 = (props) => {
               id="lembaga"
               name="lembaga"
               onChange={setValueLembagaHandler}
+              defaultValue=""
             >
-              <option value="" disabled selected>
+              <option value="" disabled>
                 Swasta, BUMN, BUMD
               </option>
               <option value="volvo">Volvo</option>
@@ -151,8 +152,9 @@ const RegisterAsEducator2 = (props) => {
                 id="provinsi"
                 name="provinsi"
                 onChange={setProvinsiHandler}
+                defaultValue=""
               >
-                <option value="" disabled selected>
+                <option value="" disabled>
                   DKI Jakarta
                 </option>
                 <option value="volvo">Volvo</option>
@@ -162,7 +164,7 @@ const RegisterAsEducator2 = (props) => {
           <div className="pb-3">
             <label className="m-0">Logo lembaga</label>
             <div className="buttonFile">
-              <label for="file-upload" class="buttonDesign m-0 p-1">
+              <label htmlFor="file-upload" className="buttonDesign m-0 p-1">
                 <span className="buttonText">Pilih File</span>
               </label>
               <input
@@ -195,8 +197,9 @@ const RegisterAsEducator2 = (props) => {
               id="jabatan"
               name="jabatan"
               onChange={setValueJabatanHandler}
+              defaultValue=""
             >
-              <option value="" disabled selected>
+              <option value="" disabled>
                 CEO, COO, Manager, Staff
               </option>
               <option value="volvo">Volvo</option>

@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import symbolActive from "../../../symbol/XMLID1386(active).svg";
 import "./RegisterAsEducator.css";
 import "../Register.css";
 import NavbarRegister2 from "../navbar/NavbarRegister2";
 
 const RegisterAsEducator4 = () => {
+  const [otp, setOtp] = useState(new Array(6).fill(""));
+  const otpHandler = (element, index) => {
+    if (isNaN(element.value)) return false;
+    setOtp([...otp.map((d, idx) => (idx === index ? element.value : d))]);
+    if (element.nextSibling) {
+      element.nextSibling.focus();
+    }
+  };
   return (
     <div className="backgroundRegister">
       <NavbarRegister2 />
@@ -53,11 +61,25 @@ const RegisterAsEducator4 = () => {
         // class="digit-group"
         data-group-name="digits"
         data-autosubmit="false"
-        autocomplete="off"
+        autoComplete="off"
       >
         <div className="d-flex digit-group col-md-5 mx-auto pt-3">
           {/* <div className="digit-group mx-auto col-md-6"> */}
-          <input type="text" id="digit" name="digit-1" data-next="digit-2" />
+          {otp.map((data, index) => {
+            return (
+              <input
+                type="text"
+                id="digit"
+                name="otp"
+                maxLength="1"
+                key={index}
+                value={data}
+                onChange={(e) => otpHandler(e.target, index)}
+                onFocus={(e) => e.target.select()}
+              />
+            );
+          })}
+          {/* <input type="text" id="digit" name="digit-1" data-next="digit-2" />
           <input
             type="text"
             id="digit"
@@ -71,9 +93,9 @@ const RegisterAsEducator4 = () => {
             name="digit-3"
             data-next="digit-4"
             data-previous="digit-2"
-          />
+          /> */}
           {/* <span class="splitter">&ndash;</span> */}
-          <input
+          {/* <input
             type="text"
             id="digit"
             name="digit-4"
@@ -92,10 +114,16 @@ const RegisterAsEducator4 = () => {
             id="digit"
             name="digit-6"
             data-previous="digit-5"
-          />
+          /> */}
         </div>
         <div className="pt-5">
-          <button className="OtpButton Primary col-md-2">Simpan</button>
+          <button
+            type="button"
+            onClick={(e) => alert("Entered OTP is " + otp.join(""))}
+            className="OtpButton Primary col-md-2"
+          >
+            Simpan
+          </button>
         </div>
       </form>
     </div>
