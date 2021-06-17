@@ -39,6 +39,9 @@
 
 .googleButton {
   border: 2px solid #C6352F;
+  width: 150px;
+  height: 52px;
+  border-radius: 8px;
   background-color: transparent;
   color: #C6352F;
 }

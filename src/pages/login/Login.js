@@ -6,6 +6,14 @@ import "../testcss.css";
 import "./login1.css";
 import "../login.css";
 
+//Login
+import ReactDOM from 'react-dom';
+import { GoogleLogin } from 'react-google-login';
+
+const responseGoogle = (response) => {
+    console.log(response);
+  }
+
 const Login = () => {
     const [passwordShown, setPasswordShown] = useState(false);
     const togglePasswordVisibility = () => {
@@ -61,9 +69,20 @@ const Login = () => {
                                 <button className="navButton facebookButton mb-5">
                                 <span className="textButton">Facebook</span>
                                 </button>
-                                <button className="navButton googleButton mb-5">
+                                <GoogleLogin
+                                    clientId="295513891719-1rscphpsbern9hb147h807u4sdu6fok9.apps.googleusercontent.com"
+                                    render={renderProps => (
+                                    <button className="googleButton" onClick={renderProps.onClick} disabled={renderProps.disabled}>Google</button>
+                                    )}
+                                    buttonText="Login"
+                                    onSuccess={responseGoogle}
+                                    onFailure={responseGoogle}
+                                    cookiePolicy={'single_host_origin'}
+                                    
+                                />
+                                {/* <button className="navButton googleButton mb-5">
                                 <span className="textButton">Google</span>
-                                </button>
+                                </button> */}
                             </div>
                         </div>
                     </div>
