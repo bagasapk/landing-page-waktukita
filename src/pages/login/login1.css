@@ -1,4 +1,4 @@
-.login {
+  .login {
     width: 100%;
     min-height: 100vh;
     /* padding: 0 20px; */
@@ -11,6 +11,7 @@
     /* margin: auto; */
     width: 100%;
     max-width: 520px;
+    /* max-height: fit-content; */
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -82,7 +83,7 @@
   
   .loginBox {
     display: flex;
-    position: absolute;
+    position: absolute !important;
     justify-content: center;
     top: 140px;
   }

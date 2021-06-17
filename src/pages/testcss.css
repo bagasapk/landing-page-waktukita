@@ -1,0 +1,104 @@
+.loginContainer,
+.boxContainer {
+  width: auto;
+  height: 120px;
+}
+
+.loginContainer {
+  box-shadow: 0px 4px 24px 0px rgba(196, 196, 196, 0.24);
+}
+
+.navbarLogin {
+  padding: 28px 0px 28px 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonFlexNav,
+.boxFlex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.boxGrid {
+  display: grid;
+}
+
+.navButton {
+  border-radius: 8px;
+  padding: 12px 32px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.Secondary {
+  border: 1.5px solid #00a69c;
+  background-color: transparent;
+  color: #00a69c;
+}
+
+.googleButton {
+  border: 2px solid #C6352F;
+  background-color: transparent;
+  color: #C6352F;
+}
+
+.facebookButton {
+  border: 2px solid #546CB0;
+  background-color: transparent;
+  color: #546CB0;
+}
+
+.Secondary:hover {
+  background-color: #00a69c;
+  border: 1.5px solid #00a69c;
+  color: #ffffff;
+}
+
+.Primary {
+  background-color: #00a69c;
+  border: 1.5px solid #00a69c;
+  color: #ffffff;
+}
+
+.Primary:hover {
+  background-color: #00857d;
+}
+
+.textButton {
+  line-height: 24px;
+  font-size: 19px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.buttonDesc {
+  padding: 48px;
+}
+
+.boxSize {
+  /* width: 1106px; */
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  align-items: center;
+  font-size: 24px;
+  color: #c4c4c4;
+}
+
+.contentPosition {
+  display: flex;
+  justify-content: center;
+}
+
+.contentColor {
+  color: #00a69c;
+  fill: #00a69c;
+}
+
+.textPosition {
+  color: #404041;
+  text-align: justify;
+  font-size: 20px;
+}
