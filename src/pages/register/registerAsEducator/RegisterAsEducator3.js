@@ -4,20 +4,35 @@ import symbolActive from "../../../symbol/XMLID1386(active).svg";
 import "./RegisterAsEducator.css";
 import "../Register.css";
 import NavbarRegister2 from "../navbar/NavbarRegister2";
+import PopUpRegister from "./popUp/PopUpRegister";
+import symbolPopUp from "./popUp/Group2981.svg";
 
 const RegisterAsEducator3 = (props) => {
-  const [isFileUploaded, setFileUploaded] = useState(false);
-  const hiddenFileInput = React.useRef(null);
-  const handleClick = () => {
-    hiddenFileInput.current.click();
-  };
+  //Upload File Button
+  const [selectedFile, setSelectedFile] = useState([]);
+  const [fileName, setFileName] = useState("");
+  const [isFilePicked, setIsFilePicked] = useState(false);
   const handleChange = (event) => {
-    // var fileUploaded = false;
-    const fileUploads = event.target.files[0];
-    props.handleFile(fileUploads);
-    // fileUploaded = true;
-    setFileUploaded(isFileUploaded ? false : true);
+    setSelectedFile([...selectedFile, event.target.files[0]]);
+    console.log("files :", selectedFile);
+    setIsFilePicked(isFilePicked ? false : true);
+    setFileName([...fileName, event.target.files[0].name]);
   };
+
+  //StatusPajak Set Color
+  const [isSetValueStatusPajak, setValueStatusPajak] = useState(false);
+  const setValueStatusPajakHandler = () => {
+    setValueStatusPajak(isSetValueStatusPajak ? false : true);
+  };
+
+  //Bank Set Color
+  const [isSetValueBank, setValueBank] = useState(false);
+  const setValueBankHandler = () => {
+    setValueBank(isSetValueBank ? false : true);
+  };
+
+  //Popup Handler
+  const [popUp, setPopUp] = useState(false);
 
   return (
     <div className="backgroundRegister">
@@ -47,11 +62,13 @@ const RegisterAsEducator3 = (props) => {
         </div>
       </div>
       <p className="mx-auto col-md-7 textPosition">
-      Informasi ini akan digunakan oleh tim Waktukita dalam
-        <span style={{ color: "#00A69C", fontWeight: "bold" }}>{" "}
-        proses pembayaran
+        Informasi ini akan digunakan oleh tim Waktukita dalam
+        <span style={{ color: "#00A69C", fontWeight: "bold" }}>
+          {" "}
+          proses pembayaran
         </span>
-        , dimohon untuk mengisi informasi dengan data terbaru milik Lembaga Pelatihan anda.
+        , dimohon untuk mengisi informasi dengan data terbaru milik Lembaga
+        Pelatihan anda.
       </p>
       <form>
         <div
@@ -65,32 +82,41 @@ const RegisterAsEducator3 = (props) => {
           <div className="pb-3">
             <label className="m-0">Scan NPWP</label>
             <div className="buttonFile">
-              <button className="buttonDesign" onClick={handleClick}>
+              <label for="file-upload" class="buttonDesign m-0 p-1">
                 <span className="buttonText">Pilih File</span>
-              </button>
+              </label>
               <input
-                style={
-                  isFileUploaded ? { position: "static" } : { display: "none" }
-                }
+                style={{ display: "none" }}
+                id="file-upload"
                 type="file"
-                ref={hiddenFileInput}
-                onChange={handleChange}
+                onChange={(event) => handleChange(event)}
               ></input>
-              <span style={{ color: "#CACACA" }}> Belum ada file yang dipilih</span>
+              <span
+                className="pl-3"
+                style={isFilePicked ? { color: "black" } : { color: "#CACACA" }}
+              >
+                {isFilePicked ? fileName : " Belum ada file yang dipilih"}
+              </span>
             </div>
-          </div>  
+          </div>
           <div className="pb-3">
             <label className="m-0">Status pajak</label>
-            <select style={{ color: "#767676" }} id="Status pajak" name="Status pajak">
-              <option value="" disabled selected>
-              </option>
+            <select
+              style={
+                isSetValueStatusPajak
+                  ? { color: "black" }
+                  : { color: "#CACACA" }
+              }
+              id="Status pajak"
+              name="Status pajak"
+              onChange={setValueStatusPajakHandler}
+            >
+              <option value="" disabled selected></option>
               <option value="volvo">Volvo</option>
             </select>
           </div>
           <div className="pb-3">
-            <label className="m-0">
-              Nomor rekening
-            </label>
+            <label className="m-0">Nomor rekening</label>
             <input type="text"></input>
           </div>
           <div className="pb-3">
@@ -99,7 +125,12 @@ const RegisterAsEducator3 = (props) => {
           </div>
           <div className="pb-3">
             <label className="m-0">Nama bank</label>
-            <select style={{ color: "#CACACA" }} id="Nama bank" name="Nama bank">
+            <select
+              style={isSetValueBank ? { color: "black" } : { color: "#CACACA" }}
+              id="Nama bank"
+              name="Nama bank"
+              onChange={setValueBankHandler}
+            >
               <option value="" disabled selected>
                 Bank Central Asia (BCA)
               </option>
@@ -117,9 +148,37 @@ const RegisterAsEducator3 = (props) => {
           </div>
           <div className="pt-2"></div>
         </div>
-        <button className="col-md-3 mx-auto d-flex justify-content-center Primary formButton">
+        <button
+          type="button"
+          style={{ cursor: "pointer" }}
+          onClick={() => setPopUp(true)}
+          className="col-md-3 mx-auto d-flex justify-content-center Primary formButton"
+        >
           Lanjutkan
         </button>
+        <PopUpRegister trigger={popUp}>
+          <div>
+            <div className="pb-3">
+              <img alt="symbol" src={symbolPopUp}></img>
+            </div>
+            <p style={{color:'#404041',fontSize:'20px'}} className="col-md-10 mx-auto">
+              Pastikan email sudah benar, dan email yang dicantumkan sudah dapat
+              menerima verifikasi
+            </p>
+            <div className="d-flex col-md-8 mx-auto justify-content-around">
+              <button
+                type="button"
+                onClick={() => setPopUp(false)}
+                className="navButton Secondary"
+              >
+                <span className="textButton">Kembali</span>
+              </button>
+              <button className="navButton Primary">
+                <span className="textButton">Lanjutkan</span>
+              </button>
+            </div>
+          </div>
+        </PopUpRegister>
       </form>
     </div>
   );

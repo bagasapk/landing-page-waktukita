@@ -162,9 +162,6 @@ const RegisterAsEducator2 = (props) => {
           <div className="pb-3">
             <label className="m-0">Logo lembaga</label>
             <div className="buttonFile">
-              {/* <button className="buttonDesign" onClick={handleClick}>
-                <span className="buttonText">Pilih File</span>
-              </button> */}
               <label for="file-upload" class="buttonDesign m-0 p-1">
                 <span className="buttonText">Pilih File</span>
               </label>
@@ -172,10 +169,8 @@ const RegisterAsEducator2 = (props) => {
                 style={{ display: "none" }}
                 id="file-upload"
                 type="file"
-                // ref={hiddenFileInput}
                 onChange={(event) => handleChange(event)}
               ></input>
-              {/* {isFilePicked ? ( */}
               <span
                 className="pl-3"
                 style={isFilePicked ? { color: "black" } : { color: "#CACACA" }}
