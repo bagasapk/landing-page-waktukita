@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from './pages/login/Login';
 import LupaKataSandi1 from './pages/lupa_kata_sandi/LupaKataSandi1';
+import LupaKataSandi2 from './pages/lupa_kata_sandi/lupaKataSandi2';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route path="/lupakatasandi/1">
             <LupaKataSandi1 />
+          </Route>
+          <Route path="/lupakatasandi/2">
+            <LupaKataSandi2 />
           </Route>
         </Switch>
       </Router>
