@@ -79,7 +79,7 @@ const Login = () => {
                                     appId="301931954961768"
                                     autoLoad={true}
                                     render={renderProps => (
-                                        <button className="facebookButton" onClick={renderProps.onClick}>Facebook</button>
+                                        <button className="facebookButton mb-5" onClick={renderProps.onClick}>Facebook</button>
                                       )}
                                     // fields="name,email,picture"
                                     // onClick={componentClicked}
@@ -88,7 +88,7 @@ const Login = () => {
                                 <GoogleLogin
                                     clientId="295513891719-1rscphpsbern9hb147h807u4sdu6fok9.apps.googleusercontent.com"
                                     render={renderProps => (
-                                    <button className="googleButton" onClick={renderProps.onClick} disabled={renderProps.disabled}>Google</button>
+                                    <button className="googleButton mb-5" onClick={renderProps.onClick} disabled={renderProps.disabled}>Google</button>
                                     )}
                                     buttonText="Login"
                                     onSuccess={responseGoogle}
