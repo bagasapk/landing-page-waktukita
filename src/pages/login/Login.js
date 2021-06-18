@@ -9,16 +9,22 @@ import "../login.css";
 //Login
 import ReactDOM from 'react-dom';
 import { GoogleLogin } from 'react-google-login';
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 
 const responseGoogle = (response) => {
     console.log(response);
-  }
+}
+const responseFacebook = (response) => {
+    console.log(response);
+}
 
 const Login = () => {
     const [passwordShown, setPasswordShown] = useState(false);
     const togglePasswordVisibility = () => {
         setPasswordShown(passwordShown ? false : true);
     };
+
+
     return (
         <div>
             <div className="backgroundLogin">
@@ -66,9 +72,19 @@ const Login = () => {
                             <p style={{color:"#404041", fontSize:'14px'}} className="pt-3">Lupa kata sandi? <a style={{color:'#00A69C'}} href="/">Klik disini</a></p>
                             <p style={{color:"#404041", fontSize:'14px'}} className="pt-3"><a style={{color:"#00A69C"}} href="/">Registrasi</a> atau Login dengan </p>
                             <div className="buttonFlexNav">
-                                <button className="navButton facebookButton mb-5">
+                                {/* <button className="navButton facebookButton mb-5">
                                 <span className="textButton">Facebook</span>
-                                </button>
+                                </button> */}
+                                <FacebookLogin
+                                    appId="301931954961768"
+                                    autoLoad={true}
+                                    render={renderProps => (
+                                        <button className="facebookButton" onClick={renderProps.onClick}>Facebook</button>
+                                      )}
+                                    // fields="name,email,picture"
+                                    // onClick={componentClicked}
+                                    callback={responseFacebook}
+                                />
                                 <GoogleLogin
                                     clientId="295513891719-1rscphpsbern9hb147h807u4sdu6fok9.apps.googleusercontent.com"
                                     render={renderProps => (
@@ -78,7 +94,6 @@ const Login = () => {
                                     onSuccess={responseGoogle}
                                     onFailure={responseGoogle}
                                     cookiePolicy={'single_host_origin'}
-                                    
                                 />
                                 {/* <button className="navButton googleButton mb-5">
                                 <span className="textButton">Google</span>

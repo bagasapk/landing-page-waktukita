@@ -48,6 +48,9 @@
 
 .facebookButton {
   border: 2px solid #546CB0;
+  width: 150px;
+  height: 52px;
+  border-radius: 8px;
   background-color: transparent;
   color: #546CB0;
 }
