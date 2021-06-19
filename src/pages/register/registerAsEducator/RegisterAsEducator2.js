@@ -7,7 +7,8 @@ import NavbarRegister2 from "../navbar/NavbarRegister2";
 
 const RegisterAsEducator2 = (props) => {
   //Dropdown Negara
-  const [isNegara, setNegara] = useState("");
+  // const [isNegara, setNegara] = useState("");
+  const [setNegara] = useState("");
   const [isIndonesia, setIndonesia] = useState(false);
   const [isSetNegara, setNegaraColor] = useState(false);
   const [addrtype] = useState(["Belanda", "Indonesia", "Jepang"]);
