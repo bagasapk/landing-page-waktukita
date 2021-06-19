@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+import React from 'react';
 import NavbarLogin from '../navbar/navbar';
-import hide from '../../resources/symbols/hide.svg';
+// import hide from '../../resources/symbols/hide.svg';
 import symbol from '../../resources/symbols/XMLID1386(active).svg';
 import "../testcss.css";
 import "../login/login1.css";
 import "../login.css";
 
 const LupaKataSandi2 = () => {
-    const [passwordShown, setPasswordShown] = useState(false);
-    const togglePasswordVisibility = () => {
-        setPasswordShown(passwordShown ? false : true);
-    };
+    // const [passwordShown, setPasswordShown] = useState(false);
+    // const togglePasswordVisibility = () => {
+    //     setPasswordShown(passwordShown ? false : true);
+    // };
     
     return (
         <div>

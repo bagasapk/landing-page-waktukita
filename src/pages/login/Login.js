@@ -7,7 +7,7 @@ import "./login1.css";
 import "../login.css";
 
 //Login
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import { GoogleLogin } from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 
