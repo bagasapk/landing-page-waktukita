@@ -1,0 +1,113 @@
+.registerContainer,
+.boxContainer {
+  width: auto;
+  height: 120px;
+}
+
+.registerContainer {
+  box-shadow: 0px 4px 24px 0px rgba(196, 196, 196, 0.24);
+}
+
+.navbarRegister {
+  padding: 28px 0px 28px 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonFlexNav,
+.boxFlex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.boxGrid {
+  display: grid;
+}
+
+.navButton {
+  border-radius: 8px;
+  padding: 12px 32px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.Secondary {
+  border: 1.5px solid #00a69c;
+  background-color: transparent;
+  color: #00a69c;
+}
+
+.Secondary:hover {
+  background-color: #00a69c;
+  border: 1.5px solid #00a69c;
+  color: #ffffff;
+  text-decoration:none !important;
+}
+
+.Primary {
+  background-color: #00a69c;
+  border: 1.5px solid #00a69c;
+  color: #ffffff;
+  text-decoration:none !important;
+}
+
+.Primary:hover {
+  background-color: #00857d;
+  color: #FFF;
+}
+
+.textButton {
+  line-height: 24px;
+  font-size: 19px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.buttonDesc {
+  padding: 48px;
+}
+
+.boxSize {
+  /* width: 1106px; */
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  align-items: center;
+  font-size: 24px;
+  color: #c4c4c4;
+}
+
+.contentPosition {
+  display: flex;
+  justify-content: center;
+}
+
+.contentColor {
+  color: #00a69c;
+  fill: #00a69c;
+}
+
+.textPosition {
+  color: #404041;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.OtpButton {
+  border-radius: 8px;
+  border: 1px solid #00a69c;
+  padding: 8px 40px;
+}
+
+.digit-group {
+  /* padding: 12px 20px; */
+  justify-content: space-around;
+}
+
+input[id="digit"] {
+  width: 66px !important;
+  height: 66px !important;
+  text-align: center;
+}

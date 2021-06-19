@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.App {
+  background: url(https://i.ibb.co/Y7cjbJq/image.png);
+  background-repeat: no-repeat;
+  background-position-y: 150px;
+  height: auto;
+}
