@@ -1,7 +1,7 @@
 .registerContainer,
 .boxContainer {
   width: auto;
-  height: 120px;
+  height: 80px;
 }
 
 .registerContainer {
@@ -26,7 +26,7 @@
 
 .navButton {
   border-radius: 8px;
-  padding: 12px 32px;
+  padding: 8px 24px;
   align-items: center;
   box-sizing: border-box;
 }
@@ -58,7 +58,7 @@
 
 .textButton {
   line-height: 24px;
-  font-size: 19px;
+  font-size: 16px;
   line-height: 24px;
   display: flex;
   align-items: center;
@@ -75,7 +75,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   align-items: center;
-  font-size: 24px;
+  font-size: 20px;
   color: #c4c4c4;
 }
 
@@ -92,7 +92,7 @@
 .textPosition {
   color: #404041;
   text-align: justify;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .OtpButton {

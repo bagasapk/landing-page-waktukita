@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import NavbarLogin from '../navbar/navbar';
+import NavbarLogin from './navbar/navbar';
 import hide from '../../resources/symbols/hide.svg';
 import symbol from '../../resources/symbols/XMLID1386(active).svg';
-import "../testcss.css";
+import "./testcss.css";
 import "./login1.css";
-import "../login.css";
+import "./login.css";
 
 //Login
 // import ReactDOM from 'react-dom';
@@ -34,7 +34,7 @@ const Login = () => {
                     <div className="jumbotronContainer col-md-6"></div>
                     <div className="loginBox col-md-12">
                         <div className="loginContainer">
-                            <h1 className="titleForm">Login</h1>
+                            <h2 className="titleForm">Login</h2>
                             <img className="mx-auto symbolPosition"
                             alt="symbol"
                             style={{ width: "20px", height: "45px" }}
@@ -63,14 +63,14 @@ const Login = () => {
                                     <img src={hide} alt="hide"></img>
                                     </i>
                                 </div>
-                                <div className="pt-4"></div>
+                                <div className="pt-2"></div>
                                 </div>
                                 <button className="col-md-8 mx-auto d-flex justify-content-center Primary formButton">
                                 Lanjutkan
                                 </button>
                             </form>
-                            <p style={{color:"#404041", fontSize:'14px'}} className="pt-3">Lupa kata sandi? <a style={{color:'#00A69C'}} href="/">Klik disini</a></p>
-                            <p style={{color:"#404041", fontSize:'14px'}} className="pt-3"><a style={{color:"#00A69C"}} href="/">Registrasi</a> atau Login dengan </p>
+                            <p style={{color:"#404041", fontSize:'14px'}} className="pt-2">Lupa kata sandi? <a style={{color:'#00A69C'}} href="/">Klik disini</a></p>
+                            <p style={{color:"#404041", fontSize:'14px'}} className=""><a style={{color:"#00A69C"}} href="/">Registrasi</a> atau Login dengan </p>
                             <div className="buttonFlexNav">
                                 {/* <button className="navButton facebookButton mb-5">
                                 <span className="textButton">Facebook</span>

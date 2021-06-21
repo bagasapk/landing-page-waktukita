@@ -4,12 +4,12 @@ import logo1 from "../../../logo1.svg";
 
 const NavbarRegister = () => {
   return (
-    <div className="registerContainer">
-      <div className="navbarRegister">
+    <div className="loginContainer">
+      <div className="navbar navbarLogin">
         <a href="/">
-          <img alt="logo" src={logo1}></img>
+          <img className="logoScale" alt="logo" src={logo1}></img>
         </a>
-        <div className="col-lg-5">
+        <div className="col-lg-4">
           <div className="buttonFlexNav">
             <span
               style={{ color: "#404041", opacity: "0.5" }}
@@ -17,7 +17,7 @@ const NavbarRegister = () => {
             >
               Register Sebagai ?
             </span>
-            <div className="col-lg-7">
+            <div className="col-lg-8">
               <div className="buttonFlexNav">
                 <a href="/register/student" className="navButton Secondary">
                   <span className="textButton">Student</span>

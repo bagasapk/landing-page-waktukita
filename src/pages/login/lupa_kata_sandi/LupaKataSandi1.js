@@ -2,9 +2,9 @@
 import React from 'react';
 import NavbarLogin from '../navbar/navbar';
 // import hide from '../../resources/symbols/hide.svg';
-import symbol from '../../resources/symbols/XMLID1386(active).svg';
+import symbol from '../../../resources/symbols/XMLID1386(active).svg'
 import "../testcss.css";
-import "../login/login1.css";
+import "../login1.css";
 import "../login.css";
 
 const LupaKataSandi1 = () => {
@@ -20,9 +20,9 @@ const LupaKataSandi1 = () => {
                 <section className="login p-0">
                     <div className="col-md-6"></div>
                     <div className="jumbotronContainer col-md-6"></div>
-                    <div className="loginBox col-md-12">
+                    <div style={{top:'25%'}} className="loginBox col-md-12">
                         <div className="loginContainer">
-                            <h1 className="titleForm">Lupa kata sandi ?</h1>
+                            <h2 className="titleForm">Lupa kata sandi ?</h2>
                             <img className="mx-auto symbolPosition"
                             alt="symbol"
                             style={{ width: "20px", height: "45px" }}
@@ -33,7 +33,7 @@ const LupaKataSandi1 = () => {
                                 style={{ textAlign: "left" }}
                                 className="mx-auto d-flex flex-column"
                                 >
-                                <p>Silahkan masukkan email kamu untuk setel ulang kata sandi</p>
+                                <p style={{fontFamily:'Lato'}}>Silahkan masukkan email kamu untuk setel ulang kata sandi</p>
                                 <div className="pb-3">
                                     <label className="m-0">Email</label>
                                     <input type="email" placeholder="john.doe@gmail.com"></input>

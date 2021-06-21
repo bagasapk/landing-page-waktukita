@@ -1,7 +1,7 @@
 .loginContainer,
 .boxContainer {
   width: auto;
-  height: 120px;
+  /* height: 120px; */
 }
 
 .loginContainer {
@@ -9,7 +9,7 @@
 }
 
 .navbarLogin {
-  padding: 28px 0px 28px 120px;
+  padding: 18px 0px 18px 120px;
   display: flex;
   justify-content: space-between;
 }
@@ -24,13 +24,6 @@
   display: grid;
 }
 
-.navButton {
-  border-radius: 8px;
-  padding: 12px 32px;
-  align-items: center;
-  box-sizing: border-box;
-}
-
 .Secondary {
   border: 1.5px solid #00a69c;
   background-color: transparent;
@@ -39,8 +32,7 @@
 
 .googleButton {
   border: 2px solid #C6352F;
-  width: 150px;
-  height: 52px;
+  padding: 8px 24px;
   border-radius: 8px;
   background-color: transparent;
   color: #C6352F;
@@ -48,8 +40,7 @@
 
 .facebookButton {
   border: 2px solid #546CB0;
-  width: 150px;
-  height: 52px;
+  padding: 8px 24px;
   border-radius: 8px;
   background-color: transparent;
   color: #546CB0;
@@ -69,14 +60,6 @@
 
 .Primary:hover {
   background-color: #00857d;
-}
-
-.textButton {
-  line-height: 24px;
-  font-size: 19px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
 }
 
 .buttonDesc {

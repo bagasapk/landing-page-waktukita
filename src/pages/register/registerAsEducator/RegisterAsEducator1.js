@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import symbol from "../../../symbol/XMLID1386.svg";
-import hide from "../../../symbol/hide.svg";
+import symbol from "../../../resources/symbols/XMLID1386.svg";
+import hide from "../../../resources/symbols/hide.svg";
 import "./RegisterAsEducator.css";
 import "../Register.css"
 import NavbarRegister from '../navbar/NavbarRegister'
@@ -39,7 +39,7 @@ const RegisterAsEducator1 = () => {
             <span>Selesai</span>
           </div>
         </div>
-        <p className="mx-auto col-md-7 textPosition">
+        <p className="pt-3 mx-auto col-md-6 textPosition">
           Informasi ini merupakan informasi akun Lembaga Pelatihan di
           Waktukita.com dan tidak dapat diubah.{" "}
           <span style={{ color: "#00A69C", fontWeight: "bold" }}>

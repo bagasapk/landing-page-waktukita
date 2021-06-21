@@ -1,13 +1,13 @@
 .register {
   width: 100%;
-  min-height: 100vh;
+  min-height: 88.9vh;
   /* padding: 0 20px; */
   /* background: #e9e9e9; */
   display: flex;
 }
 
 .register .registerContainer {
-  padding: 60px 60px 0 60px;
+  padding: 40px 60px 0 60px;
   /* margin: auto; */
   width: 100%;
   max-width: 520px;
@@ -40,7 +40,7 @@
   width: 100%;
   /* border: none;
     outline: none; */
-  font-size: 19px;
+  font-size: 16px;
   padding: 10px;
   background: rgba(255, 255, 255, 0.1);
   color: #343a3f;

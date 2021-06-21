@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import symbolActive from "../../../symbol/XMLID1386(active).svg";
+import symbolActive from "../../../resources/symbols/XMLID1386(active).svg";
 import "./RegisterAsEducator.css";
 import "../Register.css";
 import NavbarRegister2 from "../navbar/NavbarRegister2";
@@ -16,6 +16,7 @@ const RegisterAsEducator4 = () => {
   return (
     <div className="backgroundRegister">
       <NavbarRegister2 />
+      <div className="p-5">
       <div className="boxContainer contentPosition">
         <div className="boxFlex col-md-8 boxSize">
           <span className="contentColor">Register</span>
@@ -126,6 +127,7 @@ const RegisterAsEducator4 = () => {
           </button>
         </div>
       </form>
+      </div>
     </div>
   );
 };

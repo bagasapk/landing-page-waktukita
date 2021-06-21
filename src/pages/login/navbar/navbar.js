@@ -1,12 +1,14 @@
-import React from 'react';
-import logo1 from '../../resources/images/logo1.svg';
+import React from "react";
+import logo1 from "../../../resources/images/logo1.svg";
 
 const NavbarLogin = () => {
-    return (
+  return (
     <div className="loginContainer">
-      <div className="navbarLogin">
-        <img alt="logo" src={logo1}></img>
-        <div className="col-lg-5">
+      <div className="navbar navbarLogin">
+        <div>
+          <img className="logoScale" alt="logo" src={logo1}></img>
+        </div>
+        <div className="col-lg-4">
           <div className="buttonFlexNav">
             <span
               style={{ color: "#404041", opacity: "0.5" }}
@@ -14,7 +16,7 @@ const NavbarLogin = () => {
             >
               Login Sebagai ?
             </span>
-            <div className="col-lg-7">
+            <div className="col-lg-8">
               <div className="buttonFlexNav">
                 <button className="navButton Secondary">
                   <span className="textButton">Student</span>
@@ -28,6 +30,6 @@ const NavbarLogin = () => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 export default NavbarLogin;

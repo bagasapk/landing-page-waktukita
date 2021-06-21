@@ -1,6 +1,6 @@
   .login {
     width: 100%;
-    min-height: 100vh;
+    min-height: 88.9vh;
     /* padding: 0 20px; */
     /* background: #e9e9e9; */
     display: flex;
@@ -41,7 +41,7 @@
     width: 100%;
     /* border: none;
       outline: none; */
-    font-size: 19px;
+    font-size: 16px;
     padding: 10px;
     background: rgba(255, 255, 255, 0.1);
     color: #343a3f;
@@ -85,7 +85,7 @@
     display: flex;
     position: absolute !important;
     justify-content: center;
-    top: 140px;
+    top: 15%;
   }
   
   .titleForm{
