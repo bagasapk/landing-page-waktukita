@@ -1,0 +1,8 @@
+.navColor a{
+        color: #404041;
+        opacity: 0.5;
+}
+
+.navColor a:hover{
+    opacity: 1;
+}

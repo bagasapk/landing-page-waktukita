@@ -10,12 +10,13 @@ import RegisterAsEducator2 from "./pages/register/registerAsEducator/RegisterAsE
 import RegisterAsStudent from "./pages/register/registerAsStudent/RegisterAsStudent";
 import RegisterAsEducator3 from "./pages/register/registerAsEducator/RegisterAsEducator3";
 import RegisterAsEducator4 from "./pages/register/registerAsEducator/RegisterAsEducator4";
+import Tentang from './pages/tentang/Tentang';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Route path="/"></Route>
+        <Route exact path="/"><Tentang/></Route>
         <Switch>
           <Route path="/login">
             <Login />

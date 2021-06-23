@@ -1,0 +1,85 @@
+.hero {
+  left: 54.6%;
+  height: 90.7vh;
+}
+
+.heroImg {
+  padding-left: 200px;
+}
+
+.heroBox {
+  max-height: 91vh;
+  overflow: hidden;
+  background-color: white;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 7%;
+}
+
+.heroNumber {
+  align-items: center;
+  color: #00a69c;
+}
+
+.heroDesc p {
+  color: #404041;
+  opacity: 0.5;
+}
+
+.heroDesc {
+  text-align: left;
+}
+
+.textHero {
+  text-align: left;
+}
+
+.waktukita {
+  background-color: #f8fafb;
+}
+
+.slideshowSlider {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.slider {
+  transition: ease 1000ms;
+}
+
+.slideshowDots {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  margin: 15px 7px 0px;
+
+  background-color: #c4c4c4;
+}
+
+.slideshowDots.active {
+  background-color: #00a69c;
+}
+
+.footer{
+  background: linear-gradient(277.89deg, #00A69C -28.68%, #01897F 132.48%);
+}
+
+.footer img{
+  height: 44px;
+}
+
+.footer h6{
+  color: #FFF;
+  font-weight: 700;
+}
+
+.footer p{
+  color: #FFF;
+}
