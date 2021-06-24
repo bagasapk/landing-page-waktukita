@@ -9,9 +9,9 @@
 }
 
 .navbarLogin {
-  padding: 18px 0px 18px 120px;
-  display: flex;
-  justify-content: space-between;
+  padding: 18px 0px 18px;
+  /* display: flex; */
+  /* justify-content: space-between; */
 }
 
 .buttonFlexNav,
