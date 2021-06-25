@@ -5,6 +5,7 @@ form {
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="tel"],
 select,
 .buttonFile {
   width: 100%;
@@ -30,6 +31,6 @@ label {
   border-radius: 8px;
   font-size: 16px;
 }
-input::placeholder{
-  color: #CACACA;
+input::placeholder {
+  color: #cacaca;
 }

@@ -84,9 +84,20 @@
   justify-content: center;
 }
 
-.contentColor {
+button.contentColor , .contentColor {
   color: #00a69c;
   fill: #00a69c;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+button.contentColor:hover{
+background-color: #00a69c;  
+color: white;
+/* border: 1px solid #00a69c; */
+border-radius: 8px;
 }
 
 .textPosition {

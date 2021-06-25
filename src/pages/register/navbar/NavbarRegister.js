@@ -12,7 +12,7 @@ const NavbarRegister = () => {
         </div>
         <div className="pr-3">
           <Navbar.Toggle
-            class="p-1 navbar-toggler"
+            className="p-1 navbar-toggler"
             type="button" 
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -20,10 +20,10 @@ const NavbarRegister = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
         </div>
-        <Navbar.Collapse class="collapse navbar-collapse" id="basic-navbar-nav">
+        <Navbar.Collapse className="collapse navbar-collapse" id="basic-navbar-nav">
           <Nav className=" ml-auto navbar-nav">
             <Nav className="nav-item d-flex justify-content-md-around justify-content-lg-end col-lg-9">
               <Nav className="m-md-1 m-1 m-lg-0 mt-md-3 d-flex col-lg-7">

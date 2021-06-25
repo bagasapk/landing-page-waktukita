@@ -15,8 +15,6 @@ import authService from "../../services/auth.service";
 import { GoogleLogin } from "react-google-login";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 
-
-
 const responseGoogleFailure = (response) => {
   console.log("Login Gagal :", response);
 };
@@ -30,11 +28,19 @@ const responseFacebook = (response) => {
 const Login = (props) => {
   const responseGoogleSuccess = (response) => {
     console.log("Login Success :", response);
+    console.log("Login Success :", response.getBasicProfile());
+    console.log("ID: " + response.getBasicProfile().getId());
+    console.log("Full Name: " + response.getBasicProfile().getName());
+    console.log("Given Name: " + response.getBasicProfile().getGivenName());
+    console.log("Family Name: " + response.getBasicProfile().getFamilyName());
+    console.log("Image URL: " + response.getBasicProfile().getImageUrl());
+    console.log("Email: " + response.getBasicProfile().getEmail());
+
     if (response.accessToken) {
       localStorage.setItem("user", JSON.stringify(response.accessToken));
     }
-    props.history.push('/');
-    window.location.reload();
+    // props.history.push('/');
+    // window.location.reload();
   };
 
   const form = useRef();
