@@ -103,7 +103,7 @@ const Login = (props) => {
           <div className="col-md-6"></div>
           <div className="jumbotronContainer col-md-6"></div>
           <div className="loginBox col-md-12">
-            <div className="loginContainer">
+            <div className="loginContainer p-4">
               <h2 className="titleForm">Login</h2>
               <img
                 className="mx-auto symbolPosition"
@@ -164,7 +164,7 @@ const Login = (props) => {
                 </a>{" "}
                 atau Login dengan{" "}
               </p>
-              <div className="buttonFlexNav">
+              <div className="d-flex justify-content-around">
                 {/* <button className="navButton facebookButton mb-5">
                                 <span className="textButton">Facebook</span>
                                 </button> */}
@@ -173,7 +173,7 @@ const Login = (props) => {
                   autoLoad={true}
                   render={(renderProps) => (
                     <button
-                      className="facebookButton mb-5"
+                      className="facebookButton p-md-2 mb-5"
                       onClick={renderProps.onClick}
                     >
                       <img alt="facebook" className="pr-1" src={fbSymbol}></img>
@@ -188,7 +188,7 @@ const Login = (props) => {
                   clientId={clientId}
                   render={(renderProps) => (
                     <button
-                      className="googleButton mb-5"
+                      className="googleButton p-md-2 n mb-5"
                       onClick={renderProps.onClick}
                       disabled={renderProps.disabled}
                     >

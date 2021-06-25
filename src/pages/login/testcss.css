@@ -14,11 +14,11 @@
   /* justify-content: space-between; */
 }
 
-.buttonFlexNav,
-.boxFlex {
+/* .buttonFlexNav,
+/* .boxFlex {
   display: flex;
   justify-content: space-around;
-}
+} */
 
 .boxGrid {
   display: grid;
@@ -32,7 +32,7 @@
 
 .googleButton {
   border: 2px solid #C6352F;
-  padding: 8px 24px;
+  /* padding: 8px 24px; */
   border-radius: 8px;
   background-color: transparent;
   color: #C6352F;
@@ -40,7 +40,7 @@
 
 .facebookButton {
   border: 2px solid #546CB0;
-  padding: 8px 24px;
+  /* padding: 8px 24px; */
   border-radius: 8px;
   background-color: transparent;
   color: #546CB0;
@@ -67,13 +67,13 @@
 }
 
 .boxSize {
-  /* width: 1106px; */
+  /* width: 1106px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   align-items: center;
-  font-size: 24px;
-  color: #c4c4c4;
+  /* font-size: 24px; */
+  /* color: #c4c4c4; */
 }
 
 .contentPosition {

@@ -23,10 +23,10 @@ const NavbarRegister = () => {
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
         </div>
-        <Navbar.Collapse className="collapse navbar-collapse" id="basic-navbar-nav">
-          <Nav className=" ml-auto navbar-nav">
-            <Nav className="nav-item d-flex justify-content-md-around justify-content-lg-end col-lg-9">
-              <Nav className="m-md-1 m-1 m-lg-0 mt-md-3 d-flex col-lg-7">
+        <Navbar.Collapse class="collapse navbar-collapse" id="basic-navbar-nav">
+          <Nav className="ml-auto navbar-nav p-4 p-md-0">
+            <Nav className="nav-item d-flex justify-content-md-around justify-content-lg-end col-lg-9 p-0 ">
+              <Nav className="m-md-1 m-1 m-lg-0 mt-md-3 d-flex col-lg-7 p-0">
                 <span
                   style={{ color: "#404041", opacity: "0.5" }}
                   className="textButton"
@@ -34,7 +34,7 @@ const NavbarRegister = () => {
                   Register Sebagai ?
                 </span>
               </Nav>
-              <Nav className="d-flex justify-content-around col-lg-12">
+              <Nav className="d-flex justify-content-around col-lg-12 p-0">
                 <Nav>
                   <button className="m-md-1 m-1 m-lg-0  navButton Secondary">
                     <span className="textButton">Student</span>

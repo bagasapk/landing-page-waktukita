@@ -1,7 +1,7 @@
 .registerContainer,
 .boxContainer {
   width: auto;
-  height: 80px;
+  /* height: 80px; */
 }
 
 .registerContainer {
@@ -14,11 +14,11 @@
   justify-content: space-between;
 }
 
-.buttonFlexNav,
+/* .buttonFlexNav,
 .boxFlex {
   display: flex;
   justify-content: space-around;
-}
+} */
 
 .boxGrid {
   display: grid;
@@ -79,10 +79,10 @@
   color: #c4c4c4;
 }
 
-.contentPosition {
+/* .contentPosition {
   display: flex;
   justify-content: center;
-}
+} */
 
 button.contentColor , .contentColor {
   color: #00a69c;
@@ -118,7 +118,7 @@ border-radius: 8px;
 }
 
 input[id="digit"] {
-  width: 66px !important;
-  height: 66px !important;
+  /* width: 66px !important;
+  height: 66px !important; */
   text-align: center;
 }
