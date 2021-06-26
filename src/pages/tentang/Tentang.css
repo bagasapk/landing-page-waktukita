@@ -1,6 +1,6 @@
 .hero {
   left: 54.6%;
-  height: 90.7vh;
+  max-height: 90.7vh;
 }
 
 .heroImg {
@@ -8,15 +8,15 @@
 }
 
 .heroBox {
-  max-height: 91vh;
+  /* max-height: 91vh; */
   overflow: hidden;
   background-color: white;
 }
 
 .heroContainer {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
   left: 7%;
 }
 

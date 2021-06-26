@@ -62,21 +62,21 @@ const Tentang = () => {
     <div>
       <NavbarTentang />
       <section>
-        <div className="heroBox">
+        <div className="heroBox col-sm-12 px-sm-5">
           <div className="d-flex justify-content-between">
-            <div className="col-md-6 heroContainer">
-              <div className="textHero">
+            <div className="col-md-6 pl-5 pl-md-0 row m-0 d-lg-flex flex-lg-column justify-content-lg-center">
+              <div className="textHero d-lg-flex flex-lg-column justify-content-lg-end">
                 <h2
                   style={{
                     fontFamily: "Montserrat, sans-serif",
                     fontWeight: "bold",
-                    fontSize: "46px",
+                    fontSize: "40px",
                   }}
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum
                   cursus dictum duis.
                 </h2>
-                <p className="mr-5 pr-5">
+                <p className="mr-5 pr-5 pb-mb-5">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Quisque commodo pellentesque amet, pellentesque. Leo in sapien
                   nisi, fusce libero ultrices. Neque sed gravida feugiat
@@ -84,22 +84,22 @@ const Tentang = () => {
                   morbi. Enim sapien neque nec risus sodales in.
                 </p>
               </div>
-              <div className="d-flex justify-content-between mr-5 pr-5">
-                <div className="d-flex heroDesc">
+              <div className="d-lg-flex justify-content-between mr-5 pr-5 m-0">
+                <div className="d-flex heroDesc pb-3 pb-mb-0">
                   <img alt="symbol" src={symbol}></img>
-                  <div className="pl-3 d-flex flex-column justify-content-center">
+                  <div className="pb-2 pl-3 d-flex flex-column justify-content-center">
                     <h3 className=" heroNumber m-0 mt-2">20</h3>
                     <p className="">Kelas</p>
                   </div>
                 </div>
-                <div className="d-flex heroDesc">
+                <div className="d-flex heroDesc pb-3 pb-mb-0">
                   <img alt="symbol" src={symbol}></img>
                   <div className="pl-3 d-flex flex-column justify-content-center">
                     <h3 className=" heroNumber m-0 mt-2">32</h3>
                     <p className="">Mentor</p>
                   </div>
                 </div>
-                <div className="d-flex heroDesc">
+                <div className="d-flex heroDesc pb-3 pb-mb-0">
                   <img alt="symbol" src={symbol}></img>
                   <div className="pl-3 d-flex flex-column justify-content-center">
                     <h3 className=" heroNumber m-0 mt-2">500+</h3>
@@ -108,7 +108,7 @@ const Tentang = () => {
                 </div>
               </div>
             </div>
-            <div className="hero">
+            <div className="d-none d-sm-block hero">
               <img className="heroImg" alt="hero" src={hero}></img>
             </div>
           </div>
@@ -202,13 +202,13 @@ const Tentang = () => {
             src={icon}
           ></img>
         </div>
-        <div className="d-flex justify-content-center">
+        <div className="row justify-content-center m-0">
           <img
-            className="p-5 col-md-5"
+            className="p-5 p-sm-5 col-md-7 col-xl-5"
             alt="classes"
             src="https://i.ibb.co/rybnqLt/Mask-Group.png"
           ></img>
-          <div className="p-5 col-md-5 d-flex flex-column justify-content-center">
+          <div className="px-5 col-md-5 d-flex flex-column justify-content-center">
             <h3 style={{ textAlign: "left" }} className="heroNumber">
               Classes
             </h3>
@@ -218,14 +218,14 @@ const Tentang = () => {
               and more — on board and online
             </p>
             <div>
-              <button className="col-md-4 mr-auto d-flex justify-content-center Primary formButton">
+              <button className="col-md-7 mr-auto d-flex justify-content-center Primary formButton">
                 Pick a class
               </button>
             </div>
           </div>
         </div>
-        <div className="d-flex justify-content-center">
-          <div className="p-5 col-md-5 d-flex flex-column justify-content-center">
+        <div className="flex-md-row d-flex flex-column-reverse justify-content-center m-0">
+          <div className="px-5 col-md-5 d-flex flex-column justify-content-center">
             <h3 style={{ textAlign: "right" }} className="heroNumber">
               Assessed | Talent Solution
             </h3>
@@ -235,24 +235,24 @@ const Tentang = () => {
               exclusive hiring pipeline
             </p>
             <div>
-              <button className="col-md-4 ml-auto d-flex justify-content-center Primary formButton">
+              <button className="col-md-8 ml-auto d-flex justify-content-center Primary formButton">
                 Hunting now
               </button>
             </div>
           </div>
           <img
-            className="p-5 col-md-5"
+            className="p-5 col-md-7 col-xl-5"
             alt="talent"
             src="https://i.ibb.co/NxMvH7G/Mask-Group-1.png"
           ></img>
         </div>
-        <div className="d-flex justify-content-center">
+        <div className="row  justify-content-center m-0">
           <img
-            className="p-5 col-md-5"
+            className="p-5 col-md-7 col-xl-5"
             alt="classes"
             src="https://i.ibb.co/rybnqLt/Mask-Group.png"
           ></img>
-          <div className="p-5 col-md-5 d-flex flex-column justify-content-center">
+          <div className="px-5 col-md-5  d-flex flex-column justify-content-center">
             <h3 style={{ textAlign: "left" }} className="heroNumber">
               Personal Development
             </h3>
@@ -262,7 +262,7 @@ const Tentang = () => {
               molestie lectus dui cras faucibus. Sed diam neque.
             </p>
             <div>
-              <button className="col-md-4 mr-auto d-flex justify-content-center Primary formButton">
+              <button className="col-md-7 mr-auto d-flex justify-content-center Primary formButton">
                 Pick a class
               </button>
             </div>
@@ -271,8 +271,8 @@ const Tentang = () => {
       </section>
 
       <section>
-        <div className="d-flex justify-content-center waktukita">
-          <div className="p-4 col-md-6 my-auto">
+        <div className="row justify-content-center waktukita m-0">
+          <div className="p-4 pl-lg-5 col-md-5 col-lg-6 col-xl-5 pr-xl-0 my-auto">
             <h2 style={{ textAlign: "left" }} className="titleForm">
               Jadi apa yang kamu cari?
             </h2>
@@ -281,30 +281,32 @@ const Tentang = () => {
               eget etiam aliquam sed in a. Ridiculus interdum senectus sociis
               porttitor suspendisse amet. Tempor quis morbi.
             </p>
-            <div className="d-flex col-md-8 p-0 justify-content-between">
+            <div className="d-flex col-md-12 p-0 justify-content-around justify-md-content-around">
               <div>
                 <button
-                  style={{ width: "15vw" }}
-                  className="d-flex justify-content-center navButton Primary"
+                  // style={{ width: "15vw" }}
+                  className="d-flex justify-content-center navButton Primary px-xl-5"
                 >
                   <span className="textButton">Student</span>
                 </button>
               </div>
               <div>
                 <button
-                  style={{ width: "15vw" }}
-                  className="d-flex justify-content-center navButton Secondary"
+                  // style={{ width: "15vw" }}
+                  className="d-flex justify-content-center navButton Secondary px-xl-5"
                 >
                   <span className="textButton">Educator</span>
                 </button>
               </div>
             </div>
           </div>
-          <img
-            className="p-4"
-            alt="none"
-            src="https://i.ibb.co/JKW0BXY/Group-13.png"
-          ></img>
+          <div className="col-12 col-md-7 col-lg-6 col-xl-5">
+            <img
+              className="p-md-5 img-fluid "
+              alt="none"
+              src="https://i.ibb.co/JKW0BXY/Group-13.png"
+            ></img>
+          </div>
         </div>
       </section>
 
@@ -321,14 +323,31 @@ const Tentang = () => {
 
         <div className="pb-4 slideshowSlider">
           <div
-            style={{ transform: `translate3d(${-index * 27}%, 0, 0)` }}
-            className="p-5 d-flex flex-nowrap slider"
+            style={{ transform: `translate3d(${-index * 25}%, 0, 0)` }}
+            className="p-5 d-none row d-lg-flex flex-nowrap slider"
           >
             {slides.map((src, index) => (
-              <img className="pl-5" key={index} alt="frame-1" src={src}></img>
+              <div className="col-lg-2">
+                <img
+                  className="img-fluid"
+                  key={index}
+                  alt="frame-1"
+                  src={src}
+                ></img>
+              </div>
             ))}
           </div>
-          <div>
+          <div className="d-lg-none">
+            {slides.map((src, index) => (
+              <img
+                className="img-fluid"
+                key={index}
+                alt="frame-1"
+                src={src}
+              ></img>
+            ))}
+          </div>
+          <div className="d-none d-lg-block">
             {slides.slice(0, 3).map((_, idx) => (
               <div
                 key={idx}
@@ -340,12 +359,12 @@ const Tentang = () => {
             ))}
           </div>
         </div>
-        <div className="footer d-flex justify-content-between">
-          <div className="pl-5 pt-5 col-md-3 d-flex flex-column justify-content-between">
+        <div className="footer row d-md-flex justify-content-between m-0">
+          <div className="pl-md-3 pt-5 col-md-4 col-lg-3 d-md-flex flex-column justify-content-between p-0">
             <div>
               <img alt="logo" src={logo}></img>
             </div>
-            <div className="pl-5 text-left">
+            <div className="pt-4 pt-md-0 pl-md-3 pl-lg-3 text-md-left text-center text-xl-center pl-xl-0">
               <h6>Contact Us</h6>
               <div>
                 <img alt="messages" src={contact1}></img>
@@ -355,9 +374,9 @@ const Tentang = () => {
               </div>
             </div>
           </div>
-          <div className="pt-5 mt-5 d-flex col-md-5 justify-content-around">
-            <div className="d-flex h-100 flex-column justify-content-between">
-              <div className="text-left">
+          <div className="pt-md-5 mt-md-5 d-lg-flex col-md-4 col-lg-5 justify-content-around justify-md-content-around p-0">
+            <div className="d-md-flex flex-md-column justify-md-content-between">
+              <div className="text-lg-left">
                 <h6 className="pb-1 pt-5">Contact Us</h6>
                 <p>Beranda</p>
                 <p>Kategori</p>
@@ -366,26 +385,26 @@ const Tentang = () => {
                 <p>Kontak</p>
               </div>
             </div>
-            <div className="d-flex h-100 flex-column justify-content-between">
-              <div className="text-left">
-                <h6 className="pb-1 pt-5">Join Us</h6>
+            <div className="d-md-flex h-md-100 flex-md-column justify-md-content-between">
+              <div className="text-lg-left">
+                <h6 className="pb-1 pt-3 pt-md-5">Join Us</h6>
                 <p>Join as Student</p>
                 <p>Join as Educator</p>
               </div>
             </div>
-            <div className="d-flex h-100 flex-column justify-content-between">
-              <div className="text-left">
-                <h6 className="pb-1 pt-5">More</h6>
+            <div className="d-md-flex h-md-100 flex-md-column justify-md-content-between">
+              <div className="text-lg-left">
+                <h6 className="pb-1 pt-3 pt-md-5">More</h6>
                 <p>FAQ</p>
                 <p>Privacy Policy</p>
                 <p>Terms & Condition</p>
               </div>
             </div>
           </div>
-          <div className="pt-5 d-flex flex-column justify-content-around">
-            <div className="pt-5 d-flex">
+          <div className="pt-4 pt-md-5 col-md-4 d-flex flex-column justify-content-around">
+            <div className="pt-md-5 d-md-flex">
               <img alt="loc" src={location}></img>
-              <div className="col-md-9 text-left">
+              <div className="col-md-9 pt-2 pt-md-0 text-md-left">
                 <h6>Yogyakarta</h6>
                 <p>
                   Innovation Factory Block 71 Yogyakarta Jl. Prof. Dr. Herman
@@ -393,9 +412,9 @@ const Tentang = () => {
                 </p>
               </div>
             </div>
-            <div className="d-flex">
+            <div className="d-md-flex">
               <img alt="loc" src={location}></img>
-              <div className="col-md-9 text-left">
+              <div className="col-md-9 pt-2 pt-md-0 text-md-left">
                 <h6>Jakarta</h6>
                 <p>
                   Innovation Factory Block 71 Jakarta Ariobimo Sentral, South
@@ -405,7 +424,7 @@ const Tentang = () => {
             </div>
           </div>
         </div>
-        <div className="pr-5 pl-5 pb-1 pt-3 footer">
+        <div className="pr-md-5 pl-md-5 pb-1 pt-3 footer">
           <div className="pr-5 pl-5 pt-1">
             <div className="border-top pr-5 pl-5 pt-1">
               <p>Copyright © 2021 Waktukita.com</p>

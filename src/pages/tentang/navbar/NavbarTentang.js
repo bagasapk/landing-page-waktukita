@@ -6,7 +6,7 @@ import "./navTentang.css";
 const NavbarTentang = () => {
   return (
     <div className="loginContainer">
-      <Navbar expand="lg" className="pl-5 ml-lg-5 navbarLogin">
+      <Navbar expand="lg" className="pl-5 pl-lg-1 pr-3 pr-lg-0 ml-lg-5 navbarLogin">
       {/* <div className="pl-5 ml-lg-5 navbar navbar-expand-md navbarLogin"> */}
         <div>
           <img className="logoScale" alt="logo" src={logo1}></img>
