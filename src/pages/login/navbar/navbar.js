@@ -27,7 +27,7 @@ const NavbarLogin = () => {
           id="basic-navbar-nav"
           style={{ zIndex: "1", backgroundColor: "white" }}
         >
-          <Nav className=" ml-auto navbar-nav p-3 p-md-0  ">
+          <Nav className="ml-auto navbar-nav p-3 p-md-0  ">
             <Nav className="nav-item d-flex justify-content-md-around justify-content-lg-end col-lg-9">
               <Nav className="m-md-1 m-1 m-lg-0 mt-md-3 d-flex col-lg-7">
                 <span

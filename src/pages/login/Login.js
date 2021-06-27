@@ -27,8 +27,8 @@ const responseFacebook = (response) => {
 
 const Login = (props) => {
   const responseGoogleSuccess = (response) => {
-    console.log("Login Success :", response);
-    console.log("Login Success :", response.getBasicProfile());
+    // console.log("Login Success :", response);
+    // console.log("Login Success :", response.getBasicProfile());
     console.log("ID: " + response.getBasicProfile().getId());
     console.log("Full Name: " + response.getBasicProfile().getName());
     console.log("Given Name: " + response.getBasicProfile().getGivenName());

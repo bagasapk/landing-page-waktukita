@@ -11,13 +11,17 @@ import RegisterAsStudent from "./pages/register/registerAsStudent/RegisterAsStud
 import RegisterAsEducator3 from "./pages/register/registerAsEducator/RegisterAsEducator3";
 import RegisterAsEducator4 from "./pages/register/registerAsEducator/RegisterAsEducator4";
 import Tentang from './pages/tentang/Tentang';
+import Kontak from './pages/kontak/Kontak';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Route exact path="/"><Tentang/></Route>
+        <Route exact path="/"><Kontak/></Route>
         <Switch>
+          <Route path="/about">
+            <Tentang />
+          </Route>
           <Route path="/login">
             <Login />
           </Route>

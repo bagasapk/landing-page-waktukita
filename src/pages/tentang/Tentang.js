@@ -64,7 +64,7 @@ const Tentang = () => {
       <section>
         <div className="heroBox col-sm-12 px-sm-5">
           <div className="d-flex justify-content-between">
-            <div className="col-md-6 pl-5 pl-md-0 row m-0 d-lg-flex flex-lg-column justify-content-lg-center">
+            <div className="col-md-6 col-lg-7 col-xl-6 pl-5 pl-md-0 pl-lg-5 row m-0 d-lg-flex flex-lg-column justify-content-lg-center">
               <div className="textHero d-lg-flex flex-lg-column justify-content-lg-end">
                 <h2
                   style={{
@@ -204,7 +204,7 @@ const Tentang = () => {
         </div>
         <div className="row justify-content-center m-0">
           <img
-            className="p-5 p-sm-5 col-md-7 col-xl-5"
+            className="p-5 p-sm-5 col-md-7 col-xl-5 col-lg-6"
             alt="classes"
             src="https://i.ibb.co/rybnqLt/Mask-Group.png"
           ></img>
@@ -241,14 +241,14 @@ const Tentang = () => {
             </div>
           </div>
           <img
-            className="p-5 col-md-7 col-xl-5"
+            className="p-5 col-md-7 col-xl-5 col-lg-6"
             alt="talent"
             src="https://i.ibb.co/NxMvH7G/Mask-Group-1.png"
           ></img>
         </div>
         <div className="row  justify-content-center m-0">
           <img
-            className="p-5 col-md-7 col-xl-5"
+            className="p-5 col-md-7 col-xl-5 col-lg-6"
             alt="classes"
             src="https://i.ibb.co/rybnqLt/Mask-Group.png"
           ></img>
@@ -300,7 +300,7 @@ const Tentang = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-7 col-lg-6 col-xl-5">
+          <div className="col-12 col-md-6 col-lg-5 col-xl-5">
             <img
               className="p-md-5 img-fluid "
               alt="none"
@@ -360,11 +360,11 @@ const Tentang = () => {
           </div>
         </div>
         <div className="footer row d-md-flex justify-content-between m-0">
-          <div className="pl-md-3 pt-5 col-md-4 col-lg-3 d-md-flex flex-column justify-content-between p-0">
+          <div className="pl-md-5 pt-5 col-md-4 col-lg-3 d-md-flex flex-column justify-content-between p-0">
             <div>
               <img alt="logo" src={logo}></img>
             </div>
-            <div className="pt-4 pt-md-0 pl-md-3 pl-lg-3 text-md-left text-center text-xl-center pl-xl-0">
+            <div className="pt-4 pt-md-0 pl-lg-3 text-md-left text-center text-xl-center pl-xl-0">
               <h6>Contact Us</h6>
               <div>
                 <img alt="messages" src={contact1}></img>

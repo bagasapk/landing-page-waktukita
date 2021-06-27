@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav} from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 // import { Link } from "react-router-dom";
 import logo1 from "../../../logo1.svg";
 
@@ -13,7 +13,7 @@ const NavbarRegister = () => {
         <div className="pr-3">
           <Navbar.Toggle
             className="p-1 navbar-toggler"
-            type="button" 
+            type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
             aria-controls="basic-navbar-nav"
@@ -23,7 +23,11 @@ const NavbarRegister = () => {
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
         </div>
-        <Navbar.Collapse class="collapse navbar-collapse" id="basic-navbar-nav">
+        <Navbar.Collapse
+          class="collapse navbar-collapse"
+          id="basic-navbar-nav"
+          style={{ zIndex: "1", backgroundColor: "white" }}
+        >
           <Nav className="ml-auto navbar-nav p-4 p-md-0">
             <Nav className="nav-item d-flex justify-content-md-around justify-content-lg-end col-lg-9 p-0 ">
               <Nav className="m-md-1 m-1 m-lg-0 mt-md-3 d-flex col-lg-7 p-0">
