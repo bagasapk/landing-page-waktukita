@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import logo1 from "../../../resources/images/logo1.svg";
+import icon3 from "./layout-module-1.svg";
 
 const NavbarBeranda = () => {
   return (
@@ -22,23 +23,57 @@ const NavbarBeranda = () => {
             style={{ zIndex: "1", backgroundColor: "white" }}
           >
             <Nav className="ml-lg-auto col-lg-11 col-xl-8 justify-content-around navColor text-left p-0">
-              <Nav.Link style={{ color: "#00A69C", opacity: "1", fontWeight: "bold" }} href="#home">Beranda</Nav.Link>
-              <NavDropdown title="Kategori" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
+              <Nav.Link
+                style={{ color: "#00A69C", opacity: "1", fontWeight: "bold" }}
+                href="#home"
+              >
+                Beranda
+              </Nav.Link>
+              <NavDropdown title="Kategori" id="basic-nav-dropdown" >
+                <NavDropdown.Item class="d-flex align-content-center py-0" href="#action/3.1" style={{opacity:'1'}}>
+                  <img className="pr-3" src={icon3} alt="icon"></img>
+                  <span className="align-self-center">Analisis Data</span>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
+                <NavDropdown.Item class="d-flex align-content-center py-0" href="#action/3.1" style={{opacity:'1'}}>
+                  <img className="pr-3" src={icon3} alt="icon"></img>
+                  <span className="align-self-center">Bisnis</span>
+                </NavDropdown.Item>
+                <NavDropdown.Item class="d-flex align-content-center py-0" href="#action/3.1" style={{opacity:'1'}}>
+                  <img className="pr-3" src={icon3} alt="icon"></img>
+                  <span className="align-self-center">Desain</span>
+                </NavDropdown.Item>
+                <NavDropdown.Item class="d-flex align-content-center py-0" href="#action/3.1" style={{opacity:'1'}}>
+                  <img className="pr-3" src={icon3} alt="icon"></img>
+                  <span className="align-self-center">Ekonomi</span>
+                </NavDropdown.Item>
+                <NavDropdown.Item class="d-flex align-content-center py-0" href="#action/3.1" style={{opacity:'1'}}>
+                  <img className="pr-3" src={icon3} alt="icon"></img>
+                  <span className="align-self-center">Ilmu komunikasi</span>
+                </NavDropdown.Item>
+                <NavDropdown.Item class="d-flex align-content-center py-0" href="#action/3.1" style={{opacity:'1'}}>
+                  <img className="pr-3" src={icon3} alt="icon"></img>
+                  <span className="align-self-center">Kerajinan tangan</span>
+                </NavDropdown.Item>
+                <NavDropdown.Item class="d-flex align-content-center py-0" href="#action/3.1" style={{opacity:'1'}}>
+                  <img className="pr-3" src={icon3} alt="icon"></img>
+                  <span className="align-self-center">Marketing</span>
+                </NavDropdown.Item>
+                <NavDropdown.Item class="d-flex align-content-center py-0" href="#action/3.1" style={{opacity:'1'}}>
+                  <img className="pr-3" src={icon3} alt="icon"></img>
+                  <span className="align-self-center">Operasional</span>
+                </NavDropdown.Item>
+                <NavDropdown.Item class="d-flex align-content-center py-0" href="#action/3.1" style={{opacity:'1'}}>
+                  <img className="pr-3" src={icon3} alt="icon"></img>
+                  <span className="align-self-center">Pengembangan website</span>
+                </NavDropdown.Item>
+                <NavDropdown.Item class="d-flex align-content-center py-0" href="#action/3.1" style={{opacity:'1'}}>
+                  <img className="pr-3" src={icon3} alt="icon"></img>
+                  <span className="align-self-center">Seni</span>
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#link">Artikel</Nav.Link>
               <Nav.Link href="#link">Tentang</Nav.Link>
-              <Nav.Link
-                href="#link"
-              >
-                Kontak
-              </Nav.Link>
+              <Nav.Link href="#link">Kontak</Nav.Link>
               <button className="m-md-1 mb-2 mb-lg-0 navButton Secondary">
                 <span className="textButton">Student</span>
               </button>

@@ -76,3 +76,7 @@
 .artikel h5{
     color: #404041;
 }
+
+.dropdown-menu a:hover{  
+  color: #00a69c;
+}
