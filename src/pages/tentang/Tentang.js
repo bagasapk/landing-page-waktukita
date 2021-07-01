@@ -347,11 +347,11 @@ const Tentang = () => {
               ></img>
             ))}
           </div>
-          <div className="d-none d-lg-block">
+          <div className="d-none d-lg-block ">
             {slides.slice(0, 3).map((_, idx) => (
               <div
                 key={idx}
-                className={`slideshowDots${index === idx ? " active" : ""}`}
+                className={`tentang slideshowDots${index === idx ? " active" : ""}`}
                 onClick={() => {
                   setIndex(idx);
                 }}

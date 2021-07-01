@@ -118,9 +118,8 @@ const Kontak = () => {
             <h6>Ikuti sosial media kami</h6>
             <div className="py-3 text-center text-md-left">
               <img alt="linkedin" src={icon3}></img>
-              <img className="pl-3" alt="linkedin" src={icon4}></img>
+              <img className="pl-3" alt="instagram" src={icon4}></img>
             </div>
-            <img></img>
           </div>
           <div className="p-lg-3 pt-4 pt-md-5 pt-lg-0 d-flex flex-column justify-content-around">
             <div className="p-md-5 pt-lg-0 d-md-flex">
