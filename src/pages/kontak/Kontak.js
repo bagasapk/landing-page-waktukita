@@ -1,16 +1,17 @@
 import React from "react";
-import NavbarKontak from "./navbar/NavbarKontak";
 import "./Kontak.css";
 import icon1 from "./Group 56 (1).svg";
 import icon2 from "./Group 55 (1).svg";
 import icon3 from "../../resources/contact/Group 54.svg";
 import icon4 from "../../resources/contact/Group 50.svg";
 import location from "../../resources/symbols/Group10.svg";
+import Navbar2 from "../../components/navbar/Navbar2";
+import ReactTooltip from "react-tooltip";
 
 const Kontak = () => {
   return (
     <div>
-      <NavbarKontak />
+      <Navbar2 />
       <div
         style={{ backgroundColor: "white" }}
         className="d-md-flex hubungikami px-lg-5 "
@@ -103,13 +104,29 @@ const Kontak = () => {
             <h6 className="p-2 text-center text-md-left">Kontak Kami</h6>
             <div>
               <div className="p-2 d-flex ">
-                <img alt="message" src={icon1}></img>
+                <img
+                  data-tip
+                  data-for="Email"
+                  alt="Email"
+                  src={icon1}
+                ></img>
+                <ReactTooltip id="Email" effect="solid" place="left">
+                  <span>Email</span>
+                </ReactTooltip>
                 <span className="pl-2 align-self-center">
                   info@waktukita.com
                 </span>
               </div>
               <div className="p-2 d-flex">
-                <img alt="message" src={icon2}></img>
+                <img
+                  data-tip
+                  data-for="telephone"
+                  alt="telephone"
+                  src={icon2}
+                ></img>
+                <ReactTooltip id="telephone" effect="solid" place="left">
+                  <span>Telephone</span>
+                </ReactTooltip>
                 <span className="pl-2 align-self-center">+62 8112640520</span>
               </div>
             </div>
@@ -117,13 +134,25 @@ const Kontak = () => {
           <div className="px-5 pt-5 mt-1 text-left mx-auto mx-md-0">
             <h6>Ikuti sosial media kami</h6>
             <div className="py-3 text-center text-md-left">
-              <img alt="linkedin" src={icon3}></img>
-              <img className="pl-3" alt="instagram" src={icon4}></img>
+              <img
+                data-tip
+                data-for="Linkedin"
+                alt="linkedin"
+                src={icon3}
+              ></img>
+              <ReactTooltip id="Linkedin" effect="solid" place="bottom">
+                <span>Linkedin</span>
+              </ReactTooltip>
+              <img data-tip
+                data-for="Instagram" className="pl-3" alt="instagram" src={icon4}></img>
+              <ReactTooltip id="Instagram" effect="solid" place="bottom">
+                <span>Instagram</span>
+              </ReactTooltip>
             </div>
           </div>
           <div className="p-lg-3 pt-4 pt-md-5 pt-lg-0 d-flex flex-column justify-content-around">
             <div className="p-md-5 pt-lg-0 d-md-flex">
-              <img alt="loc" src={location}></img>
+              <img className="align-self-start" alt="loc" src={location}></img>
               <div className="col-md-10 pt-2 pt-md-0 text-md-left">
                 <h6>Yogyakarta</h6>
                 <p>
@@ -133,7 +162,7 @@ const Kontak = () => {
               </div>
             </div>
             <div className="pl-md-5 d-md-flex pb-5">
-              <img alt="loc" src={location}></img>
+              <img className="align-self-start" alt="loc" src={location}></img>
               <div className="col-md-10 pt-2 pt-md-0 text-md-left">
                 <h6>Jakarta</h6>
                 <p>

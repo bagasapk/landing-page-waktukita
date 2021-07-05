@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavbarBeranda from "./navbar/NavbarBeranda";
+import Navbar2 from "../../components/navbar/Navbar2";
 import img from "./Rectangle 69.svg";
 import dashboard from "./dashboard.svg";
 import icon from "../../resources/symbols/XMLID1386(active).svg";
@@ -7,18 +7,24 @@ import icon1 from "../tentang/Group10.svg";
 import icon2 from "./Group 113.svg";
 import icon3 from "./Group 2753.svg";
 import "./Beranda.css";
-import logo from "../../resources/images/Vector.svg";
-import contact1 from "../../resources/contact/Group 56.svg";
-import contact2 from "../../resources/contact/Group 55.svg";
-import contact3 from "../../resources/contact/Group 54.svg";
-import contact4 from "../../resources/contact/Group 50.svg";
-import location from "../../resources/symbols/Group10.svg";
+import Footer from "../../components/footer/Footer";
 
 const Beranda = () => {
   const [index, setIndex] = useState(0);
   const [index2, setIndex2] = useState(0);
+  const [index3, setIndex3] = useState(0);
   const timeoutRef2 = React.useRef(null);
   const tests = ["John Doe", "John Cena"];
+  const categories = [
+    "Perangkat lunak",
+    "Teknologi",
+    "Desain",
+    "Pengembangan diri",
+    "Seni",
+    "Marketing",
+    "Teknik",
+    "Pengembangan website",
+  ];
 
   function resetTimeout2() {
     if (timeoutRef2.current) {
@@ -80,36 +86,85 @@ const Beranda = () => {
       return undefined;
     }
   };
-  // const slides = [img, img, img, img, img, img];
-  // const [index, setIndex] = React.useState(0);
-  // const timeoutRef = React.useRef(null);
-  // const delay = 400000;
 
-  // // function resetTimeout() {
-  // //   if (timeoutRef.current) {
-  // //     clearTimeout(timeoutRef.current);
-  // //   }
-  // // }
+  const renderButton = () => {
+    if (index3 === categories.length - 1) {
+      return undefined;
+    } else {
+      return (
+        <div role="button" className="carousel-control-prev chevron2">
+          <i
+            onClick={() => {
+              setIndex3(index3 + 1);
+            }}
+            class="bi bi-chevron-left chevron"
+          ></i>
+          <span className="sr-only"></span>
+        </div>
+      );
+    }
+  };
 
-  // // React.useEffect(() => {
-  // //   resetTimeout();
-  // //   timeoutRef.current = setTimeout(
-  // //     () =>
-  // //       setIndex((prevIndex) =>
-  // //         prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-  // //       ),
-  // //     delay
-  // //   );
+  const renderButton2 = () => {
+    if (index3 === 0) {
+      return undefined;
+    } else {
+      return (
+        <div role="button" className="carousel-control-next chevron2">
+          <i
+            onClick={() => {
+              setIndex3(index3 - 1);
+            }}
+            class="bi bi-chevron-right chevron"
+          ></i>
+          <span></span>
+        </div>
+      );
+    }
+  };
+  const renderButton3 = () => {
+    if (index3 === 0) {
+      return undefined;
+    } else {
+      return (
+        <div role="button" className="d-xl-none carousel-control-next chevron2">
+          <i
+            onClick={() => {
+              setIndex3(index3 - 1);
+            }}
+            class="bi bi-chevron-right chevron"
+          ></i>
+          <span></span>
+        </div>
+      );
+    }
+  };
 
-  // //   return () => {
-  // //     resetTimeout();
-  // //   };
-  // // }, [slides.length, index]);
+  const renderButton4 = () => {
+    if (index3 === 2) {
+      return undefined;
+    } else {
+      return (
+        <div role="button" className="d-xl-none carousel-control-prev chevron2">
+          <i
+            onClick={() => {
+              setIndex3(index3 + 1);
+            }}
+            class="bi bi-chevron-left chevron"
+          ></i>
+          <span></span>
+        </div>
+      );
+    }
+  };
 
   return (
     <div className="beranda">
-      <NavbarBeranda />
-      <div className="slideshowSlider">
+      <Navbar2 />
+      <div
+        style={{ backgroundColor: "white" }}
+        className="slideshowSlider pt-3"
+      >
         <div
           style={{ transform: `translate3d(${-index * 93.3}%, 0, 0)` }}
           className="d-none d-xl-block px-5 slider position-relative"
@@ -161,6 +216,29 @@ const Beranda = () => {
             ))}
           </div>
         </div>
+        <div
+          style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+          className="d-block d-md-none slider position-relative"
+        >
+          <div className="d-flex flex-nowrap">
+            {slides.map((src, index) => (
+              <div className="col-12 p-0">
+                <img
+                  className="d-block w-100 img-fluid"
+                  key={index}
+                  alt="frame-1"
+                  src={src}
+                ></img>
+                <img
+                  className="d-block w-100 img-fluid"
+                  key={index}
+                  alt="frame-1"
+                  src={src}
+                ></img>
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="d-block berandaSlider">
           {slides.map((_, idx) => (
             <div
@@ -173,50 +251,89 @@ const Beranda = () => {
           ))}
         </div>
       </div>
-      <div className="d-flex flex-md-row flex-column text-left mx-auto mx-md-0 flex-md-wrap justify-content-lg-between justify-content-md-start px-5">
-        <div className="px-0">
-          <img src={dashboard} alt="grid"></img>
-          <span className="pl-2">Perangkat lunak</span>
+      <h4 className="titleForm d-block d-xl-none">Kategori</h4>
+      <img
+        className="d-block d-xl-none mx-auto symbolPosition"
+        alt="symbol"
+        style={{ width: "20px", height: "45px" }}
+        src={icon}
+      ></img>
+      <div className="d-block d-md-none slideshowSlider">
+        <div
+          style={{ transform: `translate3d(${-index3 * 100}%, 0, 0)` }}
+          className="d-block d-lg-none slider position-relative"
+        >
+          <div className="d-flex flex-nowrap">
+            {categories.map((src, index) => (
+              <div className="d-flex justify-content-center col-12 col-md-2 ml-md-5 px-md-2">
+                <img
+                  className="d-block col-2 col-md-6 img-fluid"
+                  key={index}
+                  alt="frame-1"
+                  src={dashboard}
+                ></img>
+                <p className="align-self-center pt-3">{src}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="px-0">
-          <img src={dashboard} alt="grid"></img>
-          <span className="pl-2">Teknologi</span>
-        </div>
-        <div className="px-0">
-          <img src={dashboard} alt="grid"></img>
-          <span className="pl-2">Desain</span>
-        </div>
-        <div className="px-0">
-          <img src={dashboard} alt="grid"></img>
-          <span className="pl-2">Pengembangan diri</span>
-        </div>
-        <div className="px-0">
-          <img src={dashboard} alt="grid"></img>
-          <span className="pl-2">Seni</span>
-        </div>
-        <div className="px-0">
-          <img src={dashboard} alt="grid"></img>
-          <span className="pl-2">Marketing</span>
-        </div>
-        <div className="px-0">
-          <img src={dashboard} alt="grid"></img>
-          <span className="pl-2">Teknik</span>
-        </div>
-        <div className="px-0">
-          <img src={dashboard} alt="grid"></img>
-          <span className="pl-2">Pengembangan website</span>
-        </div>
+        {renderButton()}
+        {renderButton2()}
       </div>
-      `
-      <div className="row px-5 pt-5 pb-3 justify-content-between">
+      <div className="d-none d-md-block slideshowSlider">
+        <div
+          style={{ transform: `translate3d(${-index3 * 94}%, 0, 0)` }}
+          className="d-md-block d-lg-none slider position-relative"
+        >
+          <div className="d-flex flex-nowrap">
+            {categories.map((src, index) => (
+              <div className="d-flex justify-content-center col-12 col-md-3 ml-md-5 px-md-2">
+                <img
+                  className="d-block col-2 col-md-4 img-fluid"
+                  key={index}
+                  alt="frame-1"
+                  src={dashboard}
+                ></img>
+                <p className="align-self-center pt-3">{src}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        {renderButton3()}
+        {renderButton4()}
+      </div>
+      <div className="d-none d-lg-block slideshowSlider">
+        <div
+          style={{ transform: `translate3d(${-index3 * 88}%, 0, 0)` }}
+          className="d-none d-lg-block d-xl-block slider position-relative"
+        >
+          <div className="d-flex flex-nowrap justify-content-xl-center">
+            {categories.map((src, index) => (
+              <div className="d-flex justify-content-center col-12 col-md-3 col-xl-1 p-xl-0 ml-xl-0 px-xl-0 mx-xl-4 ml-md-5 px-md-2">
+                <img
+                  className="d-block col-2 col-md-4 col-lg-3 col-xl-6 img-fluid"
+                  key={index}
+                  alt="frame-1"
+                  src={dashboard}
+                ></img>
+                <p className="align-self-center pt-3">{src}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        {renderButton3()}
+        {renderButton4()}
+      </div>
+
+      <div className="row m-0 px-5 pt-5 pb-3 justify-content-between">
         <h2 className="titleForm text-left ">Kelas dalam Waktu dekat</h2>
         <p className="align-self-center">
           Lihat semua <i className="bi bi-chevron-right"></i>
         </p>
       </div>
-      <div className="row mx-5">
+      <div className="row mx-4 mx-md-5">
         {cards.map((cards) => (
-          <div className="px-3 col-md-6 col-lg-3">
+          <div className="px-0 px-md-3 col-md-6 col-lg-3">
             <div class="card  p-0 berandaCardFull">
               <div className="d-flex">
                 <img
@@ -255,7 +372,7 @@ const Beranda = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="d-flex justify-content-xl-end justify-content-lg-center justify-content-md-end">
+                  <div className="d-flex justify-content-xl-end justify-content-lg-center justify-content-md-end justify-content-end">
                     <span
                       style={{ fontWeight: "700" }}
                       className="align-self-center"
@@ -270,15 +387,15 @@ const Beranda = () => {
           </div>
         ))}
       </div>
-      <div className="row px-5 pt-5 pb-3 justify-content-between">
+      <div className="row m-0 px-5 pt-5 pb-3 justify-content-between">
         <h2 className="titleForm text-left ">Kelas Rekomendasi</h2>
         <p className="align-self-center">
           Lihat semua <i className="bi bi-chevron-right"></i>
         </p>
       </div>
-      <div className="row mx-5">
+      <div className="row mx-4 mx-md-5">
         {cards.map((cards) => (
-          <div className="px-3 col-md-6 col-lg-3">
+          <div className="px-0 px-md-3 col-md-6 col-lg-3">
             <div class="card  p-0 berandaCardFull">
               <div className="d-flex">
                 <img
@@ -317,7 +434,7 @@ const Beranda = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="d-flex justify-content-xl-end justify-content-lg-center justify-content-md-end">
+                  <div className="d-flex justify-content-xl-end justify-content-lg-center justify-content-md-end justify-content-end">
                     <span
                       style={{ fontWeight: "700" }}
                       className="align-self-center"
@@ -332,15 +449,15 @@ const Beranda = () => {
           </div>
         ))}
       </div>
-      <div className="row px-5 pt-5 pb-3 justify-content-between">
+      <div className="row m-0 px-5 pt-5 pb-3 justify-content-between">
         <h2 className="titleForm text-left ">Kelas Favorit</h2>
         <p className="align-self-center">
           Lihat semua <i className="bi bi-chevron-right"></i>
         </p>
       </div>
-      <div className="row mx-5">
+      <div className="row mx-4 mx-md-5">
         {cards.map((cards) => (
-          <div className="px-3 col-md-6 col-lg-3">
+          <div className="px-0 px-md-3 col-md-6 col-lg-3">
             <div class="card  p-0 berandaCardFull">
               <div className="d-flex">
                 <img
@@ -379,7 +496,7 @@ const Beranda = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="d-flex justify-content-xl-end justify-content-lg-center justify-content-md-end">
+                  <div className="d-flex justify-content-xl-end justify-content-lg-center justify-content-md-end justify-content-end">
                     <span
                       style={{ fontWeight: "700" }}
                       className="align-self-center"
@@ -484,39 +601,39 @@ const Beranda = () => {
         src={icon}
       ></img>
       <div className="col-md-12 p-3 p-md-5 d-flex flex-md-row flex-column justify-content-center">
-        <div className="col-md-6 col-xl-6 col-lg-4 d-flex justify-content-around">
-          <div class="card col-5 p-0 berandaCardFull2">
+        <div className="col-md-6 col-xl-6 col-lg-6 px-3 px-md-0 pr-5 pr-md-0 d-flex flex-md-row flex-column justify-content-center">
+          <div class="card col-12 col-md-5 p-0 berandaCardFull2 pt-5 pt-md-0 px-md-2">
             <img
               src="https://i.ibb.co/rybnqLt/Mask-Group.png"
-              class=""
+              class="d-block w-100"
               alt="Artikel1"
             />
-            <div class="card-body artikel text-left p-0 ">
+            <div class="card-body artikel text-left p-0 pl-3 pl-md-0 ">
               <p className="py-2 m-0">12 April 2021</p>
-              <h5 class="card-title">Lorem Ipsum</h5>
-              <span class="card-text">
+              <h5 class="">Lorem Ipsum</h5>
+              <span class="card-text truncate">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. A nulla
                 vitae varius tortor id imperdiet.
               </span>
             </div>
           </div>
-          <div class="card col-5 p-0 berandaCardFull2 ">
+          <div class="card col-12 col-md-5 p-0 berandaCardFull2 pt-5 pt-md-0 px-md-2 ">
             <img
               src="https://i.ibb.co/rybnqLt/Mask-Group.png"
-              class=""
+              class="d-block w-100"
               alt="Artikel1"
             />
-            <div class="card-body artikel text-left p-0 ">
+            <div class="card-body artikel text-left p-0 pl-3 pl-md-0 ">
               <p className="py-2 m-0">12 April 2021</p>
-              <h5 class="card-title">Lorem Ipsum</h5>
-              <span class="card-text">
+              <h5 class="">Lorem Ipsum</h5>
+              <span class="card-text truncate">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. A nulla
                 vitae varius tortor id imperdiet.
               </span>
             </div>
           </div>
         </div>
-        <div className="row col-12 col-md-6 col-lg-8 col-xl-6">
+        <div className="row col-12 col-md-6 col-lg-6 col-xl-6">
           <div className="d-flex col-md-6 col-lg-12 flex-lg-row flex-column py-5 py-md-0 pb-lg-2 justify-content-lg-center">
             <div className="align-self-start">
               <img
@@ -525,12 +642,12 @@ const Beranda = () => {
                 alt="Artikel1"
               />
             </div>
-            <div class="d-flex flex-column col-md-12 px-md-0 px-lg-2 col-lg-8 py-md-0 py-lg-3 artikel text-left">
+            <div class="d-flex flex-column col-md-12 px-md-0 px-lg-2 col-lg-6 col-xl-8 py-md-0 py-lg-0 py-xl-3 artikel text-left">
               <p className="py-2 m-0">12 April 2021</p>
               <h5>Lorem Ipsum</h5>
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. A nulla
-                vitae varius tortor id imperdiet.
+              <span className="truncate">
+                Lorem ispansum dolor sit amet, consectetur adipiscing elit. A
+                nulla vitae varius tortor id imperdiet.
               </span>
             </div>
           </div>
@@ -542,10 +659,10 @@ const Beranda = () => {
                 alt="Artikel1"
               />
             </div>
-            <div class="d-flex flex-column col-md-12 px-md-0 px-lg-2 col-lg-8 py-md-0 py-lg-3 artikel text-left">
+            <div class="d-flex flex-column col-md-12 px-md-0 px-lg-2 col-lg-6 col-xl-8 py-md-0 py-lg-0 py-xl-3 artikel text-left">
               <p className="py-2 m-0">12 April 2021</p>
               <h5>Lorem Ipsum</h5>
-              <span>
+              <span className="truncate">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. A nulla
                 vitae varius tortor id imperdiet.
               </span>
@@ -554,82 +671,11 @@ const Beranda = () => {
         </div>
       </div>
       <div className="pb-5 d-flex justify-content-center">
-        <button className="col-6 col-md-2 p-3 d-flex justify-content-center navButton Primary">
+        <button className="col-6 col-md-3 p-3 d-flex justify-content-center navButton Primary">
           <span className="textButton">Artikel lainnya</span>
         </button>
       </div>
-      <div className="footer row d-md-flex justify-content-between m-0">
-        <div className="pl-md-5 pt-5 col-md-4 col-lg-3 d-md-flex flex-column justify-content-between p-0">
-          <div>
-            <img alt="logo" src={logo}></img>
-          </div>
-          <div className="pt-4 pt-md-0 pl-lg-3 text-md-left text-center text-xl-center pl-xl-0">
-            <h6>Contact Us</h6>
-            <div>
-              <img alt="messages" src={contact1}></img>
-              <img alt="phone" src={contact2}></img>
-              <img alt="linkedin" src={contact3}></img>
-              <img alt="instagram" src={contact4}></img>
-            </div>
-          </div>
-        </div>
-        <div className="pt-md-5 mt-md-5 d-lg-flex col-md-4 col-lg-5 justify-content-around justify-md-content-around p-0">
-          <div className="d-md-flex flex-md-column justify-md-content-between">
-            <div className="text-lg-left">
-              <h6 className="pb-1 pt-5">Contact Us</h6>
-              <p>Beranda</p>
-              <p>Kategori</p>
-              <p>Artikel</p>
-              <p>Tentang</p>
-              <p>Kontak</p>
-            </div>
-          </div>
-          <div className="d-md-flex h-md-100 flex-md-column justify-md-content-between">
-            <div className="text-lg-left">
-              <h6 className="pb-1 pt-3 pt-md-5">Join Us</h6>
-              <p>Join as Student</p>
-              <p>Join as Educator</p>
-            </div>
-          </div>
-          <div className="d-md-flex h-md-100 flex-md-column justify-md-content-between">
-            <div className="text-lg-left">
-              <h6 className="pb-1 pt-3 pt-md-5">More</h6>
-              <p>FAQ</p>
-              <p>Privacy Policy</p>
-              <p>Terms & Condition</p>
-            </div>
-          </div>
-        </div>
-        <div className="pt-4 pt-md-5 col-md-4 d-flex flex-column justify-content-around">
-          <div className="pt-md-5 d-md-flex">
-            <img alt="loc" src={location}></img>
-            <div className="col-md-9 pt-2 pt-md-0 text-md-left">
-              <h6>Yogyakarta</h6>
-              <p>
-                Innovation Factory Block 71 Yogyakarta Jl. Prof. Dr. Herman
-                Yohanes No. 1212, Terban, Gondokusuman, Yogyakarta, 552233
-              </p>
-            </div>
-          </div>
-          <div className="d-md-flex">
-            <img alt="loc" src={location}></img>
-            <div className="col-md-9 pt-2 pt-md-0 text-md-left">
-              <h6>Jakarta</h6>
-              <p>
-                Innovation Factory Block 71 Jakarta Ariobimo Sentral, South
-                Jakarta, RT.9/RW.4, East Kuningan, Jakarta, 12950
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="pr-md-5 pl-md-5 pb-1 pt-3 footer">
-        <div className="pr-5 pl-5 pt-1">
-          <div className="border-top pr-5 pl-5 pt-1">
-            <p>Copyright © 2021 Waktukita.com</p>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 };
