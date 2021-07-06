@@ -24,7 +24,9 @@ const Navbar2 = () => {
             style={{ zIndex: "1", backgroundColor: "white" }}
           >
             <Nav className="ml-lg-auto col-lg-11 col-xl-8 justify-content-between navColor text-left p-0 align-items-lg-baseline">
-              <NavLink exact to="/">Beranda</NavLink>
+              <NavLink exact to="/">
+                Beranda
+              </NavLink>
               <NavDropdown title="Kategori" id="basic-nav-dropdown">
                 <NavDropdown.Item
                   class="d-flex align-content-center py-0"
@@ -112,7 +114,14 @@ const Navbar2 = () => {
               <NavLink to="/artikel">Artikel</NavLink>
               <NavLink to="/about">Tentang</NavLink>
               <NavLink to="/contact">Kontak</NavLink>
-              <button className="m-md-1 mb-2 mb-lg-0 navButton Secondary">
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = "/login";
+                }}
+                className="m-md-1 mb-2 mb-lg-0 navButton Secondary"
+              >
                 <span className="textButton">Student</span>
               </button>
               <button className="m-md-1 m-lg-0 navButton Primary">
@@ -126,7 +135,6 @@ const Navbar2 = () => {
     </div>
     // </div>{}
   );
-}; 
-
+};
 
 export default Navbar2;

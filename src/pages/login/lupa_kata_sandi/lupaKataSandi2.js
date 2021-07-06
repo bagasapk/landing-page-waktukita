@@ -1,6 +1,6 @@
 // import React, { useState } from 'react';
 import React from 'react';
-import NavbarLogin from '../navbar/navbar';
+import NavbarLogin from '../../../components/navbar/NavbarLogin';
 // import hide from '../../resources/symbols/hide.svg';
 import symbol from '../../../resources/symbols/XMLID1386(active).svg'
 import "../testcss.css";
@@ -21,7 +21,7 @@ const LupaKataSandi2 = () => {
                     <div className="col-md-6"></div>
                     <div className="jumbotronContainer col-md-6"></div>
                     <div style={{top:'32%'}} className="loginBox col-md-12">
-                        <div className="loginContainer">
+                        <div className="loginContainer p-4 p-md-5">
                             <h2 className="titleForm">Lupa kata sandi ?</h2>
                             <img className="mx-auto symbolPosition"
                             alt="symbol"

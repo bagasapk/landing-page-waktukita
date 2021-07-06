@@ -1,5 +1,5 @@
 import React from "react";
-import logo1 from "../../../logo1.svg";
+import logo1 from "../../logo1.svg";
 
 const NavbarRegister = () => {
   return (

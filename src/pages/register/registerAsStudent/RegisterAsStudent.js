@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavbarRegister from "../navbar/NavbarRegister";
+import NavbarRegister from "../../../components/navbar/NavbarRegister";
 import hide from "../../../resources/symbols/hide.svg";
 import symbol from "../../../resources/symbols/XMLID1386(active).svg";
 import "./RegisterAsStudent.css";
@@ -15,10 +15,10 @@ const RegisterAsStudent = () => {
       <div className="backgroundLogin">
         <NavbarRegister />
         <section className="register p-0">
-          <div className="col-md-6"></div>
-          <div className="jumbotronContainer col-md-6"></div>
+          <div className="col-md-6 p-5"></div>
+          <div className="jumbotronContainer col-md-6 p-5"></div>
           <div className="loginBox col-md-12">
-            <div className="registerContainer">
+            <div className="registerContainer p-4 p-md-5">
               <h2 className="titleForm">Register</h2>
               <img className="mx-auto symbolPosition"
                 alt="symbol"
