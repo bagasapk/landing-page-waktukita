@@ -11,6 +11,7 @@ import Tentang from "./pages/tentang/Tentang";
 import Kontak from "./pages/kontak/Kontak";
 import Beranda from "./pages/beranda/Beranda";
 import SemuaKelas from "./pages/semuaKelas/SemuaKelas";
+import Educator from "./pages/educator/Educator";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Kontak />
+          </Route>
+          <Route path="/educator">
+            <Educator />
           </Route>
           <Route path="/login">
             <Login />

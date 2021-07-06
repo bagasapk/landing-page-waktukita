@@ -111,7 +111,7 @@ const Navbar2 = () => {
                   <span className="align-self-center">Seni</span>
                 </NavDropdown.Item>
               </NavDropdown>
-              <NavLink to="/artikel">Artikel</NavLink>
+              <NavLink to="/article">Artikel</NavLink>
               <NavLink to="/about">Tentang</NavLink>
               <NavLink to="/contact">Kontak</NavLink>
               <button
@@ -124,7 +124,13 @@ const Navbar2 = () => {
               >
                 <span className="textButton">Student</span>
               </button>
-              <button className="m-md-1 m-lg-0 navButton Primary">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = "/educator";
+                }}
+                className="m-md-1 m-lg-0 navButton Primary"
+              >
                 <span className="textButton">Educator</span>
               </button>
             </Nav>

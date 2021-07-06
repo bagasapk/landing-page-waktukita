@@ -37,7 +37,10 @@ const NavbarLogin = () => {
             >
               <span className="textButton">Student</span>
             </button>
-            <button className="m-md-1 m-lg-0 navButton Primary">
+            <button onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "/educator";
+              }} className="m-md-1 m-lg-0 navButton Primary">
               <span className="textButton">Educator</span>
             </button>
           </Nav>

@@ -5,7 +5,7 @@ import contact2 from "../../resources/contact/Group 55.svg";
 import contact3 from "../../resources/contact/Group 54.svg";
 import contact4 from "../../resources/contact/Group 50.svg";
 import location from "../../resources/symbols/Group10.svg";
-
+import ReactTooltip from "react-tooltip"; 
 const Footer = () => {
   return (
     <div>
@@ -33,10 +33,37 @@ const Footer = () => {
           <div className="pt-4 pt-md-0 pl-lg-3 text-lg-left text-center text-xl-center pl-xl-0">
             <h6>Contact Us</h6>
             <div>
-              <img alt="messages" src={contact1}></img>
-              <img alt="phone" src={contact2}></img>
-              <img alt="linkedin" src={contact3}></img>
-              <img alt="instagram" src={contact4}></img>
+              <img data-tip data-for="Email" alt="Email" src={contact1}></img>
+              <ReactTooltip id="Email" effect="solid" place="bottom">
+                <span>Email</span>
+              </ReactTooltip>
+              <img
+                data-tip
+                data-for="telephone"
+                alt="telephone"
+                src={contact2}
+              ></img>
+              <ReactTooltip id="telephone" effect="solid" place="bottom">
+                <span>Telephone</span>
+              </ReactTooltip>
+              <img
+                data-tip
+                data-for="Linkedin"
+                alt="linkedin"
+                src={contact3}
+              ></img>
+              <ReactTooltip id="Linkedin" effect="solid" place="bottom">
+                <span>Linkedin</span>
+              </ReactTooltip>
+              <img
+                data-tip
+                data-for="Instagram"
+                alt="instagram"
+                src={contact4}
+              ></img>
+              <ReactTooltip id="Instagram" effect="solid" place="bottom">
+                <span>Instagram</span>
+              </ReactTooltip>
             </div>
           </div>
         </div>

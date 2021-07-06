@@ -1,9 +1,8 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
-// import { Link } from "react-router-dom";
-import logo1 from "../../logo1.svg";
+import { Navbar,Nav } from "react-bootstrap";
+import logo1 from "../../resources/images/logo1.svg";
 
-const NavbarRegister = () => {
+const NavbarEducator = () => {
   return (
     <div className="loginContainer">
       <Navbar
@@ -18,7 +17,7 @@ const NavbarRegister = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse
           id="basic-navbar-nav"
-          className="px-5 pb-3 pb-lg-0 px-lg-0"
+          className="px-5 py-3 py-lg-0 px-lg-0"
           style={{ zIndex: "1", backgroundColor: "white" }}
         >
           <Nav className="ml-lg-auto col-lg-7 col-xl-4 justify-content-between navColor text-left p-0 align-items-lg-baseline">
@@ -26,20 +25,17 @@ const NavbarRegister = () => {
               style={{ color: "#404041", opacity: "0.5" }}
               className="textButton"
             >
-              Register Sebagai ?
+              Ingin menjadi educator ?
             </span>
             <button
               type="button"
               onClick={(e) => {
                 e.preventDefault();
-                window.location.href = "#";
+                window.location.href = "/register/educator";
               }}
-              className="m-md-1 mb-2 mb-lg-0 navButton Secondary"
+              className="m-md-1 my-2 my-lg-0 px-lg-5 navButton Secondary"
             >
-              <span className="textButton">Student</span>
-            </button>
-            <button className="m-md-1 m-lg-0 navButton Primary">
-              <span className="textButton">Educator</span>
+              <span className="textButton d-flex justify-content-center">Daftar sekarang</span>
             </button>
           </Nav>
         </Navbar.Collapse>
@@ -48,4 +44,5 @@ const NavbarRegister = () => {
     </div>
   );
 };
-export default NavbarRegister;
+
+export default NavbarEducator;

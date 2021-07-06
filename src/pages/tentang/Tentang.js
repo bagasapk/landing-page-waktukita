@@ -3,56 +3,11 @@ import hero from "../../resources/images/Ellipse3.svg";
 import "./Tentang.css";
 import symbol from "./Group10.svg";
 import icon from "../../resources/symbols/XMLID1386(active).svg";
-import frame1 from "../../resources/brand/Rectangle 47.png";
-import frame2 from "../../resources/brand/our-partner-3 1.png";
-import frame3 from "../../resources/brand/our-partner-10.png";
-import frame4 from "../../resources/brand/our-partner-5.png";
-import frame5 from "../../resources/brand/our-partner-8.png";
-import frame6 from "../../resources/brand/Group 64.png";
-import frame7 from "../../resources/brand/our-partner-6.png";
-import frame8 from "../../resources/brand/our-partner-9.png";
-import frame9 from "../../resources/brand/our-partner-2 1.png";
 import Navbar2 from "../../components/navbar/Navbar2";
 import Footer from "../../components/footer/Footer";
+import Partner from "../../components/slider/Partner";
 
 const Tentang = () => {
-  const slides = [
-    frame1,
-    frame2,
-    frame3,
-    frame4,
-    frame5,
-    frame6,
-    frame7,
-    frame8,
-    frame9,
-  ];
-
-  const [index, setIndex] = React.useState(0);
-  const timeoutRef = React.useRef(null);
-  const delay = 4000;
-
-  function resetTimeout() {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-  }
-
-  React.useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(
-      () =>
-        setIndex((prevIndex) =>
-          prevIndex === slides.length - 7 ? 0 : prevIndex + 1
-        ),
-      delay
-    );
-
-    return () => {
-      resetTimeout();
-    };
-  }, [slides.length, index]);
-
   return (
     <div>
       <Navbar2 />
@@ -127,7 +82,10 @@ const Tentang = () => {
                 <img style={{ width: "40px" }} alt="symbol" src={symbol}></img>
                 <h5 className="pl-3 heroNumber m-0 mt-2">Lorem Ipsum</h5>
               </div>
-              <p className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left" style={{ textAlign: "left" }}>
+              <p
+                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
+                style={{ textAlign: "left" }}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod
               </p>
@@ -139,7 +97,10 @@ const Tentang = () => {
                   <h5 className="heroNumber m-0 mt-2">Lorem Ipsum</h5>
                 </div>
               </div>
-              <p className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left" style={{ textAlign: "left" }}>
+              <p
+                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
+                style={{ textAlign: "left" }}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod
               </p>
@@ -151,7 +112,10 @@ const Tentang = () => {
                   <h5 className="heroNumber m-0 mt-2">Lorem Ipsum</h5>
                 </div>
               </div>
-              <p className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left" style={{ textAlign: "left" }}>
+              <p
+                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
+                style={{ textAlign: "left" }}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod
               </p>
@@ -163,7 +127,10 @@ const Tentang = () => {
                   <h5 className="heroNumber m-0 mt-2">Lorem Ipsum</h5>
                 </div>
               </div>
-              <p className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left" style={{ textAlign: "left" }}>
+              <p
+                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
+                style={{ textAlign: "left" }}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod
               </p>
@@ -175,7 +142,10 @@ const Tentang = () => {
                   <h5 className="heroNumber m-0 mt-2">Lorem Ipsum</h5>
                 </div>
               </div>
-              <p className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left" style={{ textAlign: "left" }}>
+              <p
+                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
+                style={{ textAlign: "left" }}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod
               </p>
@@ -315,67 +285,9 @@ const Tentang = () => {
             src={icon}
           ></img>
         </div>
-
-        <div className="pb-4 slideshowSlider">
-          <div
-            style={{ transform: `translate3d(${-index * 25}%, 0, 0)` }}
-            className="p-5 d-none row d-lg-flex flex-nowrap slider"
-          >
-            {slides.map((src, index) => (
-              <div className="col-lg-2">
-                <img
-                  className="img-fluid"
-                  key={index}
-                  alt="frame-1"
-                  src={src}
-                ></img>
-              </div>
-            ))}
-          </div>
-          <div
-            style={{ transform: `translate3d(${-index * 57}%, 0, 0)` }}
-            className="px-5 d-none row d-md-flex d-lg-none flex-nowrap slider"
-          >
-            {slides.map((src, index) => (
-              <div className="col-md-3">
-                <img
-                  className="img-fluid"
-                  key={index}
-                  alt="frame-1"
-                  src={src}
-                ></img>
-              </div>
-            ))}
-          </div>
-          <div
-            style={{ transform: `translate3d(${-index * 79.0}%, 0, 0)` }}
-            className="px-5 row d-flex d-md-none flex-nowrap slider"
-          >
-            {slides.map((src, index) => (
-              <div className="col-4">
-                <img
-                  className="img-fluid"
-                  key={index}
-                  alt="frame-1"
-                  src={src}
-                ></img>
-              </div>
-            ))}
-          </div>
-          <div className="d-block">
-            {slides.slice(0, 3).map((_, idx) => (
-              <div
-                key={idx}
-                className={`tentang slideshowDots${index === idx ? " active" : ""}`}
-                onClick={() => {
-                  setIndex(idx);
-                }}
-              ></div>
-            ))}
-          </div>
-        </div>
-        <Footer/>
+        <Partner />
       </section>
+      <Footer />
     </div>
   );
 };
