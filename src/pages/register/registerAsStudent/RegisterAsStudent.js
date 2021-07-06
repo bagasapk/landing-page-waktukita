@@ -12,7 +12,7 @@ const RegisterAsStudent = () => {
   };
   return (
     <div>
-      <div className="backgroundRegister">
+      <div className="backgroundLogin">
         <NavbarRegister />
         <section className="register p-0">
           <div className="col-md-6"></div>

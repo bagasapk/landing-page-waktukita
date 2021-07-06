@@ -671,7 +671,7 @@ const Beranda = () => {
         </div>
       </div>
       <div className="pb-5 d-flex justify-content-center">
-        <button className="col-6 col-md-3 p-3 d-flex justify-content-center navButton Primary">
+        <button className="col-6 col-md-3 p-3 d-flex justify-content-center navButton Secondary">
           <span className="textButton">Artikel lainnya</span>
         </button>
       </div>

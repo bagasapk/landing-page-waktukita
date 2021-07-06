@@ -127,7 +127,7 @@ const RegisterAsEducator1 = () => {
     setFormStep(1);
   };
   return (
-    <div>
+    <div className="backgroundLogin">
       <form onSubmit={handleSubmit(onSubmit)}>
         {formStep === 0 && (
           <section>

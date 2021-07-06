@@ -7,9 +7,9 @@ input[type="password"], textarea   {
   width: 100%;
   padding: 12px 20px;
   /* margin: 8px 0; */
-  background: #ffffff;
+  background: #ffffff !important;
   display: inline-block;
-  border: 1px solid #949494;
+  border: 1px solid #949494 !important;
   border-radius: 4px;
   box-sizing: border-box;
 }

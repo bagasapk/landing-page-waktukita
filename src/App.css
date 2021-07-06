@@ -38,9 +38,9 @@
 }
 
 .App {
-  background: url(https://i.ibb.co/Y7cjbJq/image.png);
+  
+  background: white;
   background-repeat: no-repeat;
-  background-position-y: 150px;
   height: auto;
 }
 
@@ -117,8 +117,8 @@ textarea:-ms-input-placeholder {
   .textHero p{
     font-size: 14px;
   }
-  
 }
+
 @media only screen and (max-width: 426px) {
   .heroDesc img{
     width: 10vw !important;
@@ -135,8 +135,60 @@ textarea:-ms-input-placeholder {
   h5{
     font-size: 20px !important;
   }
+  .kelas i{
+    right: 10px !important;
+  }
 }
 
 .heroDesc img{
   width: 6vw;
+}
+
+.backgroundLogin{
+  background: url(https://i.ibb.co/Y7cjbJq/image.png);
+  background-repeat: no-repeat;
+  background-position-y: 150px;
+}
+
+label.kelas{
+  color: #404041;
+}
+
+.kelas i{
+  font-size: 24px;
+  right: 0;
+  margin-right: 6%;
+  color: #00a69c;
+}
+
+.berandaCardFull{
+  background-color: #F8FAFB;;
+}
+
+.rmsc {
+  --rmsc-main: #404041 !important;
+  --rmsc-hover: #fff !important;
+  --rmsc-selected: #fff !important;
+  --rmsc-border: #949494 !important;
+  --rmsc-gray: #aaa;
+  --rmsc-bg: #fff;
+  --rmsc-p: 12px ; /* Spacing */
+  --rmsc-radius: 4px; /* Radius */
+  --rmsc-h: 44.4px !important; /* Height */
+}
+
+.dropdown-content :hover{
+  color: #00a69c !important;
+}
+.title{
+  color: #404041;
+}
+
+option:checked{
+  color: #00a69c !important;
+}
+
+title :hover{
+  color: #00a69c !important;
+  background: white !important;
 }
