@@ -1,10 +1,6 @@
 .hero {
-  left: 54.6%;
+  /* left: 54.6%; */
   max-height: 90.7vh;
-}
-
-.heroImg {
-  padding-left: 200px;
 }
 
 .heroBox {

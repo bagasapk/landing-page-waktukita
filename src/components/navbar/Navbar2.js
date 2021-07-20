@@ -19,6 +19,9 @@ class Navbar2 extends Component {
   componentDidMount() {
     document.addEventListener("click", this.documentHandler, true);
   }
+  componentWillUnmount() {
+    document.removeEventListener("click", this.documentHandler, true);
+  }
 
   documentHandler = (e) => {
     const container = this.element;
@@ -41,8 +44,8 @@ class Navbar2 extends Component {
     };
 
     return (
-      <div ref={(c) => (this.element = c)}>
-        <div className="loginContainer">
+      <div>
+        <div ref={(c) => (this.element = c)} className="loginContainer">
           <Navbar
             expanded={this.state.visible}
             expand="lg"
@@ -50,7 +53,9 @@ class Navbar2 extends Component {
           >
             {/* <div className="pl-5 ml-lg-5 navbar navbar-expand-md navbarLogin"> */}
             <div className="pl-5 pl-lg-0">
-              <img className="logoScale" alt="logo" src={logo1}></img>
+              <a href="/" style={{opacity:"1"}}>
+                <img className="logoScale" alt="logo" src={logo1}></img>
+              </a>
             </div>
             {/* <div className="d-flex col-md-10 justify-content-around"> */}
             <Navbar.Toggle

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import symbolActive from "../../../resources/symbols/XMLID1386(active).svg";
 import "./RegisterAsEducator.css";
 import "../Register.css";
-import NavbarRegister2 from "../navbar/NavbarRegister2";
+import NavbarRegister2 from "../../../components/navbar/NavbarRegister2";
 
 const RegisterAsEducator4 = () => {
   const [otp, setOtp] = useState(new Array(6).fill(""));

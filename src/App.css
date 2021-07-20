@@ -38,7 +38,6 @@
 }
 
 .App {
-  
   background: white;
   background-repeat: no-repeat;
   height: auto;
@@ -110,65 +109,75 @@ textarea:-ms-input-placeholder {
   opacity: 0.5;
 }
 
+@media only screen and (max-width: 1025px) {
+  .heroImg {
+    width: 120%;
+  }
+}
 @media only screen and (max-width: 769px) {
-  .textHero h2{
+  .textHero h2 {
     font-size: 30px !important;
   }
-  .textHero p{
+  .textHero p {
     font-size: 14px;
   }
-  .register{
+  .register {
     min-height: 110vh !important;
   }
 }
 
 @media only screen and (max-width: 426px) {
-  .heroDesc img{
+  .heroDesc img {
     width: 10vw !important;
   }
-  h2{
+  h2 {
     font-size: 24px !important;
   }
-  p{
+  p {
     font-size: 14px !important;
   }
-  h3{
+  h3 {
     font-size: 22px !important;
   }
-  h5{
+  h5 {
     font-size: 20px !important;
   }
-  .kelas i{
+  .kelas i {
     right: 10px !important;
   }
-  .register{
+  .register {
     min-height: 100vh !important;
   }
 }
-
-.heroDesc img{
+@media only screen and (max-width: 321px) {
+  .output img {
+    width: 48px !important;
+  }
+}
+.heroDesc img {
   width: 6vw;
 }
 
-.backgroundLogin{
+.backgroundLogin {
   background: url(https://i.ibb.co/Y7cjbJq/image.png);
   background-repeat: no-repeat;
   background-position-y: 150px;
 }
 
-label.kelas{
+label.kelas {
   color: #404041;
 }
 
-.kelas i{
+.kelas i {
   font-size: 24px;
   right: 0;
   margin-right: 6%;
   color: #00a69c;
 }
 
-.berandaCardFull{
-  background-color: #F8FAFB;;
+.berandaCardFull,
+.payment-detail {
+  background-color: #f8fafb;
 }
 
 .rmsc {
@@ -178,27 +187,173 @@ label.kelas{
   --rmsc-border: #949494 !important;
   --rmsc-gray: #aaa;
   --rmsc-bg: #fff;
-  --rmsc-p: 12px ; /* Spacing */
+  --rmsc-p: 12px; /* Spacing */
   --rmsc-radius: 4px; /* Radius */
   --rmsc-h: 44.4px !important; /* Height */
 }
 
-.dropdown-content :hover{
+.dropdown-content :hover {
   color: #00a69c !important;
 }
-.title{
+.title {
   color: #404041;
 }
 
-option:checked{
+option:checked {
   color: #00a69c !important;
 }
 
-title :hover{
+title :hover {
   color: #00a69c !important;
   background: white !important;
 }
 
-span.textButton{
-  font-family: 'Lato', sans-serif;
+span.textButton {
+  font-family: "Lato", sans-serif;
+}
+.textHero h5 {
+  color: #404041;
+  opacity: 0.5;
+}
+
+.textHero a {
+  color: #00a69c !important;
+  opacity: 1;
+  font-style: italic;
+}
+
+.textHero a:hover {
+  cursor: pointer;
+  color: #404041 !important ;
+}
+
+.detail2 p,
+.pelaksanaan h4,
+.materi h4,
+.syarat h4,
+.harga h5 {
+  color: #00a69c;
+  opacity: 1;
+  font-weight: 500;
+}
+
+.detail2 span,
+.detail p {
+  color: #404041;
+  opacity: 0.5;
+}
+
+.detail2 {
+  background-color: #f8fafb;
+}
+
+.pelaksanaan img {
+  width: 48px;
+}
+.mentor img {
+  width: 65px;
+}
+
+.mentorDesc {
+  color: #404041;
+  opacity: 0.6;
+}
+
+.heroImg {
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  margin-top: -20%;
+  z-index: -1;
+}
+.materi {
+  background-color: #f8fafb;
+  border-radius: 20px;
+}
+
+.rincian h6 {
+  color: #404041;
+  letter-spacing: 0.05rem;
+  font-weight: bold;
+}
+
+.rincian {
+  border-top: 1px solid #00a69c;
+}
+
+.rincianButton {
+  border: none;
+  background: none;
+}
+
+.rincian i:hover {
+  color: #00a69c;
+}
+
+.opacity {
+  opacity: 0.5;
+}
+
+.output i {
+  color: #00a69c;
+}
+
+.output img {
+  width: 52px;
+}
+
+p.harga {
+  font-weight: 500;
+}
+
+.relate h3 {
+  color: #00a69c;
+}
+
+.iconPrimary {
+  filter: invert(45%) sepia(87%) saturate(2004%) hue-rotate(144deg)
+    brightness(91%) contrast(101%);
+}
+
+.payment-radio label {
+  opacity: 1;
+  color: #404041;
+}
+.payment-metode a {
+  color: #00a69c;
+  opacity: 1;
+}
+.payment-voucher-status {
+  font-size: 12px;
+  color: #00a69c;
+}
+input.payment {
+  width: 1vw;
+}
+
+.payment-detail h6 {
+  color: #00a69c;
+}
+
+.payment-detail {
+  border-radius: 8px;
+  box-shadow: 12px 16px 40px rgba(64, 64, 65, 0.08);
+}
+
+.metode-pembayaran {
+  border-bottom: 1px solid rgba(53, 49, 49, 0.247);
+}
+
+.popUpPayment {
+  background-color: white;
+  text-align: left;
+}
+.popUpClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.buttonNone {
+  border: none;
+  background-color: transparent;
 }

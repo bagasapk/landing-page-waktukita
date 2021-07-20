@@ -16,6 +16,10 @@ class NavbarEducator extends Component {
   componentDidMount() {
     document.addEventListener("click", this.documentHandler, true);
   }
+  
+  componentWillUnmount() {
+    document.removeEventListener("click", this.documentHandler, true);
+  }
 
   documentHandler = (e) => {
     const container = this.element;

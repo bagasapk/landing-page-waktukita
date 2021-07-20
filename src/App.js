@@ -6,12 +6,15 @@ import Login from "./pages/login/Login";
 import LupaKataSandi1 from "./pages/login/lupa_kata_sandi/LupaKataSandi1";
 import LupaKataSandi2 from "./pages/login/lupa_kata_sandi/lupaKataSandi2";
 import RegisterAsEducator1 from "./pages/register/registerAsEducator/RegisterAsEducator1";
+import RegisterAsEducator4 from "./pages/register/registerAsEducator/RegisterAsEducator4";
 import RegisterAsStudent from "./pages/register/registerAsStudent/RegisterAsStudent";
 import Tentang from "./pages/tentang/Tentang";
 import Kontak from "./pages/kontak/Kontak";
 import Beranda from "./pages/beranda/Beranda";
 import SemuaKelas from "./pages/semuaKelas/SemuaKelas";
 import Educator from "./pages/educator/Educator";
+import RincianKelas from "./pages/rincianKelas/RincianKelas";
+import Payment from "./pages/payment/Payment";
 
 function App() {
   return (
@@ -24,8 +27,14 @@ function App() {
           <Route path="/about">
             <Tentang />
           </Route>
-          <Route path="/classes">
+          <Route exact path="/classes">
             <SemuaKelas />
+          </Route>
+          <Route exact path="/classes/detail">
+            <RincianKelas />
+          </Route>
+          <Route path="/classes/detail/payment">
+            <Payment />
           </Route>
           <Route path="/contact">
             <Kontak />
@@ -39,11 +48,14 @@ function App() {
           <Route path="/lupakatasandi/1">
             <LupaKataSandi1 />
           </Route>
-          <Route exact path="/lupakatasandi/2">
+          <Route path="/lupakatasandi/2">
             <LupaKataSandi2 />
           </Route>
-          <Route path="/register/educator">
+          <Route exact path="/register/educator">
             <RegisterAsEducator1 />
+          </Route>
+          <Route path="/register/educator/verification">
+            <RegisterAsEducator4 />
           </Route>
           <Route path="/register/student">
             <RegisterAsStudent />
