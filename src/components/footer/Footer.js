@@ -5,7 +5,7 @@ import contact2 from "../../resources/contact/Group 55.svg";
 import contact3 from "../../resources/contact/Group 54.svg";
 import contact4 from "../../resources/contact/Group 50.svg";
 import location from "../../resources/symbols/Group10.svg";
-import ReactTooltip from "react-tooltip"; 
+import ReactTooltip from "react-tooltip";
 const Footer = () => {
   return (
     <div>
@@ -16,11 +16,38 @@ const Footer = () => {
           </div>
           <div className="pt-md-4 pl-lg-3 text-lg-left text-center text-xl-center pl-xl-0">
             <h6>Contact Us</h6>
-            <div>
-              <img alt="messages" src={contact1}></img>
-              <img alt="phone" src={contact2}></img>
-              <img alt="linkedin" src={contact3}></img>
-              <img alt="instagram" src={contact4}></img>
+            <div className="d-flex justify-content-center">
+              <img data-tip className="mx-1" data-for="Email" alt="Email" src={contact1}></img>
+              <ReactTooltip id="Email" effect="solid" place="bottom">
+                <span>Email</span>
+              </ReactTooltip>
+              <img
+                data-tip className="mx-1"
+                data-for="telephone"
+                alt="telephone"
+                src={contact2}
+              ></img>
+              <ReactTooltip id="telephone" effect="solid" place="bottom">
+                <span>Telephone</span>
+              </ReactTooltip>
+              <img
+                data-tip className="mx-1"
+                data-for="Linkedin"
+                alt="linkedin"
+                src={contact3}
+              ></img>
+              <ReactTooltip id="Linkedin" effect="solid" place="bottom">
+                <span>Linkedin</span>
+              </ReactTooltip>
+              <img
+                data-tip className="mx-1"
+                data-for="Instagram"
+                alt="instagram"
+                src={contact4}
+              ></img>
+              <ReactTooltip id="Instagram" effect="solid" place="bottom">
+                <span>Instagram</span>
+              </ReactTooltip>
             </div>
           </div>
         </div>
@@ -32,13 +59,13 @@ const Footer = () => {
           </div>
           <div className="pt-4 pt-md-0 pl-lg-3 text-lg-left text-center text-xl-center pl-xl-0">
             <h6>Contact Us</h6>
-            <div>
-              <img data-tip data-for="Email" alt="Email" src={contact1}></img>
+            <div className="d-flex justify-content-center">
+              <img data-tip className="mx-1" data-for="Email" alt="Email" src={contact1}></img>
               <ReactTooltip id="Email" effect="solid" place="bottom">
                 <span>Email</span>
               </ReactTooltip>
               <img
-                data-tip
+                data-tip className="mx-1"
                 data-for="telephone"
                 alt="telephone"
                 src={contact2}
@@ -47,7 +74,7 @@ const Footer = () => {
                 <span>Telephone</span>
               </ReactTooltip>
               <img
-                data-tip
+                data-tip className="mx-1"
                 data-for="Linkedin"
                 alt="linkedin"
                 src={contact3}
@@ -56,7 +83,7 @@ const Footer = () => {
                 <span>Linkedin</span>
               </ReactTooltip>
               <img
-                data-tip
+                data-tip className="mx-1"
                 data-for="Instagram"
                 alt="instagram"
                 src={contact4}
@@ -70,7 +97,7 @@ const Footer = () => {
         <div className="pl-md-5 pl-lg-0 pt-md-0 pt-lg-5 mt-md-0 mt-lg-5 d-lg-flex col-md-4 col-lg-5 justify-content-around justify-md-content-around p-0">
           <div className="d-md-flex flex-md-column justify-md-content-between">
             <div className="text-lg-left">
-              <h6 className="pb-1 pt-5">Contact Us</h6>
+              <h6 className="pb-1 pt-5">Explore</h6>
               <p>Beranda</p>
               <p>Kategori</p>
               <p>Artikel</p>

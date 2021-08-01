@@ -56,7 +56,7 @@ const RincianKelas = () => {
                 >
                   DIGITAL MARKETING
                 </h2>
-                <div className="p-2 m-0 row col-12 justify-content-around justify-content-lg-around justify-content-md-between detail2 align-content-center">
+                <div className="p-2 m-0 row justify-content-around justify-content-lg-around justify-content-md-between detail2 align-content-center">
                   <p className="m-0 align-content-center">Pendaftaran</p>
                   <div className="row align-content-center">
                     <img alt="calendar" className="px-2" src={calendar}></img>
@@ -76,59 +76,61 @@ const RincianKelas = () => {
                   employers demand. <a href="/">Lihat Selengkapnya</a>
                 </p>
               </div>
-              <div className="row justify-content-between pr-4 pr-md-5 m-0">
-                <div className="pelaksanaan">
-                  <h4 className="text-left pt-3 pt-xl-0">Pelaksanaan</h4>
-                  <div className="d-flex">
-                    <img
-                      className="mr-3 mt-2"
-                      alt="calendar"
-                      src={symbol}
-                    ></img>
-                    <p className="align-self-center text-left m-0">
-                      1 Maret - 3 Juni 2021
-                    </p>
-                  </div>
-                  <div className="d-flex">
-                    <img className="mr-3 mt-2" alt="waktu" src={waktu}></img>
-                    <div className="align-self-center text-left">
-                      <p className="m-0">Senin dan Kamis</p>
-                      <p className="m-0">18:30 - 21:00 WIB</p>
+              <div className="d-none d-xl-block">
+                <div className="row justify-content-between pr-4 pr-md-5 m-0">
+                  <div className="pelaksanaan">
+                    <h4 className="text-left pt-3 pt-xl-0">Pelaksanaan</h4>
+                    <div className="d-flex">
+                      <img
+                        className="mr-3 mt-2"
+                        alt="calendar"
+                        src={symbol}
+                      ></img>
+                      <p className="align-self-center text-left m-0">
+                        1 Maret - 3 Juni 2021
+                      </p>
                     </div>
-                  </div>
-                  <div className="d-flex">
-                    <img className="mr-3 mt-2" alt="loc" src={loc}></img>
-                    <p className="align-self-center text-left m-0">
-                      1 Maret - 3 Juni 2021
-                    </p>
-                  </div>
-                </div>
-                <div className="pelaksanaan">
-                  <h4 className="text-left pt-3 pt-xl-0">Mentor</h4>
-                  <div className="d-flex mentor">
-                    <img
-                      className="mr-3 mt-2"
-                      alt="calendar"
-                      src="https://i.ibb.co/Q94YXWr/Ellipse-2.png"
-                    ></img>
-                    <div className="align-self-center text-left">
-                      <p className="m-0">Lorem Ipsum</p>
-                      <p className="m-0 mentorDesc">
-                        Wordpress Developer at Kompas TV
+                    <div className="d-flex">
+                      <img className="mr-3 mt-2" alt="waktu" src={waktu}></img>
+                      <div className="align-self-center text-left">
+                        <p className="m-0">Senin dan Kamis</p>
+                        <p className="m-0">18:30 - 21:00 WIB</p>
+                      </div>
+                    </div>
+                    <div className="d-flex">
+                      <img className="mr-3 mt-2" alt="loc" src={loc}></img>
+                      <p className="align-self-center text-left m-0">
+                        1 Maret - 3 Juni 2021
                       </p>
                     </div>
                   </div>
-                  <div className="d-flex mentor">
-                    <img
-                      className="mr-3 mt-2"
-                      alt="calendar"
-                      src="https://i.ibb.co/Q94YXWr/Ellipse-2.png"
-                    ></img>
-                    <div className="align-self-center text-left">
-                      <p className="m-0">Lorem Ipsum</p>
-                      <p className="m-0 mentorDesc">
-                        Wordpress Developer at Kompas TV
-                      </p>
+                  <div className="pelaksanaan">
+                    <h4 className="text-left pt-3 pt-xl-0">Mentor</h4>
+                    <div className="d-flex mentor">
+                      <img
+                        className="mr-3 mt-2"
+                        alt="calendar"
+                        src="https://i.ibb.co/Q94YXWr/Ellipse-2.png"
+                      ></img>
+                      <div className="align-self-center text-left">
+                        <p className="m-0">Lorem Ipsum</p>
+                        <p className="m-0 mentorDesc">
+                          Wordpress Developer at Kompas TV
+                        </p>
+                      </div>
+                    </div>
+                    <div className="d-flex mentor">
+                      <img
+                        className="mr-3 mt-2"
+                        alt="calendar"
+                        src="https://i.ibb.co/Q94YXWr/Ellipse-2.png"
+                      ></img>
+                      <div className="align-self-center text-left">
+                        <p className="m-0">Lorem Ipsum</p>
+                        <p className="m-0 mentorDesc">
+                          Wordpress Developer at Kompas TV
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -140,6 +142,61 @@ const RincianKelas = () => {
                 alt="hero"
                 src="https://i.ibb.co/Jq9jDFg/green-chameleon-s9-CC2-SKy-SJM-unsplash-2.png"
               ></img>
+            </div>
+          </div>
+        </div>
+        <div className="d-block d-xl-none">
+          <div className="row justify-content-lg-around justify-content-md-start px-lg-5 mx-5 m-0">
+            <div className="pelaksanaan pr-5">
+              <h4 className="text-left pt-3 pt-xl-0">Pelaksanaan</h4>
+              <div className="d-flex">
+                <img className="mr-3 mt-2" alt="calendar" src={symbol}></img>
+                <p className="align-self-center text-left m-0">
+                  1 Maret - 3 Juni 2021
+                </p>
+              </div>
+              <div className="d-flex">
+                <img className="mr-3 mt-2" alt="waktu" src={waktu}></img>
+                <div className="align-self-center text-left">
+                  <p className="m-0">Senin dan Kamis</p>
+                  <p className="m-0">18:30 - 21:00 WIB</p>
+                </div>
+              </div>
+              <div className="d-flex">
+                <img className="mr-3 mt-2" alt="loc" src={loc}></img>
+                <p className="align-self-center text-left m-0">
+                  1 Maret - 3 Juni 2021
+                </p>
+              </div>
+            </div>
+            <div className="pelaksanaan pr-5">
+              <h4 className="text-left pt-3 pt-xl-0">Mentor</h4>
+              <div className="d-flex mentor">
+                <img
+                  className="mr-3 mt-2"
+                  alt="calendar"
+                  src="https://i.ibb.co/Q94YXWr/Ellipse-2.png"
+                ></img>
+                <div className="align-self-center text-left">
+                  <p className="m-0">Lorem Ipsum</p>
+                  <p className="m-0 mentorDesc">
+                    Wordpress Developer at Kompas TV
+                  </p>
+                </div>
+              </div>
+              <div className="d-flex mentor">
+                <img
+                  className="mr-3 mt-2"
+                  alt="calendar"
+                  src="https://i.ibb.co/Q94YXWr/Ellipse-2.png"
+                ></img>
+                <div className="align-self-center text-left">
+                  <p className="m-0">Lorem Ipsum</p>
+                  <p className="m-0 mentorDesc">
+                    Wordpress Developer at Kompas TV
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -413,7 +470,7 @@ const RincianKelas = () => {
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

@@ -15,6 +15,7 @@ import SemuaKelas from "./pages/semuaKelas/SemuaKelas";
 import Educator from "./pages/educator/Educator";
 import RincianKelas from "./pages/rincianKelas/RincianKelas";
 import Payment from "./pages/payment/Payment";
+import Student from "./dashboard/student/Student";
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Kontak />
+          </Route>
+          <Route path="/dashboard">
+            <Student />
           </Route>
           <Route path="/educator">
             <Educator />

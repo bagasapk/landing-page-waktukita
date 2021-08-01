@@ -37,7 +37,9 @@
   }
 }
 
-.App {
+.App,
+.sidebar,
+.dashboard-card-kelas,.dashboard-statistik-kelas,.dashboard-right-sidebar{
   background: white;
   background-repeat: no-repeat;
   height: auto;
@@ -54,7 +56,7 @@ a {
   padding: 5px 0px 5px 0px;
 }
 
-a:hover {
+a:hover,.dashboard-statistik-kelas h6 {
   opacity: 1;
   color: #00a69c;
 }
@@ -192,7 +194,7 @@ label.kelas {
   --rmsc-h: 44.4px !important; /* Height */
 }
 
-.dropdown-content :hover {
+.dropdown-content :hover,.dashboard-statistik-tambah a {
   color: #00a69c !important;
 }
 .title {
@@ -211,7 +213,8 @@ title :hover {
 span.textButton {
   font-family: "Lato", sans-serif;
 }
-.textHero h5 {
+.textHero h5,
+.sidebar p {
   color: #404041;
   opacity: 0.5;
 }
@@ -222,7 +225,7 @@ span.textButton {
   font-style: italic;
 }
 
-.textHero a:hover {
+.textHero a:hover,.dashboard-statistik-tambah:hover a,.dashboard-statistik-tambah:hover i {
   cursor: pointer;
   color: #404041 !important ;
 }
@@ -231,7 +234,8 @@ span.textButton {
 .pelaksanaan h4,
 .materi h4,
 .syarat h4,
-.harga h5 {
+.harga h5,
+.dashboard-card-kelas h6,.dashboard-statistik-tambah a,.dashboard-statistik-tambah i {
   color: #00a69c;
   opacity: 1;
   font-weight: 500;
@@ -334,9 +338,13 @@ input.payment {
   color: #00a69c;
 }
 
-.payment-detail {
+.payment-detail,.dashboard-card-kelas,.dashboard-statistik-kelas {
   border-radius: 8px;
+}
+
+.payment-detail{
   box-shadow: 12px 16px 40px rgba(64, 64, 65, 0.08);
+
 }
 
 .metode-pembayaran {
@@ -357,3 +365,70 @@ input.payment {
   border: none;
   background-color: transparent;
 }
+
+.activeSidebar {
+  background: #f8fafb !important;
+  list-style: none;
+}
+
+.activeSidebar a,
+.activeSidebar p,
+.sidebar a {
+  opacity: 1;
+}
+
+.activeSidebar .rectangle {
+  width: 2.5%;
+  background-color: #00a69c;
+  margin: 0;
+  display: block !important;
+}
+
+.dashboard {
+  background: rgb(248, 250, 251);
+}
+
+.sidebar li:hover p,
+.dashboard-kelas a {
+  opacity: 1;
+}
+
+.sidebar li:hover {
+  background: #f8fafb;
+}
+
+.sidebar,.dashboard-right-sidebar {
+  min-height: 100vh;
+  box-shadow: 0px 0px 40px rgba(196, 196, 196, 0.16);
+}
+
+.dashboard-card-kelas span,.dashboard-card-kelas p,.dashboard-card-kelas h6 {
+  font-size: 14px;
+}
+
+.iconSecondary {
+  width: 28px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600 !important;
+}
+
+.circle{
+  border-radius: 24px;
+}
+
+.dashboard-statistik-kelas p{
+  font-size: 18px;
+}
+
+.dashboard-statistik-kelas h6{
+  font-size: 60px;
+}
+.dashboard-notif{
+  background: #cc0001;
+}
+
+
+

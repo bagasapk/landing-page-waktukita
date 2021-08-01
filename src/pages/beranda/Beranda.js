@@ -259,14 +259,14 @@ const Beranda = () => {
       </div>
       <div className="d-none d-md-block slideshowSlider">
         <div
-          style={{ transform: `translate3d(${-index3 * 94}%, 0, 0)` }}
+          style={{ transform: `translate3d(${-index3 * 89}%, 0, 0)` }}
           className="d-md-block d-lg-none slider position-relative"
         >
-          <div className="d-flex flex-nowrap">
+          <div className="ml-5 pl-5 d-flex flex-nowrap">
             {categories.map((src, index) => (
-              <div className="d-flex justify-content-center col-12 col-md-3 ml-md-5 px-md-2">
+              <div className="d-flex justify-content-start col-12 col-md-4 px-md-0">
                 <img
-                  className="d-block col-2 col-md-4 img-fluid"
+                  className="d-block col-2 col-md-3 img-fluid"
                   key={index}
                   alt="frame-1"
                   src={dashboard}
@@ -279,16 +279,16 @@ const Beranda = () => {
         {renderButton3()}
         {renderButton4()}
       </div>
-      <div className="d-none d-lg-block slideshowSlider">
+      <div className="d-none d-lg-block d-xl-none slideshowSlider">
         <div
-          style={{ transform: `translate3d(${-index3 * 88}%, 0, 0)` }}
+          style={{ transform: `translate3d(${-index3 * 71.2}%, 0, 0)` }}
           className="d-none d-lg-block d-xl-block slider position-relative"
         >
-          <div className="d-flex flex-nowrap justify-content-xl-center">
+          <div className="d-flex flex-nowrap justify-content-xl-center pl-5 pl-xl-0">
             {categories.map((src, index) => (
-              <div className="d-flex justify-content-center col-12 col-md-3 col-xl-1 p-xl-0 ml-xl-0 px-xl-0 mx-xl-4 ml-md-5 px-md-2">
+              <div className="d-flex justify-content-center col-12 col-md-3 col-xl-1 p-xl-0 ml-xl-0 px-xl-0 mx-xl-4 px-lg-0">
                 <img
-                  className="d-block col-2 col-md-4 col-lg-3 col-xl-6 img-fluid"
+                  className="d-block col-2 col-md-4 col-lg-3 col-xl-6  img-fluid"
                   key={index}
                   alt="frame-1"
                   src={dashboard}
@@ -300,6 +300,21 @@ const Beranda = () => {
         </div>
         {renderButton3()}
         {renderButton4()}
+      </div>
+      <div className="d-none d-xl-block slideshowSlider">
+          <div className="d-flex justify-content-xl-between mx-5">
+            {categories.map((src, index) => (
+              <div className="d-flex">
+                <img
+                  className="d-block img-fluid"
+                  key={index}
+                  alt="frame-1"
+                  src={dashboard}
+                ></img>
+                <span className="align-self-center pl-3">{src}</span>
+              </div>
+            ))}
+        </div>
       </div>
 
       <div className="row m-0 px-5 pt-5 pb-3 justify-content-between">
@@ -497,7 +512,7 @@ const Beranda = () => {
         src={icon}
       ></img>
       <div className="col-md-12 p-3 p-md-5 d-flex flex-md-row flex-column justify-content-center">
-        <div className="col-md-6 col-xl-6 col-lg-6 px-3 px-md-0 pr-5 pr-md-0 d-flex flex-md-row flex-column justify-content-center">
+        <div className="col-md-6 col-xl-6 col-lg-6 px-3 px-md-0 pr-md-0 d-flex flex-md-row flex-column justify-content-center">
           <div class="card col-12 col-md-5 p-0 berandaCardFull2 pt-5 pt-md-0 px-md-2">
             <img
               src="https://i.ibb.co/rybnqLt/Mask-Group.png"
@@ -513,7 +528,7 @@ const Beranda = () => {
               </span>
             </div>
           </div>
-          <div class="card col-12 col-md-5 p-0 berandaCardFull2 pt-5 pt-md-0 px-md-2 ">
+          <div class="card col-12 col-md-5 p-0 berandaCardFull2 pt-5 pt-md-0 px-md-2 mx-md-2 ">
             <img
               src="https://i.ibb.co/rybnqLt/Mask-Group.png"
               class="d-block w-100"
@@ -529,7 +544,7 @@ const Beranda = () => {
             </div>
           </div>
         </div>
-        <div className="row col-12 col-md-6 col-lg-6 col-xl-6">
+        <div className="row col-12 col-md-6 col-lg-6 col-xl-6 px-0 mx-auto mx-md-0 px-md-3">
           <div className="d-flex col-md-6 col-lg-12 flex-lg-row flex-column py-5 py-md-0 pb-lg-2 justify-content-lg-center">
             <div className="align-self-start">
               <img
