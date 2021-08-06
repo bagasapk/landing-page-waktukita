@@ -43,7 +43,7 @@ class NavbarRegister extends Component {
     };
 
     return (
-      <div ref={(c) => (this.element = c)}>
+      <div ref={(c) => (this.element = c)} className="navbarWaktuKita">
         <div className="loginContainer">
           <Navbar
             expanded={this.state.visible}
@@ -52,7 +52,7 @@ class NavbarRegister extends Component {
           >
             {/* <div className="pl-5 ml-lg-5 navbar navbar-expand-md navbarLogin"> */}
             <div className="pl-5 pl-lg-0">
-              <img className="logoScale" alt="logo" src={logo1}></img>
+            <a href="/" style={{opacity:'1'}}><img className="logoScale" alt="logo" src={logo1}></img></a>
             </div>
             {/* <div className="d-flex col-md-10 justify-content-around"> */}
             <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={clickHandler}/>

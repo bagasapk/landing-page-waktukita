@@ -14,7 +14,7 @@ const Kontak = () => {
       <Navbar2 />
       <div
         style={{ backgroundColor: "white" }}
-        className="d-md-flex hubungikami px-lg-5 "
+        className="d-md-flex hubungikami paddingWaktuKita px-lg-5 "
       >
         <div className="col-lg-7 p-5 text-left">
           <h2>Hubungi Kami</h2>

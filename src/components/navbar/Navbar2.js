@@ -44,7 +44,7 @@ class Navbar2 extends Component {
     };
 
     return (
-      <div>
+      <div className="navbarWaktuKita">
         <div ref={(c) => (this.element = c)} className="loginContainer">
           <Navbar
             expanded={this.state.visible}

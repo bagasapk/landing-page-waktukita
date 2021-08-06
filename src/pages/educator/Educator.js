@@ -11,7 +11,7 @@ const Educator = () => {
   return (
     <div>
       <NavbarEducator />
-      <section>
+      <section className="paddingWaktuKita">
         <div className="heroBox col-sm-12 px-0">
           <div className="d-flex justify-content-between">
             <div className="col-md-6 col-lg-7 col-xl-6 pl-5 pl-md-5 pl-lg-5 row m-0 d-lg-flex flex-lg-column justify-content-lg-center">
@@ -79,20 +79,32 @@ const Educator = () => {
           <div className="d-flex flex-wrap justify-content-center col-md-10 mx-auto">
             <div className="d-flex flex-column col-md-4 p-3">
               <div className="d-flex col-xl-12 heroDesc">
-                <img style={{ width: "40px" }} alt="symbol" src={symbol}></img>
-                <h5 className="pl-3 heroNumber m-0 mt-2">Perluas pasar</h5>
+                <img
+                  className="align-self-start"
+                  style={{ width: "40px" }}
+                  alt="symbol"
+                  src={symbol}
+                ></img>
+                <div>
+                  <h5 className="pl-3 heroNumber m-0 mt-2">Perluas pasar</h5>
+                  <p
+                    className="text-center pl-3 pt-3 truncate text-md-left"
+                    style={{ opacity: "1" }}
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod
+                  </p>
+                </div>
               </div>
-              <p
-                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
-                style={{ textAlign: "left" }}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod
-              </p>
             </div>
             <div className="d-flex flex-column col-md-4 p-3">
               <div className="d-flex col-xl-12 heroDesc">
-                <img style={{ width: "40px" }} alt="symbol" src={symbol}></img>
+                <img
+                  className="align-self-start"
+                  style={{ width: "40px" }}
+                  alt="symbol"
+                  src={symbol}
+                ></img>
                 <div className="pl-3">
                   <h5 className="heroNumber m-0 mt-2">Perbanyak peserta</h5>
                 </div>
@@ -107,7 +119,12 @@ const Educator = () => {
             </div>
             <div className="d-flex flex-column col-md-4 p-3">
               <div className="d-flex col-xl-12 heroDesc">
-                <img style={{ width: "40px" }} alt="symbol" src={symbol}></img>
+                <img
+                  className="align-self-start"
+                  style={{ width: "40px" }}
+                  alt="symbol"
+                  src={symbol}
+                ></img>
                 <div className="pl-3">
                   <h5 className="heroNumber m-0 mt-2">Lorem Ipsum</h5>
                 </div>
@@ -138,7 +155,12 @@ const Educator = () => {
           <div className="d-flex flex-wrap justify-content-center col-md-10 mx-auto">
             <div className="d-flex flex-column col-md-4 p-3">
               <div className="d-flex col-xl-12 heroDesc">
-                <img style={{ width: "40px" }} alt="symbol" src={symbol}></img>
+                <img
+                  className="align-self-start"
+                  style={{ width: "40px" }}
+                  alt="symbol"
+                  src={symbol}
+                ></img>
                 <h5 className="pl-3 heroNumber m-0 mt-2">Lorem ipsum</h5>
               </div>
               <p
@@ -151,7 +173,12 @@ const Educator = () => {
             </div>
             <div className="d-flex flex-column col-md-4 p-3">
               <div className="d-flex col-xl-12 heroDesc">
-                <img style={{ width: "40px" }} alt="symbol" src={symbol}></img>
+                <img
+                  className="align-self-start"
+                  style={{ width: "40px" }}
+                  alt="symbol"
+                  src={symbol}
+                ></img>
                 <div className="pl-3">
                   <h5 className="heroNumber m-0 mt-2">Lorem ipsum</h5>
                 </div>
@@ -166,7 +193,12 @@ const Educator = () => {
             </div>
             <div className="d-flex flex-column col-md-4 p-3">
               <div className="d-flex col-xl-12 heroDesc">
-                <img style={{ width: "40px" }} alt="symbol" src={symbol}></img>
+                <img
+                  className="align-self-start"
+                  style={{ width: "40px" }}
+                  alt="symbol"
+                  src={symbol}
+                ></img>
                 <div className="pl-3">
                   <h5 className="heroNumber m-0 mt-2">Lorem Ipsum</h5>
                 </div>
@@ -197,7 +229,7 @@ const Educator = () => {
       </section>
 
       <section>
-      <div className="p-5">
+        <div className="p-5">
           <h2 className="titleForm">Partner kami</h2>
           <img
             className="mx-auto symbolPosition"
@@ -206,9 +238,9 @@ const Educator = () => {
             src={icon}
           ></img>
         </div>
-        <Partner/>
+        <Partner />
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

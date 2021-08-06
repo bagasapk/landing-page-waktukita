@@ -62,10 +62,19 @@ a:hover,.dashboard-statistik-kelas h6 {
 }
 
 .truncate {
-  overflow: hidden;
+  /* overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; */
+  overflow:hidden;
+  line-height: 1.5rem;
+  max-height: calc(1.5rem * 3);
   -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
 }
 
 .nav-item a {
@@ -430,5 +439,22 @@ h1,h2,h3,h4,h5,h6{
   background: #cc0001;
 }
 
+.navbarWaktuKita{
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  background-color: white;
+}
 
+.paddingWaktuKita{
+  padding-top: 83px !important;
+}
+
+.footer a:hover{
+  font-weight: bold;
+}
+
+.product a{
+  opacity: 1;
+}
 

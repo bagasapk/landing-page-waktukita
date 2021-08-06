@@ -140,7 +140,7 @@ const Beranda = () => {
       <Navbar2 />
       <div
         style={{ backgroundColor: "white" }}
-        className="slideshowSlider pt-3"
+        className="slideshowSlider   pt-3"
       >
         <div
           style={{ transform: `translate3d(${-index * 93.3}%, 0, 0)` }}

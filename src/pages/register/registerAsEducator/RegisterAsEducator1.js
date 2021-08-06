@@ -133,8 +133,8 @@ const RegisterAsEducator1 = () => {
           <section>
             <div className="backgroundRegister">
               <NavbarRegister />
-              <div className="p-3 p-md-5">
-                <div className="boxContainer contentPosition">
+              <div className="p-3 p-md-5 paddingWaktuKita">
+                <div className="boxContainer contentPosition pt-5">
                   <div className="boxFlex col-11 col-md-9 boxSize mx-md-auto d-md-flex justify-content-around">
                     <span className="contentColor">Register</span>
                     <img

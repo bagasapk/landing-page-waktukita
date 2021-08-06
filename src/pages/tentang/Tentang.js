@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import hero from "../../resources/images/Ellipse3.svg";
 import "./Tentang.css";
 import symbol from "./Group10.svg";
@@ -6,12 +6,30 @@ import icon from "../../resources/symbols/XMLID1386(active).svg";
 import Navbar2 from "../../components/navbar/Navbar2";
 import Footer from "../../components/footer/Footer";
 import Partner from "../../components/slider/Partner";
+import ProductService from "../../services/ProductService";
+import { Link } from "react-router-dom";
 
 const Tentang = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    retrieve();
+  }, []);
+
+  const retrieve = () => {
+    ProductService.getAll()
+      .then((response) => {
+        setProducts(response.data.data);
+        console.log(response.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
   return (
     <div>
       <Navbar2 />
-      <section>
+      <section className="paddingWaktuKita">
         <div className="heroBox col-sm-12 p-0">
           <div className="d-flex justify-content-between">
             <div className="col-md-6 col-lg-7 col-xl-6 pl-5 row m-0 d-lg-flex flex-lg-column justify-content-lg-center">
@@ -78,12 +96,12 @@ const Tentang = () => {
           </div>
           <div className="d-flex flex-wrap justify-content-center col-md-10 mx-auto">
             <div className="d-flex flex-column col-md-4 p-3">
-              <div className="d-flex col-md-9 heroDesc">
+              <div className="d-flex heroDesc">
                 <img style={{ width: "40px" }} alt="symbol" src={symbol}></img>
                 <h5 className="pl-3 heroNumber m-0 mt-2">Lorem Ipsum</h5>
               </div>
               <p
-                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
+                className="pl-md-2 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
                 style={{ textAlign: "left" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -91,14 +109,14 @@ const Tentang = () => {
               </p>
             </div>
             <div className="d-flex flex-column col-md-4 p-3">
-              <div className="d-flex col-md-9 heroDesc">
+              <div className="d-flex heroDesc">
                 <img style={{ width: "40px" }} alt="symbol" src={symbol}></img>
                 <div className="pl-3">
                   <h5 className="heroNumber m-0 mt-2">Lorem Ipsum</h5>
                 </div>
               </div>
               <p
-                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
+                className="pl-md-2 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
                 style={{ textAlign: "left" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -106,14 +124,14 @@ const Tentang = () => {
               </p>
             </div>
             <div className="d-flex flex-column col-md-4 p-3">
-              <div className="d-flex col-md-9 heroDesc">
+              <div className="d-flex heroDesc">
                 <img style={{ width: "40px" }} alt="symbol" src={symbol}></img>
                 <div className="pl-3">
                   <h5 className="heroNumber m-0 mt-2">Lorem Ipsum</h5>
                 </div>
               </div>
               <p
-                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
+                className="pl-md-2 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
                 style={{ textAlign: "left" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -121,14 +139,14 @@ const Tentang = () => {
               </p>
             </div>
             <div className="d-flex flex-column col-md-4 p-3">
-              <div className="d-flex col-md-9 heroDesc">
+              <div className="d-flex heroDesc">
                 <img style={{ width: "40px" }} alt="symbol" src={symbol}></img>
                 <div className="pl-3">
                   <h5 className="heroNumber m-0 mt-2">Lorem Ipsum</h5>
                 </div>
               </div>
               <p
-                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
+                className="pl-md-2 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
                 style={{ textAlign: "left" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -136,14 +154,14 @@ const Tentang = () => {
               </p>
             </div>
             <div className="d-flex flex-column col-md-4 p-3">
-              <div className="d-flex col-md-9 heroDesc">
+              <div className="d-flex heroDesc">
                 <img style={{ width: "40px" }} alt="symbol" src={symbol}></img>
                 <div className="pl-3">
                   <h5 className="heroNumber m-0 mt-2">Lorem Ipsum</h5>
                 </div>
               </div>
               <p
-                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
+                className="pl-md-2 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
                 style={{ textAlign: "left" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -167,71 +185,85 @@ const Tentang = () => {
             src={icon}
           ></img>
         </div>
-        <div className="row justify-content-center m-0">
-          <img
-            className="p-4 p-sm-5 col-md-7 col-xl-5 col-lg-6"
-            alt="classes"
-            src="https://i.ibb.co/rybnqLt/Mask-Group.png"
-          ></img>
-          <div className="px-4 col-md-5 d-flex flex-column justify-content-center">
-            <h3 style={{ textAlign: "left" }} className="heroNumber">
-              Classes
-            </h3>
-            <p style={{ textAlign: "left" }}>
-              Get ahead with expert-led training in digital and technology based
-              materials. Join our class of design, coding, digital marketing,
-              and more — on board and online
-            </p>
-            <div>
-              <button className="col-md-7 mr-auto d-flex justify-content-center Primary formButton">
-                Pick a class
-              </button>
+        <div className="product ">
+          {products.map((product,index) => {
+            return (
+              <div
+                className={
+                  (index+1)%2 === 0
+                    ? "row justify-content-center m-0 flex-row-reverse"
+                    : "row justify-content-center m-0"
+                }
+              >
+                <img
+                  key={product.id}
+                  className="p-4 p-sm-5 col-md-7 col-xl-5 col-lg-6"
+                  alt={product.product_photo}
+                  src="https://i.ibb.co/rybnqLt/Mask-Group.png"
+                ></img>
+                <div className={(index+1)%2 === 0 ? "px-5 col-md-5 d-flex flex-column justify-content-center align-items-end" : "px-5 col-md-5 d-flex flex-column justify-content-center align-items-start"}>
+                  <h3 style={{ textAlign: "left" }} className="heroNumber">
+                    {product.product_title}
+                  </h3>
+                  <p style={{ textAlign: "left" }}>
+                    {product.product_description}
+                  </p>
+                  <div>
+                    <Link
+                      to={product.product_link}
+                      className="mr-auto d-flex justify-content-center Primary formButton"
+                    >
+                      {product.product_title_button}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+          {/* <div className="flex-md-row d-flex flex-column-reverse justify-content-center m-0">
+            <div className="px-5 col-md-5 d-flex flex-column justify-content-center">
+              <h3 style={{ textAlign: "right" }} className="heroNumber">
+                Assessed | Talent Solution
+              </h3>
+              <p style={{ textAlign: "right" }}>
+                Transform your workforce and forget the complexity of hiring and
+                employer training with our intensive training, assessments, and
+                an exclusive hiring pipeline
+              </p>
+              <div>
+                <button className="col-md-8 ml-auto d-flex justify-content-center Primary formButton">
+                  Hunting now
+                </button>
+              </div>
             </div>
+            <img
+              className="p-4 col-md-7 col-xl-5 col-lg-6"
+              alt="talent"
+              src="https://i.ibb.co/NxMvH7G/Mask-Group-1.png"
+            ></img>
           </div>
-        </div>
-        <div className="flex-md-row d-flex flex-column-reverse justify-content-center m-0">
-          <div className="px-5 col-md-5 d-flex flex-column justify-content-center">
-            <h3 style={{ textAlign: "right" }} className="heroNumber">
-              Assessed | Talent Solution
-            </h3>
-            <p style={{ textAlign: "right" }}>
-              Transform your workforce and forget the complexity of hiring and
-              employer training with our intensive training, assessments, and an
-              exclusive hiring pipeline
-            </p>
-            <div>
-              <button className="col-md-8 ml-auto d-flex justify-content-center Primary formButton">
-                Hunting now
-              </button>
+          <div className="row  justify-content-center m-0">
+            <img
+              className="p-4 col-md-7 col-xl-5 col-lg-6"
+              alt="classes"
+              src="https://i.ibb.co/rybnqLt/Mask-Group.png"
+            ></img>
+            <div className="px-4 col-md-5  d-flex flex-column justify-content-center">
+              <h3 style={{ textAlign: "left" }} className="heroNumber">
+                Personal Development
+              </h3>
+              <p style={{ textAlign: "left" }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse euismod cras nisl eu adipiscing amet diam. Et
+                pharetra molestie lectus dui cras faucibus. Sed diam neque.
+              </p>
+              <div>
+                <button className="col-md-7 mr-auto d-flex justify-content-center Primary formButton">
+                  Pick a class
+                </button>
+              </div>
             </div>
-          </div>
-          <img
-            className="p-4 col-md-7 col-xl-5 col-lg-6"
-            alt="talent"
-            src="https://i.ibb.co/NxMvH7G/Mask-Group-1.png"
-          ></img>
-        </div>
-        <div className="row  justify-content-center m-0">
-          <img
-            className="p-4 col-md-7 col-xl-5 col-lg-6"
-            alt="classes"
-            src="https://i.ibb.co/rybnqLt/Mask-Group.png"
-          ></img>
-          <div className="px-4 col-md-5  d-flex flex-column justify-content-center">
-            <h3 style={{ textAlign: "left" }} className="heroNumber">
-              Personal Development
-            </h3>
-            <p style={{ textAlign: "left" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse euismod cras nisl eu adipiscing amet diam. Et pharetra
-              molestie lectus dui cras faucibus. Sed diam neque.
-            </p>
-            <div>
-              <button className="col-md-7 mr-auto d-flex justify-content-center Primary formButton">
-                Pick a class
-              </button>
-            </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
