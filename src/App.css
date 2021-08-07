@@ -37,13 +37,398 @@
   }
 }
 
-.App {
-  background: url(https://i.ibb.co/Y7cjbJq/image.png);
+.App,
+.sidebar,
+.dashboard-card-kelas,.dashboard-statistik-kelas,.dashboard-right-sidebar{
+  background: white;
   background-repeat: no-repeat;
-  background-position-y: 150px;
   height: auto;
 }
 
-.logoScale{
+.logoScale {
   width: 172px;
 }
+
+a {
+  color: #404041;
+  opacity: 0.5;
+  text-decoration: none !important;
+  padding: 5px 0px 5px 0px;
+}
+
+a:hover,.dashboard-statistik-kelas h6 {
+  opacity: 1;
+  color: #00a69c;
+}
+
+.truncate {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.nav-item a {
+  color: #404041 !important;
+}
+
+.nav-item a:hover {
+  opacity: 1;
+  color: #00a69c !important;
+}
+
+.chevron {
+  color: #fff;
+  background-color: #00a69c;
+  border-radius: 20px;
+  padding: 4px 8px;
+  opacity: 1;
+}
+
+.chevron2 {
+  opacity: 1;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #8e8e8e;
+  opacity: 0.5;
+}
+
+textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #8e8e8e;
+  opacity: 0.5;
+}
+
+textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #8e8e8e;
+  opacity: 0.5;
+}
+
+textarea:-ms-input-placeholder {
+  color: #8e8e8e;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 1025px) {
+  .heroImg {
+    width: 120%;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .textHero h2 {
+    font-size: 30px !important;
+  }
+  .textHero p {
+    font-size: 14px;
+  }
+  .register {
+    min-height: 110vh !important;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .heroDesc img {
+    width: 10vw !important;
+  }
+  h2 {
+    font-size: 24px !important;
+  }
+  p {
+    font-size: 14px !important;
+  }
+  h3 {
+    font-size: 22px !important;
+  }
+  h5 {
+    font-size: 20px !important;
+  }
+  .kelas i {
+    right: 10px !important;
+  }
+  .register {
+    min-height: 100vh !important;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .output img {
+    width: 48px !important;
+  }
+}
+.heroDesc img {
+  width: 6vw;
+}
+
+.backgroundLogin {
+  background: url(https://i.ibb.co/Y7cjbJq/image.png);
+  background-repeat: no-repeat;
+  background-position-y: 150px;
+}
+
+label.kelas {
+  color: #404041;
+}
+
+.kelas i {
+  font-size: 24px;
+  right: 0;
+  margin-right: 6%;
+  color: #00a69c;
+}
+
+.berandaCardFull,
+.payment-detail {
+  background-color: #f8fafb;
+}
+
+.rmsc {
+  --rmsc-main: #404041 !important;
+  --rmsc-hover: #fff !important;
+  --rmsc-selected: #fff !important;
+  --rmsc-border: #949494 !important;
+  --rmsc-gray: #aaa;
+  --rmsc-bg: #fff;
+  --rmsc-p: 12px; /* Spacing */
+  --rmsc-radius: 4px; /* Radius */
+  --rmsc-h: 44.4px !important; /* Height */
+}
+
+.dropdown-content :hover,.dashboard-statistik-tambah a {
+  color: #00a69c !important;
+}
+.title {
+  color: #404041;
+}
+
+option:checked {
+  color: #00a69c !important;
+}
+
+title :hover {
+  color: #00a69c !important;
+  background: white !important;
+}
+
+span.textButton {
+  font-family: "Lato", sans-serif;
+}
+.textHero h5,
+.sidebar p {
+  color: #404041;
+  opacity: 0.5;
+}
+
+.textHero a {
+  color: #00a69c !important;
+  opacity: 1;
+  font-style: italic;
+}
+
+.textHero a:hover,.dashboard-statistik-tambah:hover a,.dashboard-statistik-tambah:hover i {
+  cursor: pointer;
+  color: #404041 !important ;
+}
+
+.detail2 p,
+.pelaksanaan h4,
+.materi h4,
+.syarat h4,
+.harga h5,
+.dashboard-card-kelas h6,.dashboard-statistik-tambah a,.dashboard-statistik-tambah i {
+  color: #00a69c;
+  opacity: 1;
+  font-weight: 500;
+}
+
+.detail2 span,
+.detail p {
+  color: #404041;
+  opacity: 0.5;
+}
+
+.detail2 {
+  background-color: #f8fafb;
+}
+
+.pelaksanaan img {
+  width: 48px;
+}
+.mentor img {
+  width: 65px;
+}
+
+.mentorDesc {
+  color: #404041;
+  opacity: 0.6;
+}
+
+.heroImg {
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  margin-top: -20%;
+  z-index: -1;
+}
+.materi {
+  background-color: #f8fafb;
+  border-radius: 20px;
+}
+
+.rincian h6 {
+  color: #404041;
+  letter-spacing: 0.05rem;
+  font-weight: bold;
+}
+
+.rincian {
+  border-top: 1px solid #00a69c;
+}
+
+.rincianButton {
+  border: none;
+  background: none;
+}
+
+.rincian i:hover {
+  color: #00a69c;
+}
+
+.opacity {
+  opacity: 0.5;
+}
+
+.output i {
+  color: #00a69c;
+}
+
+.output img {
+  width: 52px;
+}
+
+p.harga {
+  font-weight: 500;
+}
+
+.relate h3 {
+  color: #00a69c;
+}
+
+.iconPrimary {
+  filter: invert(45%) sepia(87%) saturate(2004%) hue-rotate(144deg)
+    brightness(91%) contrast(101%);
+}
+
+.payment-radio label {
+  opacity: 1;
+  color: #404041;
+}
+.payment-metode a {
+  color: #00a69c;
+  opacity: 1;
+}
+.payment-voucher-status {
+  font-size: 12px;
+  color: #00a69c;
+}
+input.payment {
+  width: 1vw;
+}
+
+.payment-detail h6 {
+  color: #00a69c;
+}
+
+.payment-detail,.dashboard-card-kelas,.dashboard-statistik-kelas {
+  border-radius: 8px;
+}
+
+.payment-detail{
+  box-shadow: 12px 16px 40px rgba(64, 64, 65, 0.08);
+
+}
+
+.metode-pembayaran {
+  border-bottom: 1px solid rgba(53, 49, 49, 0.247);
+}
+
+.popUpPayment {
+  background-color: white;
+  text-align: left;
+}
+.popUpClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.buttonNone {
+  border: none;
+  background-color: transparent;
+}
+
+.activeSidebar {
+  background: #f8fafb !important;
+  list-style: none;
+}
+
+.activeSidebar a,
+.activeSidebar p,
+.sidebar a {
+  opacity: 1;
+}
+
+.activeSidebar .rectangle {
+  width: 2.5%;
+  background-color: #00a69c;
+  margin: 0;
+  display: block !important;
+}
+
+.dashboard {
+  background: rgb(248, 250, 251);
+}
+
+.sidebar li:hover p,
+.dashboard-kelas a {
+  opacity: 1;
+}
+
+.sidebar li:hover {
+  background: #f8fafb;
+}
+
+.sidebar,.dashboard-right-sidebar {
+  min-height: 100vh;
+  box-shadow: 0px 0px 40px rgba(196, 196, 196, 0.16);
+}
+
+.dashboard-card-kelas span,.dashboard-card-kelas p,.dashboard-card-kelas h6 {
+  font-size: 14px;
+}
+
+.iconSecondary {
+  width: 28px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600 !important;
+}
+
+.circle{
+  border-radius: 24px;
+}
+
+.dashboard-statistik-kelas p{
+  font-size: 18px;
+}
+
+.dashboard-statistik-kelas h6{
+  font-size: 60px;
+}
+.dashboard-notif{
+  background: #cc0001;
+}
+
+
+

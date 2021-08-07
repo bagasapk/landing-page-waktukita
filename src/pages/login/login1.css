@@ -20,6 +20,7 @@
     background: #ffffff;
     box-shadow: -16px 16px 40px rgba(3, 113, 106, 0.1);
     border-radius: 20px;
+    /* z-index: 1; */
     /* background: radial-gradient(
         ellipse at left bottom,
         rgba(22, 24, 47, 1) 0%,

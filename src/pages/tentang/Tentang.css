@@ -1,16 +1,13 @@
 .hero {
-  left: 54.6%;
+  /* left: 54.6%; */
   max-height: 90.7vh;
-}
-
-.heroImg {
-  padding-left: 200px;
 }
 
 .heroBox {
   /* max-height: 91vh; */
   overflow: hidden;
   background-color: white;
+
 }
 
 .heroContainer {
@@ -53,18 +50,23 @@
 
 .slideshowDots {
   display: inline-block;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
 
   cursor: pointer;
   margin: 15px 7px 0px;
 
-  background-color: #c4c4c4;
+  background-color: #FFF;
+  opacity: 0.5;
+}
+
+.slideshowDots.tentang{
+  background-color: #00a69c;
 }
 
 .slideshowDots.active {
-  background-color: #00a69c;
+  opacity: 1;
 }
 
 .footer{

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { withRouter } from "react-router";
-import NavbarLogin from "./navbar/navbar";
+import NavbarLogin from "../../components/navbar/NavbarLogin";
 import hide from "../../resources/symbols/hide.svg";
 import symbol from "../../resources/symbols/XMLID1386(active).svg";
 import fbSymbol from "./facebook.svg";
@@ -27,8 +27,8 @@ const responseFacebook = (response) => {
 
 const Login = (props) => {
   const responseGoogleSuccess = (response) => {
-    console.log("Login Success :", response);
-    console.log("Login Success :", response.getBasicProfile());
+    // console.log("Login Success :", response);
+    // console.log("Login Success :", response.getBasicProfile());
     console.log("ID: " + response.getBasicProfile().getId());
     console.log("Full Name: " + response.getBasicProfile().getName());
     console.log("Given Name: " + response.getBasicProfile().getGivenName());
@@ -103,7 +103,7 @@ const Login = (props) => {
           <div className="col-md-6"></div>
           <div className="jumbotronContainer col-md-6"></div>
           <div className="loginBox col-md-12">
-            <div className="loginContainer p-4">
+            <div className="loginContainer p-md-5 p-4">
               <h2 className="titleForm">Login</h2>
               <img
                 className="mx-auto symbolPosition"
@@ -173,7 +173,7 @@ const Login = (props) => {
                   autoLoad={true}
                   render={(renderProps) => (
                     <button
-                      className="facebookButton p-md-2 mb-5"
+                      className="facebookButton p-md-2 mb-5 px-1"
                       onClick={renderProps.onClick}
                     >
                       <img alt="facebook" className="pr-1" src={fbSymbol}></img>
@@ -188,7 +188,7 @@ const Login = (props) => {
                   clientId={clientId}
                   render={(renderProps) => (
                     <button
-                      className="googleButton p-md-2 n mb-5"
+                      className="googleButton p-md-2 n mb-5 px-1"
                       onClick={renderProps.onClick}
                       disabled={renderProps.disabled}
                     >

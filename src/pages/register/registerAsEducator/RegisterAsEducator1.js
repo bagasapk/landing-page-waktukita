@@ -4,8 +4,8 @@ import symbolActive from "../../../resources/symbols/XMLID1386(active).svg";
 import hide from "../../../resources/symbols/hide.svg";
 import "./RegisterAsEducator.css";
 import "../Register.css";
-import NavbarRegister from "../navbar/NavbarRegister";
-import NavbarRegister2 from "../navbar/NavbarRegister2";
+import NavbarRegister from "../../../components/navbar/NavbarRegister";
+import NavbarRegister2 from "../../../components/navbar/NavbarRegister2";
 import PopUpRegister from "./popUp/PopUpRegister.js";
 import symbolPopUp from "./popUp/Group2981.svg";
 import { useForm } from "react-hook-form";
@@ -127,7 +127,7 @@ const RegisterAsEducator1 = () => {
     setFormStep(1);
   };
   return (
-    <div>
+    <div className="backgroundLogin">
       <form onSubmit={handleSubmit(onSubmit)}>
         {formStep === 0 && (
           <section>

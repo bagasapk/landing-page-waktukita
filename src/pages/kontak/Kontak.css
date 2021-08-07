@@ -1,0 +1,17 @@
+.hubungikami h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #404041;
+  font-weight: bold;
+}
+
+.hubungikami p {
+  color: #404041;
+}
+
+.hubungikami2 h6,
+.hubungikami2 span, .hubungikami2 p {
+  color: white;
+}
+.hubungikami2 h6 {
+  font-weight: 700;
+}
