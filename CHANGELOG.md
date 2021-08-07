@@ -1,3 +1,13 @@
+# 0.0.3 (7 Agustus 2021)
+
+```
+### Bug Fixes
+    - X
+
+### Features
+    - Fixing BaseUrl
+```
+
 # 0.0.2 (7 Agustus 2021)
 
 ```
