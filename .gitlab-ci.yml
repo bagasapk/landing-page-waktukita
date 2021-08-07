@@ -1,0 +1,169 @@
+stages:
+  - install_dependencies
+  - build
+  - deploy
+
+install_dependencies_develop:
+  stage: install_dependencies
+  image: node:14-alpine
+  before_script:
+    - apk --no-cache update && apk add --no-cache g++ make zlib-dev bash git libpng-dev && rm -fr /var/cache/apk/*
+  cache:
+    key: $CI_COMMIT_REF_SLUG-$CI_PROJECT_DIR
+    paths:
+      - node_modules/
+    policy: push
+  script:
+    - npm cache clean --force
+    - npm ci
+  only:
+    refs:
+      - develop
+    changes:
+      - package-lock.json
+
+build_develop:
+  stage: build
+  image: node:14-alpine
+  before_script:
+    - apk --no-cache update && apk add --no-cache g++ make zlib-dev bash git libpng-dev && rm -fr /var/cache/apk/*
+  cache:
+    key: $CI_COMMIT_REF_SLUG-$CI_PROJECT_DIR
+    paths:
+      - node_modules/
+    policy: pull-push
+  script:
+    - npm cache clean --force
+    - '[[ -d "./node_modules" ]] || npm ci'
+    - npm run build
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - build
+  only:
+    - develop
+
+deploy_develop:
+  stage: deploy
+  image: kroniak/ssh-client
+  before_script:
+    - apk add --no-cache tar
+    - "which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )"
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - cd build && tar -czf- . | ssh $REMOTE_USER@$REMOTE_HOST "tar -xpzvf- -C $APP_PATH_DEVELOP"
+  only:
+    - develop
+
+install_dependencies_staging:
+  stage: install_dependencies
+  image: node:14-alpine
+  before_script:
+    - apk --no-cache update && apk add --no-cache g++ make zlib-dev bash git libpng-dev && rm -fr /var/cache/apk/*
+  cache:
+    key: $CI_COMMIT_REF_SLUG-$CI_PROJECT_DIR
+    paths:
+      - node_modules/
+    policy: push
+  script:
+    - npm cache clean --force
+    - npm ci
+  only:
+    refs:
+      - /^(\d+\.)(\d+\.)(\d+\-(beta)\d+)$/
+    changes:
+      - package-lock.json
+
+build_staging:
+  stage: build
+  image: node:14-alpine
+  before_script:
+    - apk --no-cache update && apk add --no-cache g++ make zlib-dev bash git libpng-dev && rm -fr /var/cache/apk/*
+  cache:
+    key: $CI_COMMIT_REF_SLUG-$CI_PROJECT_DIR
+    paths:
+      - node_modules/
+    policy: pull-push
+  script:
+    - npm cache clean --force
+    - '[[ -d "./node_modules" ]] || npm ci'
+    - npm run build
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - build
+  only:
+    - /^(\d+\.)(\d+\.)(\d+\-(beta)\d+)$/
+
+deploy_staging:
+  stage: deploy
+  image: kroniak/ssh-client
+  before_script:
+    - apk add --no-cache tar
+    - "which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )"
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - cd build && tar -czf- . | ssh $REMOTE_USER@$REMOTE_HOST "tar -xpzvf- -C $APP_PATH_STAGING"
+  only:
+    - /^(\d+\.)(\d+\.)(\d+\-(beta)\d+)$/
+
+install_dependencies_production:
+  stage: install_dependencies
+  image: node:14-alpine
+  before_script:
+    - apk --no-cache update && apk add --no-cache g++ make zlib-dev bash git libpng-dev && rm -fr /var/cache/apk/*
+  cache:
+    key: $CI_COMMIT_REF_SLUG-$CI_PROJECT_DIR
+    paths:
+      - node_modules/
+    policy: push
+  script:
+    - npm cache clean --force
+    - npm ci
+  only:
+    refs:
+      - /^(\d+\.)(\d+\.)(\d+)$/
+    changes:
+      - package-lock.json
+
+build_production:
+  stage: build
+  image: node:14-alpine
+  before_script:
+    - apk --no-cache update && apk add --no-cache g++ make zlib-dev bash git libpng-dev && rm -fr /var/cache/apk/*
+  cache:
+    key: $CI_COMMIT_REF_SLUG-$CI_PROJECT_DIR
+    paths:
+      - node_modules/
+    policy: pull-push
+  script:
+    - npm cache clean --force
+    - '[[ -d "./node_modules" ]] || npm ci'
+    - npm run build
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - build
+  only:
+    - /^(\d+\.)(\d+\.)(\d+)$/
+
+deploy_production:
+  stage: deploy
+  image: kroniak/ssh-client
+  before_script:
+    - apk add --no-cache tar
+    - "which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )"
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - cd build && tar -czf- . | ssh $REMOTE_USER@$REMOTE_HOST "tar -xpzvf- -C $APP_PATH_PRODUCTION"
+  only:
+    - /^(\d+\.)(\d+\.)(\d+)$/
