@@ -18,7 +18,7 @@ install_dependencies_develop:
     - npm ci
   only:
     refs:
-      - develop
+      - /^(\d+\.)(\d+\.)(\d+\-(alpha)\d+)$/
     changes:
       - package-lock.json
 
@@ -41,7 +41,7 @@ build_develop:
     paths:
       - build
   only:
-    - develop
+    - /^(\d+\.)(\d+\.)(\d+\-(alpha)\d+)$/
 
 deploy_develop:
   stage: deploy
@@ -56,7 +56,7 @@ deploy_develop:
   script:
     - cd build && tar -czf- . | ssh $REMOTE_USER@$REMOTE_HOST "tar -xpzvf- -C $APP_PATH_DEVELOP"
   only:
-    - develop
+    - /^(\d+\.)(\d+\.)(\d+\-(alpha)\d+)$/
 
 install_dependencies_staging:
   stage: install_dependencies
