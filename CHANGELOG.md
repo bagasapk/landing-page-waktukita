@@ -1,19 +1,29 @@
-# 0.0.2 (7 Agustus 2021)
+# :white_check_mark: [0.0.3](https://gitlab.com/waktukita-new/wakutkita-class-new-frontend/-/tags/0.0.3)
+> ## :calendar: **7 Agustus 2021 - Release**
+>
+> ### **Bug Fixing**
+> - X
+>
+> ### **New Features**
+> - Fixing BaseUrl
+---
 
-```
-### Bug Fixes
-    - X
+# :white_check_mark: [0.0.2](https://gitlab.com/waktukita-new/wakutkita-class-new-frontend/-/tags/0.0.2)
+> ## :calendar: **7 Agustus 2021 - Release**
+>
+> ### **Bug Fixing**
+> - X
+>
+> ### **New Features**
+> - Sample demo
+---
 
-### Features
-    - Sample demo
-```
-
-# 0.0.1 (2 Agustus 2021)
-
-```
-### Bug Fixes
-    - X
-
-### Features
-    - First Initiate with CI/CD
-```
+# :white_check_mark: [0.0.1](https://gitlab.com/waktukita-new/wakutkita-class-new-frontend/-/tags/0.0.1)
+> ## :calendar: **2 Agustus 2021 - Release**
+>
+> ### **Bug Fixing**
+> - X
+>
+> ### **New Features**
+> - First Initiate with CI/CD
+---

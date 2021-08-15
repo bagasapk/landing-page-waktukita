@@ -1,8 +1,25 @@
 # Getting Started with Create React App
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+---
+## Maintainers
+---
+
+* Bamasatya
+* Gaswara
+* Bagas
+
+---
+## Changelog
+---
+
+Visite to [Changelog Version Tag](https://gitlab.com/waktukita-new/wakutkita-class-new-frontend/-/blob/develop/CHANGELOG.md) to see versioning
+
+---
 ## Available Scripts
+---
 
 In the project directory, you can run:
 
