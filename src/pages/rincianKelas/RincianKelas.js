@@ -43,7 +43,7 @@ const RincianKelas = () => {
       <Navbar2 />
       <section>
         <div className="heroBox col-sm-12 px-sm-5">
-          <div className="d-flex justify-content-between">
+          <div className="d-flex justify-content-between paddingWaktuKita">
             <div className="col-md-6 col-lg-7 col-xl-6 pl-md-0 pl-lg-5 row m-0 d-lg-flex flex-lg-column justify-content-lg-center">
               <div className="textHero d-md-flex flex-md-column justify-content-md-end">
                 <h5>Online</h5>

@@ -173,6 +173,7 @@ textarea:-ms-input-placeholder {
   background: url(https://i.ibb.co/Y7cjbJq/image.png);
   background-repeat: no-repeat;
   background-position-y: 150px;
+  min-height: 100vh;
 }
 
 label.kelas {
@@ -441,7 +442,7 @@ h1,h2,h3,h4,h5,h6{
 
 .navbarWaktuKita{
   position: absolute;
-  width: 100%;
+  width: 100% !important;
   z-index: 2;
   background-color: white;
 }

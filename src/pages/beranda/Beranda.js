@@ -140,7 +140,7 @@ const Beranda = () => {
       <Navbar2 />
       <div
         style={{ backgroundColor: "white" }}
-        className="slideshowSlider   pt-3"
+        className="slideshowSlider  paddingWaktuKita pt-3"
       >
         <div
           style={{ transform: `translate3d(${-index * 93.3}%, 0, 0)` }}
@@ -302,18 +302,18 @@ const Beranda = () => {
         {renderButton4()}
       </div>
       <div className="d-none d-xl-block slideshowSlider">
-          <div className="d-flex justify-content-xl-between mx-5">
-            {categories.map((src, index) => (
-              <div className="d-flex">
-                <img
-                  className="d-block img-fluid"
-                  key={index}
-                  alt="frame-1"
-                  src={dashboard}
-                ></img>
-                <span className="align-self-center pl-3">{src}</span>
-              </div>
-            ))}
+        <div className="d-flex justify-content-xl-between mx-5">
+          {categories.map((src, index) => (
+            <div className="d-flex">
+              <img
+                className="d-block img-fluid"
+                key={index}
+                alt="frame-1"
+                src={dashboard}
+              ></img>
+              <span className="align-self-center pl-3">{src}</span>
+            </div>
+          ))}
         </div>
       </div>
 

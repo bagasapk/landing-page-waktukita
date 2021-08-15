@@ -15,8 +15,8 @@ const Payment = () => {
     <div>
       <div>
         <Navbar2 />
-        <div className="my-5">
-          <h2 className="titleForm">Pembayaran</h2>
+        <div className="py-5">
+          <h2 className="titleForm paddingWaktuKita">Pembayaran</h2>
           <img
             className="mx-auto symbolPosition"
             alt="symbol"

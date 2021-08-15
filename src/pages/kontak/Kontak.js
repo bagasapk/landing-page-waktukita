@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Kontak.css";
 import icon1 from "./Group 56 (1).svg";
 import icon2 from "./Group 55 (1).svg";
@@ -7,8 +7,37 @@ import icon4 from "../../resources/contact/Group 50.svg";
 import location from "../../resources/symbols/Group10.svg";
 import Navbar2 from "../../components/navbar/Navbar2";
 import ReactTooltip from "react-tooltip";
+import CompanyInfoService from "../../services/CompanyInfoService";
 
 const Kontak = () => {
+  const [companyInfo, setCompanyInfo] = useState([]);
+  const [copied, setCopied] = useState(false);
+  const timeoutRef = React.useRef(null);
+
+  useEffect(() => {
+    retrieve();
+  }, []);
+
+  const retrieve = () => {
+    CompanyInfoService.getAll()
+      .then((response) => {
+        setCompanyInfo(response.data.data);
+        console.log(response.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
+  const handleCopy = (e) => {
+    navigator.clipboard.writeText(e);
+    setCopied(copied ? true : true);
+    timeoutRef.current = setTimeout(
+      () => setCopied(copied ? false : false),
+      2000
+    );
+  };
+
   return (
     <div>
       <Navbar2 />
@@ -96,88 +125,130 @@ const Kontak = () => {
             </div>
           </form>
         </div>
-        <div
-          style={{ backgroundColor: "#01988E", display: "block" }}
-          className="col-lg-5 ml-lg-5 pt-4 hubungikami2 d-flex flex-wrap"
-        >
-          <div className="d-flex flex-column px-5 pt-5 mx-auto mx-md-0">
-            <h6 className="p-2 text-center text-md-left">Kontak Kami</h6>
-            <div>
-              <div className="p-2 d-flex ">
-                <img
-                  data-tip
-                  data-for="Email"
-                  alt="Email"
-                  src={icon1}
-                ></img>
-                <ReactTooltip id="Email" effect="solid" place="left">
-                  <span>Email</span>
-                </ReactTooltip>
-                <span className="pl-2 align-self-center">
-                  info@waktukita.com
-                </span>
-              </div>
-              <div className="p-2 d-flex">
-                <img
-                  data-tip
-                  data-for="telephone"
-                  alt="telephone"
-                  src={icon2}
-                ></img>
-                <ReactTooltip id="telephone" effect="solid" place="left">
-                  <span>Telephone</span>
-                </ReactTooltip>
-                <span className="pl-2 align-self-center">+62 8112640520</span>
-              </div>
-            </div>
-          </div>
-          <div className="px-5 pt-5 mt-1 text-left mx-auto mx-md-0">
-            <h6>Ikuti sosial media kami</h6>
-            <div className="py-3 text-center text-md-left">
-              <img
-                data-tip
-                data-for="Linkedin"
-                alt="linkedin"
-                src={icon3}
-              ></img>
-              <ReactTooltip id="Linkedin" effect="solid" place="bottom">
-                <span>Linkedin</span>
-              </ReactTooltip>
-              <img data-tip
-                data-for="Instagram" className="pl-3" alt="instagram" src={icon4}></img>
-              <ReactTooltip id="Instagram" effect="solid" place="bottom">
-                <span>Instagram</span>
-              </ReactTooltip>
-            </div>
-          </div>
-          <div className="p-lg-3 pt-4 pt-md-5 pt-lg-0 d-flex flex-column justify-content-around">
-            <div className="p-md-5 pt-lg-0 d-md-flex">
-              <img className="align-self-start" alt="loc" src={location}></img>
-              <div className="col-md-10 pt-2 pt-md-0 text-md-left">
-                <h6>Yogyakarta</h6>
-                <p>
-                  Innovation Factory Block 71 Yogyakarta Jl. Prof. Dr. Herman
-                  Yohanes No. 1212, Terban, Gondokusuman, Yogyakarta, 552233
-                </p>
-              </div>
-            </div>
-            <div className="pl-md-5 d-md-flex pb-5">
-              <img className="align-self-start" alt="loc" src={location}></img>
-              <div className="col-md-10 pt-2 pt-md-0 text-md-left">
-                <h6>Jakarta</h6>
-                <p>
-                  Innovation Factory Block 71 Jakarta Ariobimo Sentral, South
-                  Jakarta, RT.9/RW.4, East Kuningan, Jakarta, 12950
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-12">
-            <div className="border-top px-3 px-md-5 mx-5 pt-2">
-              <p>Copyright © 2021 Waktukita.com</p>
-            </div>
-          </div>
-        </div>
+        {companyInfo
+          ? companyInfo.slice(1, 2).map((item) => {
+              return (
+                <div
+                  style={{ backgroundColor: "#01988E", display: "block" }}
+                  className="col-lg-5 ml-lg-5 pt-4 hubungikami2 d-flex flex-wrap"
+                >
+                  <div className="d-flex flex-column px-5 pt-5 mx-auto mx-md-0">
+                    <h6 className="p-2 text-center text-md-left">
+                      Kontak Kami
+                    </h6>
+
+                    <div>
+                      <div className="p-2 d-flex ">
+                        <button
+                          className="buttonNone"
+                          onClick={() => {
+                            handleCopy(item.email);
+                          }}
+                        >
+                          <img
+                            data-tip
+                            className="mx-1"
+                            data-for="Email"
+                            alt="Email"
+                            src={icon1}
+                          ></img>
+                        </button>
+                        <ReactTooltip id="Email" effect="solid" place="left">
+                          <span>{copied ? "Copy to clipboard" : "Email"}</span>
+                        </ReactTooltip>
+                        <span className="pl-2 align-self-center">
+                          {item.email}
+                        </span>
+                      </div>
+                      <div className="p-2 d-flex">
+                      <button
+                          className="buttonNone"
+                          onClick={() => {
+                            handleCopy(item.phone_number);
+                          }}
+                        >
+                          <img
+                            data-tip
+                            className="mx-1"
+                            data-for="telephone"
+                            alt="telephone"
+                            src={icon2}
+                          ></img>
+                        </button>
+                        <ReactTooltip
+                          id="telephone"
+                          effect="solid"
+                          place="left"
+                        >
+                          <span>{copied ? "Copy to clipboard" : "Telephone"}</span>
+                        </ReactTooltip>
+                        <span className="pl-2 align-self-center">
+                          {item.phone_number}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="px-5 pt-5 mt-1 text-left mx-auto mx-md-0">
+                    <h6>Ikuti sosial media kami</h6>
+                    <div className="py-3 text-center text-md-left">
+                      <img
+                        data-tip
+                        data-for="Linkedin"
+                        alt="linkedin"
+                        src={icon3}
+                      ></img>
+                      <ReactTooltip id="Linkedin" effect="solid" place="bottom">
+                        <span>{item.socialmedia_urls}</span>
+                      </ReactTooltip>
+                      <img
+                        data-tip
+                        data-for="Instagram"
+                        className="pl-3"
+                        alt="instagram"
+                        src={icon4}
+                      ></img>
+                      <ReactTooltip
+                        id="Instagram"
+                        effect="solid"
+                        place="bottom"
+                      >
+                        <span>{item.socialmedia_urls}</span>
+                      </ReactTooltip>
+                    </div>
+                  </div>
+                  <div className="p-lg-3 pt-4 pt-md-5 pt-lg-0 d-flex flex-column justify-content-around">
+                    <div className="p-md-5 pt-lg-0 d-md-flex">
+                      <img
+                        className="align-self-start"
+                        alt="loc"
+                        src={location}
+                      ></img>
+                      <div className="col-md-10 pt-2 pt-md-0 text-md-left">
+                        <h6>Yogyakarta</h6>
+                        <p>{item.addresses}</p>
+                      </div>
+                    </div>
+                    <div className="pl-md-5 d-md-flex pb-5">
+                      <img
+                        className="align-self-start"
+                        alt="loc"
+                        src={location}
+                      ></img>
+                      <div className="col-md-10 pt-2 pt-md-0 text-md-left">
+                        <h6>Jakarta</h6>
+                        <p>{item.addresses}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-12">
+                    <div className="border-top px-3 px-md-5 mx-5 pt-2">
+                      <p>Copyright © 2021 Waktukita.com</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })
+          : null}
       </div>
     </div>
   );

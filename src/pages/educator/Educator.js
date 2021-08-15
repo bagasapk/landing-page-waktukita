@@ -88,7 +88,7 @@ const Educator = () => {
                 <div>
                   <h5 className="pl-3 heroNumber m-0 mt-2">Perluas pasar</h5>
                   <p
-                    className="text-center pl-3 pt-3 truncate text-md-left"
+                    className="text-left pl-3 pt-3 truncate text-md-left"
                     style={{ opacity: "1" }}
                   >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -105,17 +105,17 @@ const Educator = () => {
                   alt="symbol"
                   src={symbol}
                 ></img>
-                <div className="pl-3">
-                  <h5 className="heroNumber m-0 mt-2">Perbanyak peserta</h5>
-                </div>
-              </div>
+                <div className="">
+                  <h5 className="heroNumber pl-3 m-0 mt-2">Perbanyak peserta</h5>
               <p
-                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
-                style={{ textAlign: "left" }}
+              className="text-left pl-3 pt-3 truncate text-md-left"
+                style={{ opacity: "1" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod
               </p>
+                </div>
+              </div>
             </div>
             <div className="d-flex flex-column col-md-4 p-3">
               <div className="d-flex col-xl-12 heroDesc">
@@ -127,15 +127,15 @@ const Educator = () => {
                 ></img>
                 <div className="pl-3">
                   <h5 className="heroNumber m-0 mt-2">Lorem Ipsum</h5>
-                </div>
-              </div>
               <p
-                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
-                style={{ textAlign: "left" }}
+              className="text-left pt-3 truncate text-md-left"
+                style={{ opacity: "1" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod
               </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -161,15 +161,18 @@ const Educator = () => {
                   alt="symbol"
                   src={symbol}
                 ></img>
-                <h5 className="pl-3 heroNumber m-0 mt-2">Lorem ipsum</h5>
-              </div>
+                <div className="pl-3">
+
+                <h5 className="heroNumber m-0 mt-2">Lorem ipsum</h5>
               <p
-                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
-                style={{ textAlign: "left" }}
-              >
+                className="text-left pt-3 truncate text-md-left"
+                style={{ opacity: "1" }}
+                >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod
               </p>
+                </div>
+              </div>
             </div>
             <div className="d-flex flex-column col-md-4 p-3">
               <div className="d-flex col-xl-12 heroDesc">
@@ -181,15 +184,15 @@ const Educator = () => {
                 ></img>
                 <div className="pl-3">
                   <h5 className="heroNumber m-0 mt-2">Lorem ipsum</h5>
-                </div>
-              </div>
               <p
-                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
-                style={{ textAlign: "left" }}
+                className="text-left pt-3 truncate text-md-left"
+                style={{ opacity: "1" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod
               </p>
+                </div>
+              </div>
             </div>
             <div className="d-flex flex-column col-md-4 p-3">
               <div className="d-flex col-xl-12 heroDesc">
@@ -201,15 +204,15 @@ const Educator = () => {
                 ></img>
                 <div className="pl-3">
                   <h5 className="heroNumber m-0 mt-2">Lorem Ipsum</h5>
-                </div>
-              </div>
               <p
-                className="pl-md-4 ml-md-5 p-0 text-center truncate col-md-12 text-md-left"
-                style={{ textAlign: "left" }}
+                className="text-left pt-3 truncate text-md-left"
+                style={{ opacity: "1" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod
               </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

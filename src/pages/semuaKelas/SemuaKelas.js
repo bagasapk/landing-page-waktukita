@@ -48,7 +48,7 @@ const SemuaKelas = () => {
     <div>
       <Navbar2></Navbar2>
       <div className="p-4 p-mb-5">
-        <div className="d-lg-flex justify-content-between">
+        <div className="d-lg-flex justify-content-between paddingWaktuKita">
           <div className="d-md-flex col-md-6 col-lg-7 p-0">
             <div className="text-left col-12 col-md-8 pb-3 pb-lg-0 col-lg-4">
               <label htmlFor="kategori" className="kelas">

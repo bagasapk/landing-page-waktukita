@@ -14,10 +14,10 @@ const RegisterAsEducator4 = () => {
     }
   };
   return (
-    <div className="backgroundRegister">
+    <div className="backgroundLogin">
       <NavbarRegister2 />
-      <div className="p-3 p-md-5">
-        <div className="boxContainer contentPosition">
+      <div className="p-3 p-md-5 ">
+        <div className="boxContainer contentPosition paddingWaktuKita">
           <div className="boxFlex col-11 col-md-9 boxSize mx-md-auto d-md-flex justify-content-around">
             <span className="contentColor">Register</span>
             <img
@@ -41,7 +41,7 @@ const RegisterAsEducator4 = () => {
             <span className="contentColor">Selesai</span>
           </div>
         </div>
-        <p className="mx-auto col-md-7 textPosition">
+        <p className="mx-auto my-3 col-md-7 textPosition">
           {/* Informasi ini akan digunakan oleh tim Waktukita dalam
         <span style={{ color: "#00A69C", fontWeight: "bold" }}>{" "}
         proses pembayaran
