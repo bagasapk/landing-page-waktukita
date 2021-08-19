@@ -8,10 +8,13 @@ import location from "../../resources/symbols/Group10.svg";
 import Navbar2 from "../../components/navbar/Navbar2";
 import ReactTooltip from "react-tooltip";
 import CompanyInfoService from "../../services/CompanyInfoService";
+import { useForm } from "react-hook-form";
+import ContactService from "../../services/ContactService";
 
 const Kontak = () => {
   const [companyInfo, setCompanyInfo] = useState([]);
   const [copied, setCopied] = useState(false);
+  const { register, handleSubmit } = useForm();
   const timeoutRef = React.useRef(null);
 
   useEffect(() => {
@@ -38,6 +41,19 @@ const Kontak = () => {
     );
   };
 
+  const onSubmit = async (data) => {
+    console.log(data);
+    await ContactService.post(data)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error.response);
+      });
+  };
+
+  const onError = (errors, e) => console.log(errors, e);
+
   return (
     <div>
       <Navbar2 />
@@ -52,61 +68,63 @@ const Kontak = () => {
             berikut. Kami akan membalas pesan Anda melalui email yang Anda
             cantumkan.
           </p>
-          <form>
+          <form onSubmit={handleSubmit(onSubmit, onError)}>
             <div
               style={{ textAlign: "left" }}
               className="d-flex flex-column col-xl-9 col-lg-11 p-0"
             >
-              <div className="pt-4 pb-3">
-                <label htmlFor="namaLengkap" className="m-0">
-                  Nama Lengkap
-                </label>
-
+              <div className="pt-4 pb-3 d-flex flex-column-reverse">
                 <input
                   id="namaLengkap"
                   type="text"
                   placeholder="John Doe"
                   autoFocus
-                  // {...register("namaLengkap", {
-                  //   required: { value: true },
-                  // })}
+                  {...register("name", {
+                    required: { value: true },
+                  })}
                 ></input>
-              </div>
-              <div className="pb-3">
-                <label htmlFor="email" className="m-0">
-                  Email
+                <label htmlFor="namaLengkap" className="m-0">
+                  Nama Lengkap
                 </label>
+              </div>
+              <div className="pb-3 d-flex flex-column-reverse">
                 <input
                   id="email"
                   type="email"
                   placeholder="john.doe@gmail.com"
-                  // {...register("email", { required: { value: true } })}
+                  {...register("email", { required: { value: true } })}
                 ></input>
-              </div>
-              <div className="pb-3">
-                <label htmlFor="subjek" className="m-0">
-                  Subjek
+                <label htmlFor="email" className="m-0">
+                  Email
                 </label>
+              </div>
+              <div className="pb-3 d-flex flex-column-reverse">
                 <input
                   id="subjek"
                   type="text"
                   placeholder="Subjek"
-                  // {...register("subjek", {
-                  //   required: { value: true },
-                  // })}
+                  {...register("subjek", {
+                    required: { value: true },
+                  })}
                 ></input>
-              </div>
-              <div className="pb-3">
-                <label htmlFor="pesan" className="m-0">
-                  Pesan
+                <label htmlFor="subjek" className="m-0">
+                  Subjek
                 </label>
+              </div>
+              <div className="pb-3 d-flex flex-column-reverse">
                 <textarea
                   cols="30"
                   rows="2"
                   id="pesan"
                   type="text"
                   placeholder="Tuliskan pesan anda disini"
+                  {...register("pesan", {
+                    required: { value: true },
+                  })}
                 ></textarea>
+                <label htmlFor="pesan" className="m-0">
+                  Pesan
+                </label>
                 {/* <input
                   id="pesan"
                   type="text"
@@ -161,7 +179,7 @@ const Kontak = () => {
                         </span>
                       </div>
                       <div className="p-2 d-flex">
-                      <button
+                        <button
                           className="buttonNone"
                           onClick={() => {
                             handleCopy(item.phone_number);
@@ -180,7 +198,9 @@ const Kontak = () => {
                           effect="solid"
                           place="left"
                         >
-                          <span>{copied ? "Copy to clipboard" : "Telephone"}</span>
+                          <span>
+                            {copied ? "Copy to clipboard" : "Telephone"}
+                          </span>
                         </ReactTooltip>
                         <span className="pl-2 align-self-center">
                           {item.phone_number}

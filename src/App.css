@@ -39,7 +39,9 @@
 
 .App,
 .sidebar,
-.dashboard-card-kelas,.dashboard-statistik-kelas,.dashboard-right-sidebar{
+.dashboard-card-kelas,
+.dashboard-statistik-kelas,
+.dashboard-right-sidebar {
   background: white;
   background-repeat: no-repeat;
   height: auto;
@@ -56,7 +58,8 @@ a {
   padding: 5px 0px 5px 0px;
 }
 
-a:hover,.dashboard-statistik-kelas h6 {
+a:hover,
+.dashboard-statistik-kelas h6 {
   opacity: 1;
   color: #00a69c;
 }
@@ -66,7 +69,7 @@ a:hover,.dashboard-statistik-kelas h6 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical; */
-  overflow:hidden;
+  overflow: hidden;
   line-height: 1.5rem;
   max-height: calc(1.5rem * 3);
   -webkit-box-orient: vertical;
@@ -204,7 +207,8 @@ label.kelas {
   --rmsc-h: 44.4px !important; /* Height */
 }
 
-.dropdown-content :hover,.dashboard-statistik-tambah a {
+.dropdown-content :hover,
+.dashboard-statistik-tambah a {
   color: #00a69c !important;
 }
 .title {
@@ -235,7 +239,9 @@ span.textButton {
   font-style: italic;
 }
 
-.textHero a:hover,.dashboard-statistik-tambah:hover a,.dashboard-statistik-tambah:hover i {
+.textHero a:hover,
+.dashboard-statistik-tambah:hover a,
+.dashboard-statistik-tambah:hover i {
   cursor: pointer;
   color: #404041 !important ;
 }
@@ -245,7 +251,9 @@ span.textButton {
 .materi h4,
 .syarat h4,
 .harga h5,
-.dashboard-card-kelas h6,.dashboard-statistik-tambah a,.dashboard-statistik-tambah i {
+.dashboard-card-kelas h6,
+.dashboard-statistik-tambah a,
+.dashboard-statistik-tambah i {
   color: #00a69c;
   opacity: 1;
   font-weight: 500;
@@ -348,13 +356,14 @@ input.payment {
   color: #00a69c;
 }
 
-.payment-detail,.dashboard-card-kelas,.dashboard-statistik-kelas {
+.payment-detail,
+.dashboard-card-kelas,
+.dashboard-statistik-kelas {
   border-radius: 8px;
 }
 
-.payment-detail{
+.payment-detail {
   box-shadow: 12px 16px 40px rgba(64, 64, 65, 0.08);
-
 }
 
 .metode-pembayaran {
@@ -407,12 +416,15 @@ input.payment {
   background: #f8fafb;
 }
 
-.sidebar,.dashboard-right-sidebar {
+.sidebar,
+.dashboard-right-sidebar {
   min-height: 100vh;
   box-shadow: 0px 0px 40px rgba(196, 196, 196, 0.16);
 }
 
-.dashboard-card-kelas span,.dashboard-card-kelas p,.dashboard-card-kelas h6 {
+.dashboard-card-kelas span,
+.dashboard-card-kelas p,
+.dashboard-card-kelas h6 {
   font-size: 14px;
 }
 
@@ -420,42 +432,83 @@ input.payment {
   width: 28px;
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
   font-weight: 600 !important;
 }
 
-.circle{
+.circle {
   border-radius: 24px;
 }
 
-.dashboard-statistik-kelas p{
+.dashboard-statistik-kelas p {
   font-size: 18px;
 }
 
-.dashboard-statistik-kelas h6{
+.dashboard-statistik-kelas h6 {
   font-size: 60px;
 }
-.dashboard-notif{
+.dashboard-notif {
   background: #cc0001;
 }
 
-.navbarWaktuKita{
+.navbarWaktuKita {
   position: absolute;
   width: 100% !important;
   z-index: 2;
   background-color: white;
 }
 
-.paddingWaktuKita{
+.paddingWaktuKita {
   padding-top: 83px !important;
 }
 
-.footer a:hover{
+.footer a:hover {
   font-weight: bold;
 }
 
-.product a{
+.product a {
   opacity: 1;
 }
 
+input:focus + label,
+textarea:focus + label {
+  color: #4200ff;
+}
+
+input:focus,
+textarea:focus {
+  outline: none !important;
+  border-color: #4200ff !important;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus:-moz-placeholder {
+  color: transparent;
+} /* FF 4-18 */
+input:focus::-moz-placeholder {
+  color: transparent;
+} /* FF 19+ */
+input:focus:-ms-input-placeholder {
+  color: transparent;
+} /* IE 10+ */
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+textarea:focus:-moz-placeholder {
+  color: transparent;
+} /* FF 4-18 */
+textarea:focus::-moz-placeholder {
+  color: transparent;
+} /* FF 19+ */
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+} /* IE 10+ */
