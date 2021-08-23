@@ -230,8 +230,8 @@ const RegisterAsEducator1 = () => {
           <section>
             <div className="backgroundRegister">
               <NavbarRegister2 />
-              <div className="p-3 p-md-5">
-                <div className="boxContainer contentPosition">
+              <div className="p-3 p-md-5 ">
+                <div className="boxContainer contentPosition paddingWaktuKita">
                   <div className="boxFlex col-11 col-md-9 boxSize mx-md-auto d-md-flex justify-content-around">
                     <button
                       type="button"
@@ -455,8 +455,8 @@ const RegisterAsEducator1 = () => {
           <section>
             <div className="backgroundRegister">
               <NavbarRegister2 />
-              <div className="p-3 p-md-5">
-                <div className="boxContainer contentPosition">
+              <div className="p-3 p-md-5 ">
+                <div className="boxContainer contentPosition paddingWaktuKita">
                   <div className="boxFlex col-11 col-md-9 boxSize mx-md-auto d-md-flex justify-content-around">
                     <button
                       type="button"

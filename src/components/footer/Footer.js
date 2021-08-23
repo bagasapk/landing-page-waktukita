@@ -47,9 +47,9 @@ const Footer = () => {
   return (
     <div>
       {companyInfo
-        ? companyInfo.map((item) => {
+        ? companyInfo.map((item,index) => {
             return (
-              <div>
+              <div key={index}>
                 <div className="footer">
                   <div className="d-none d-md-block d-lg-none pt-5 p-0">
                     <div>

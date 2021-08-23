@@ -188,6 +188,7 @@ const Tentang = () => {
           {products.map((product, index) => {
             return (
               <div
+                key={index}
                 className={
                   (index + 1) % 2 === 0
                     ? "row justify-content-center m-0 flex-row-reverse"
@@ -195,7 +196,6 @@ const Tentang = () => {
                 }
               >
                 <img
-                  key={product.id}
                   className="p-4 p-sm-5 col-md-7 col-xl-5 col-lg-6"
                   alt={product.product_photo}
                   src="https://i.ibb.co/rybnqLt/Mask-Group.png"
@@ -230,9 +230,9 @@ const Tentang = () => {
 
       <section>
         {whatYouLookFor
-          ? whatYouLookFor.map((item) => {
+          ? whatYouLookFor.map((item,index) => {
               return (
-                <div className="row justify-content-center waktukita m-0">
+                <div className="row justify-content-center waktukita m-0" key={index}>
                   <div className="p-4 pl-lg-5 col-md-5 col-lg-6 col-xl-5 pr-xl-0 my-auto">
                     <h2 style={{ textAlign: "left" }} className="titleForm">
                       Jadi apa yang kamu cari?

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.2",
+    "@hookform/resolvers": "^2.8.0",
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -21,7 +22,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "react-tooltip": "^4.2.21",
-    "web-vitals": "^1.1.2"
+    "sweetalert2": "^11.1.4",
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -154,12 +154,12 @@ const Login = (props) => {
                 className="pt-2"
               >
                 Lupa kata sandi?{" "}
-                <a style={{ color: "#00A69C" }} href="/">
+                <a style={{ color: "#00A69C" }} href="/lupakatasandi/1">
                   Klik disini
                 </a>
               </p>
               <p style={{ color: "#404041", fontSize: "14px" }} className="">
-                <a style={{ color: "#00A69C" }} href="/">
+                <a style={{ color: "#00A69C" }} href="/register/student">
                   Registrasi
                 </a>{" "}
                 atau Login dengan{" "}

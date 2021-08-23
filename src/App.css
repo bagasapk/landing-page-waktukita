@@ -484,7 +484,7 @@ textarea:focus + label {
 input:focus,
 textarea:focus {
   outline: none !important;
-  border-color: #4200ff !important;
+  border: 2px solid #543FD3 !important;
 }
 
 input:focus::-webkit-input-placeholder {
@@ -512,3 +512,26 @@ textarea:focus::-moz-placeholder {
 textarea:focus:-ms-input-placeholder {
   color: transparent;
 } /* IE 10+ */
+
+input:hover{
+  border-color: #767676 !important;
+}
+
+input:focus:hover{
+  border-color: #4200ff !important;
+}
+
+/* input:invalid{
+  border: 2px solid #EE0004 !important;
+} */
+
+.error{
+  border: 2px solid #EE0004 !important;
+}
+
+.errorIcon{
+  color: #EE0004;
+  position: absolute;
+  right: 48px;
+  margin: -36px;
+}

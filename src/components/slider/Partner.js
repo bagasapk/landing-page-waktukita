@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import frame1 from "../../resources/brand/Rectangle 47.png";
 import frame2 from "../../resources/brand/our-partner-3 1.png";
 import frame3 from "../../resources/brand/our-partner-10.png";
@@ -10,7 +10,7 @@ import frame8 from "../../resources/brand/our-partner-9.png";
 import frame9 from "../../resources/brand/our-partner-2 1.png";
 
 const Partner = () => {
-  const [index, setIndex] = React.useState(0);
+  const [index, setIndex] = useState(0);
   const slides = [
     frame1,
     frame2,
@@ -54,13 +54,8 @@ const Partner = () => {
           className="p-5 d-none row d-lg-flex flex-nowrap slider"
         >
           {slides.map((src, index) => (
-            <div className="col-lg-2">
-              <img
-                className="img-fluid"
-                key={index}
-                alt="frame-1"
-                src={src}
-              ></img>
+            <div className="col-lg-2" key={index}>
+              <img className="img-fluid" alt="frame-1" src={src}></img>
             </div>
           ))}
         </div>
@@ -69,13 +64,8 @@ const Partner = () => {
           className="px-5 d-none row d-md-flex d-lg-none flex-nowrap slider"
         >
           {slides.map((src, index) => (
-            <div className="col-md-3">
-              <img
-                className="img-fluid"
-                key={index}
-                alt="frame-1"
-                src={src}
-              ></img>
+            <div className="col-md-3" key={index}>
+              <img className="img-fluid" alt="frame-1" src={src}></img>
             </div>
           ))}
         </div>
@@ -84,13 +74,8 @@ const Partner = () => {
           className="px-5 row d-flex d-md-none flex-nowrap slider"
         >
           {slides.map((src, index) => (
-            <div className="col-4">
-              <img
-                className="img-fluid"
-                key={index}
-                alt="frame-1"
-                src={src}
-              ></img>
+            <div className="col-4" key={index}>
+              <img className="img-fluid" alt="frame-1" src={src}></img>
             </div>
           ))}
         </div>

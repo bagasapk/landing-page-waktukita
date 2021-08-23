@@ -74,7 +74,7 @@ const Beranda = () => {
             onClick={() => {
               setIndex3(index3 + 1);
             }}
-            class="bi bi-chevron-left chevron"
+            className="bi bi-chevron-left chevron"
           ></i>
           <span className="sr-only"></span>
         </div>
@@ -92,7 +92,7 @@ const Beranda = () => {
             onClick={() => {
               setIndex3(index3 - 1);
             }}
-            class="bi bi-chevron-right chevron"
+            className="bi bi-chevron-right chevron"
           ></i>
           <span></span>
         </div>
@@ -109,7 +109,7 @@ const Beranda = () => {
             onClick={() => {
               setIndex3(index3 - 1);
             }}
-            class="bi bi-chevron-right chevron"
+            className="bi bi-chevron-right chevron"
           ></i>
           <span></span>
         </div>
@@ -127,7 +127,7 @@ const Beranda = () => {
             onClick={() => {
               setIndex3(index3 + 1);
             }}
-            class="bi bi-chevron-left chevron"
+            className="bi bi-chevron-left chevron"
           ></i>
           <span></span>
         </div>
@@ -148,10 +148,10 @@ const Beranda = () => {
         >
           <div className="d-flex flex-nowrap">
             {slides.map((src, index) => (
-              <div className="col-xl-12">
+              <div className="col-xl-12" 
+              key={index}>
                 <img
                   className="d-block w-100 img-fluid"
-                  key={index}
                   alt="frame-1"
                   src={src}
                 ></img>
@@ -165,10 +165,10 @@ const Beranda = () => {
         >
           <div className="d-flex flex-nowrap">
             {slides.map((src, index) => (
-              <div className="col-lg-12">
+              <div className="col-lg-12" 
+              key={index}>
                 <img
                   className="d-block w-100 img-fluid"
-                  key={index}
                   alt="frame-1"
                   src={src}
                 ></img>
@@ -182,10 +182,10 @@ const Beranda = () => {
         >
           <div className="d-flex flex-nowrap">
             {slides.map((src, index) => (
-              <div className="col-md-12">
+              <div className="col-md-12"
+              key={index}>
                 <img
                   className="d-block w-100 img-fluid"
-                  key={index}
                   alt="frame-1"
                   src={src}
                 ></img>
@@ -199,10 +199,10 @@ const Beranda = () => {
         >
           <div className="d-flex flex-nowrap">
             {slides.map((src, index) => (
-              <div className="col-12 p-0">
+              <div className="col-12 p-0" 
+              key={index}>
                 <img
                   className="d-block w-100 img-fluid"
-                  key={index}
                   alt="frame-1"
                   src={src}
                 ></img>
@@ -242,10 +242,10 @@ const Beranda = () => {
         >
           <div className="d-flex flex-nowrap">
             {categories.map((src, index) => (
-              <div className="d-flex justify-content-center col-12 col-md-2 ml-md-5 px-md-2">
+              <div className="d-flex justify-content-center col-12 col-md-2 ml-md-5 px-md-2" 
+              key={index}>
                 <img
                   className="d-block col-2 col-md-6 img-fluid"
-                  key={index}
                   alt="frame-1"
                   src={dashboard}
                 ></img>
@@ -264,10 +264,10 @@ const Beranda = () => {
         >
           <div className="ml-5 pl-5 d-flex flex-nowrap">
             {categories.map((src, index) => (
-              <div className="d-flex justify-content-start col-12 col-md-4 px-md-0">
+              <div className="d-flex justify-content-start col-12 col-md-4 px-md-0" 
+              key={index}>
                 <img
                   className="d-block col-2 col-md-3 img-fluid"
-                  key={index}
                   alt="frame-1"
                   src={dashboard}
                 ></img>
@@ -286,10 +286,10 @@ const Beranda = () => {
         >
           <div className="d-flex flex-nowrap justify-content-xl-center pl-5 pl-xl-0">
             {categories.map((src, index) => (
-              <div className="d-flex justify-content-center col-12 col-md-3 col-xl-1 p-xl-0 ml-xl-0 px-xl-0 mx-xl-4 px-lg-0">
+              <div className="d-flex justify-content-center col-12 col-md-3 col-xl-1 p-xl-0 ml-xl-0 px-xl-0 mx-xl-4 px-lg-0" 
+              key={index}>
                 <img
                   className="d-block col-2 col-md-4 col-lg-3 col-xl-6  img-fluid"
-                  key={index}
                   alt="frame-1"
                   src={dashboard}
                 ></img>
@@ -304,10 +304,10 @@ const Beranda = () => {
       <div className="d-none d-xl-block slideshowSlider">
         <div className="d-flex justify-content-xl-between mx-5">
           {categories.map((src, index) => (
-            <div className="d-flex">
+            <div className="d-flex" 
+            key={index}>
               <img
                 className="d-block img-fluid"
-                key={index}
                 alt="frame-1"
                 src={dashboard}
               ></img>
@@ -324,12 +324,12 @@ const Beranda = () => {
         </p>
       </div>
       <div className="row mx-4 mx-md-5">
-        {cards.map((cards) => (
-          <div className="px-0 px-md-3 col-md-6 col-lg-3">
-            <div class="card  p-0 berandaCardFull">
+        {cards.map((cards,index) => (
+          <div className="px-0 px-md-3 col-md-6 col-lg-3" key={index}>
+            <div className="card  p-0 berandaCardFull">
               <div className="d-flex">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://i.ibb.co/rybnqLt/Mask-Group.png"
                   alt="Card cap"
                 />
@@ -337,11 +337,11 @@ const Beranda = () => {
                   <p className="p-1 px-4 status">{cards.status}</p>
                 </div>
               </div>
-              <div class="card-body">
-                <h5 class="card-title text-uppercase text-left">
+              <div className="card-body">
+                <h5 className="card-title text-uppercase text-left">
                   Become a wordpress developer
                 </h5>
-                {/* <p class="card-text">
+                {/* <p className="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p> */}
@@ -386,12 +386,12 @@ const Beranda = () => {
         </p>
       </div>
       <div className="row mx-4 mx-md-5">
-        {cards.map((cards) => (
-          <div className="px-0 px-md-3 col-md-6 col-lg-3">
-            <div class="card  p-0 berandaCardFull">
+        {cards.map((cards,index) => (
+          <div className="px-0 px-md-3 col-md-6 col-lg-3" key={index}>
+            <div className="card  p-0 berandaCardFull">
               <div className="d-flex">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://i.ibb.co/rybnqLt/Mask-Group.png"
                   alt="Card cap"
                 />
@@ -399,11 +399,11 @@ const Beranda = () => {
                   <p className="p-1 px-4 status">{cards.status}</p>
                 </div>
               </div>
-              <div class="card-body">
-                <h5 class="card-title text-uppercase text-left">
+              <div className="card-body">
+                <h5 className="card-title text-uppercase text-left">
                   Become a wordpress developer
                 </h5>
-                {/* <p class="card-text">
+                {/* <p className="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p> */}
@@ -448,12 +448,12 @@ const Beranda = () => {
         </p>
       </div>
       <div className="row mx-4 mx-md-5">
-        {cards.map((cards) => (
-          <div className="px-0 px-md-3 col-md-6 col-lg-3">
-            <div class="card  p-0 berandaCardFull">
+        {cards.map((cards,index) => (
+          <div className="px-0 px-md-3 col-md-6 col-lg-3" key={index}>
+            <div className="card  p-0 berandaCardFull">
               <div className="d-flex">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://i.ibb.co/rybnqLt/Mask-Group.png"
                   alt="Card cap"
                 />
@@ -461,11 +461,11 @@ const Beranda = () => {
                   <p className="p-1 px-4 status">{cards.status}</p>
                 </div>
               </div>
-              <div class="card-body">
-                <h5 class="card-title text-uppercase text-left">
+              <div className="card-body">
+                <h5 className="card-title text-uppercase text-left">
                   Become a wordpress developer
                 </h5>
-                {/* <p class="card-text">
+                {/* <p className="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p> */}
@@ -513,31 +513,31 @@ const Beranda = () => {
       ></img>
       <div className="col-md-12 p-3 p-md-5 d-flex flex-md-row flex-column justify-content-center">
         <div className="col-md-6 col-xl-6 col-lg-6 px-3 px-md-0 pr-md-0 d-flex flex-md-row flex-column justify-content-center">
-          <div class="card col-12 col-md-5 p-0 berandaCardFull2 pt-5 pt-md-0 px-md-2">
+          <div className="card col-12 col-md-5 p-0 berandaCardFull2 pt-5 pt-md-0 px-md-2">
             <img
               src="https://i.ibb.co/rybnqLt/Mask-Group.png"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="Artikel1"
             />
-            <div class="card-body artikel text-left p-0 pl-3 pl-md-0 ">
+            <div className="card-body artikel text-left p-0 pl-3 pl-md-0 ">
               <p className="py-2 m-0">12 April 2021</p>
-              <h5 class="">Lorem Ipsum</h5>
-              <span class="card-text truncate">
+              <h5 className="">Lorem Ipsum</h5>
+              <span className="card-text truncate">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. A nulla
                 vitae varius tortor id imperdiet.
               </span>
             </div>
           </div>
-          <div class="card col-12 col-md-5 p-0 berandaCardFull2 pt-5 pt-md-0 px-md-2 mx-md-2 ">
+          <div className="card col-12 col-md-5 p-0 berandaCardFull2 pt-5 pt-md-0 px-md-2 mx-md-2 ">
             <img
               src="https://i.ibb.co/rybnqLt/Mask-Group.png"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="Artikel1"
             />
-            <div class="card-body artikel text-left p-0 pl-3 pl-md-0 ">
+            <div className="card-body artikel text-left p-0 pl-3 pl-md-0 ">
               <p className="py-2 m-0">12 April 2021</p>
-              <h5 class="">Lorem Ipsum</h5>
-              <span class="card-text truncate">
+              <h5 className="">Lorem Ipsum</h5>
+              <span className="card-text truncate">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. A nulla
                 vitae varius tortor id imperdiet.
               </span>
@@ -549,11 +549,11 @@ const Beranda = () => {
             <div className="align-self-start">
               <img
                 src="https://i.ibb.co/rybnqLt/Mask-Group.png"
-                class="d-block w-100"
+                className="d-block w-100"
                 alt="Artikel1"
               />
             </div>
-            <div class="d-flex flex-column col-md-12 px-md-0 px-lg-2 col-lg-6 col-xl-8 py-md-0 py-lg-0 py-xl-3 artikel text-left">
+            <div className="d-flex flex-column col-md-12 px-md-0 px-lg-2 col-lg-6 col-xl-8 py-md-0 py-lg-0 py-xl-3 artikel text-left">
               <p className="py-2 m-0">12 April 2021</p>
               <h5>Lorem Ipsum</h5>
               <span className="truncate">
@@ -566,11 +566,11 @@ const Beranda = () => {
             <div className="align-self-start">
               <img
                 src="https://i.ibb.co/rybnqLt/Mask-Group.png"
-                class="d-block w-100"
+                className="d-block w-100"
                 alt="Artikel1"
               />
             </div>
-            <div class="d-flex flex-column col-md-12 px-md-0 px-lg-2 col-lg-6 col-xl-8 py-md-0 py-lg-0 py-xl-3 artikel text-left">
+            <div className="d-flex flex-column col-md-12 px-md-0 px-lg-2 col-lg-6 col-xl-8 py-md-0 py-lg-0 py-xl-3 artikel text-left">
               <p className="py-2 m-0">12 April 2021</p>
               <h5>Lorem Ipsum</h5>
               <span className="truncate">

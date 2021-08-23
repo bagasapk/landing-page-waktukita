@@ -36,10 +36,10 @@ const Testimoni = () => {
         >
           <div className="d-flex">
             {tests.map((name, index) => (
-              <div className="col-12 col-md-12 d-flex flex-md-row flex-column justify-content-md-center p-5 mx-5">
+              <div className="col-12 col-md-12 d-flex flex-md-row flex-column justify-content-md-center p-5 mx-5" 
+              key={index}>
                 <div className="col-12 col-md-6">
                   <img
-                    key={index}
                     className="img-fluid"
                     alt="picture1"
                     src="https://i.ibb.co/592WbhN/Rectangle-72.png"
@@ -58,11 +58,11 @@ const Testimoni = () => {
                     Vitae quis sagittis est dignissim nibh commodo.”
                   </p>
                   <div className="starColor">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star"></i>
                   </div>
                 </div>
               </div>
@@ -77,10 +77,10 @@ const Testimoni = () => {
         >
           <div className="d-flex">
             {tests.map((name, index) => (
-              <div className="col-12">
-                <div className="col-12 col-md-6">
+              <div className="col-12" 
+              key={index}>
+                <div className="col-12 col-md-6" >
                   <img
-                    key={index}
                     className="img-fluid"
                     alt="picture1"
                     src="https://i.ibb.co/592WbhN/Rectangle-72.png"
@@ -99,11 +99,11 @@ const Testimoni = () => {
                     Vitae quis sagittis est dignissim nibh commodo.”
                   </p>
                   <div className="starColor">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star"></i>
                   </div>
                 </div>
               </div>

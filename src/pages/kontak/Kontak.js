@@ -10,10 +10,12 @@ import ReactTooltip from "react-tooltip";
 import CompanyInfoService from "../../services/CompanyInfoService";
 import { useForm } from "react-hook-form";
 import ContactService from "../../services/ContactService";
+import Swal from "sweetalert2";
 
 const Kontak = () => {
   const [companyInfo, setCompanyInfo] = useState([]);
   const [copied, setCopied] = useState(false);
+  const [errors, setErrors] = useState([]);
   const { register, handleSubmit } = useForm();
   const timeoutRef = React.useRef(null);
 
@@ -46,14 +48,29 @@ const Kontak = () => {
     await ContactService.post(data)
       .then((response) => {
         console.log(response);
+        if (response.status === 200) {
+          Swal.fire(
+            "Thanks for being awesome!",
+            "Thank you for contacting us, We have received your message and would like to thank you for writing to us. If your inquiry is urgent, please use the telephone number listed below to talk to one of our staff members. Otherwise, we will reply by email as soon as possible. Talk to you soon, Waktukita ",
+            "success"
+          ).then((response) => {
+            if (response.isConfirmed) {
+              window.location.reload();
+            } else {
+              window.location.reload();
+            }
+          });
+        }
       })
       .catch((error) => {
         console.log(error.response);
       });
   };
 
-  const onError = (errors, e) => console.log(errors, e);
-
+  const onError = (errors) => {
+    setErrors(errors);
+  };
+  console.log(errors);
   return (
     <div>
       <Navbar2 />
@@ -73,14 +90,23 @@ const Kontak = () => {
               style={{ textAlign: "left" }}
               className="d-flex flex-column col-xl-9 col-lg-11 p-0"
             >
-              <div className="pt-4 pb-3 d-flex flex-column-reverse">
+              <div className="pt-4 pb-3 d-flex flex-column-reverse inputIcon">
+              {errors.name && (
+                  <div >
+                    <i data-tip data-for="nameError" class="bi bi-exclamation-circle-fill errorIcon"></i>
+                    <ReactTooltip id="nameError" effect="solid" place="top">
+                      <span>{errors.name.message}</span>
+                    </ReactTooltip>
+                  </div>
+                )}
                 <input
+                  className={errors.name ? "error" : ""}
                   id="namaLengkap"
                   type="text"
                   placeholder="John Doe"
                   autoFocus
                   {...register("name", {
-                    required: { value: true },
+                    required: { value: true, message: "Fullname required" },
                   })}
                 ></input>
                 <label htmlFor="namaLengkap" className="m-0">
@@ -88,23 +114,46 @@ const Kontak = () => {
                 </label>
               </div>
               <div className="pb-3 d-flex flex-column-reverse">
+              {errors.email && (
+                  <div >
+                    <i data-tip data-for="emailError" class="bi bi-exclamation-circle-fill errorIcon"></i>
+                    <ReactTooltip id="emailError" effect="solid" place="top">
+                      <span>{errors.email.message}</span>
+                    </ReactTooltip>
+                  </div>
+                )}
                 <input
+                  className={errors.email ? "error" : ""}
                   id="email"
                   type="email"
                   placeholder="john.doe@gmail.com"
-                  {...register("email", { required: { value: true } })}
+                  {...register("email", {
+                    required: {
+                      value: true,
+                      message: "Email required",
+                    },
+                  })}
                 ></input>
                 <label htmlFor="email" className="m-0">
                   Email
                 </label>
               </div>
               <div className="pb-3 d-flex flex-column-reverse">
+              {errors.subjek && (
+                  <div >
+                    <i data-tip data-for="subjekError" class="bi bi-exclamation-circle-fill errorIcon"></i>
+                    <ReactTooltip id="subjekError" effect="solid" place="top">
+                      <span>{errors.subjek.message}</span>
+                    </ReactTooltip>
+                  </div>
+                )}
                 <input
+                  className={errors.subjek ? "error" : ""}
                   id="subjek"
                   type="text"
                   placeholder="Subjek"
                   {...register("subjek", {
-                    required: { value: true },
+                    required: { value: true, message: "Subject required" },
                   })}
                 ></input>
                 <label htmlFor="subjek" className="m-0">
@@ -112,14 +161,23 @@ const Kontak = () => {
                 </label>
               </div>
               <div className="pb-3 d-flex flex-column-reverse">
+                {errors.pesan && (
+                  <div >
+                    <i data-tip data-for="pesanError" class="bi bi-exclamation-circle-fill errorIcon"></i>
+                    <ReactTooltip id="pesanError" effect="solid" place="top">
+                      <span>{errors.pesan.message}</span>
+                    </ReactTooltip>
+                  </div>
+                )}
                 <textarea
+                  className={errors.pesan ? "error" : ""}
                   cols="30"
                   rows="2"
                   id="pesan"
                   type="text"
                   placeholder="Tuliskan pesan anda disini"
                   {...register("pesan", {
-                    required: { value: true },
+                    required: { value: true, message: "Message required" },
                   })}
                 ></textarea>
                 <label htmlFor="pesan" className="m-0">
@@ -144,13 +202,14 @@ const Kontak = () => {
           </form>
         </div>
         {companyInfo
-          ? companyInfo.slice(1, 2).map((item) => {
+          ? companyInfo.map((item, index) => {
               return (
                 <div
+                  key={index}
                   style={{ backgroundColor: "#01988E", display: "block" }}
                   className="col-lg-5 ml-lg-5 pt-4 hubungikami2 d-flex flex-wrap"
                 >
-                  <div className="d-flex flex-column px-5 pt-5 mx-auto mx-md-0">
+                  <div className="d-flex flex-column px-0 px-md-5 pt-5 mx-auto mx-md-0">
                     <h6 className="p-2 text-center text-md-left">
                       Kontak Kami
                     </h6>
