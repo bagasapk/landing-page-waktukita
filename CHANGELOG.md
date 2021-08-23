@@ -1,3 +1,15 @@
+# :white_check_mark: [0.0.6](https://gitlab.com/waktukita-new/wakutkita-class-new-frontend/-/tags/0.0.6)
+> ## :calendar: **23 Agustus 2021 - Release**
+>
+> ### **Bug Fixing**
+> - Fix warning key attributes
+> - Fix Href login page
+> - Fix input style contact page
+>
+> ### **New Features**
+> - Add validation contact page
+> - Add Sweetalert2
+---
 # :white_check_mark: [0.0.5](https://gitlab.com/waktukita-new/wakutkita-class-new-frontend/-/tags/0.0.5)
 > ## :calendar: **20 Agustus 2021 - Release**
 >
