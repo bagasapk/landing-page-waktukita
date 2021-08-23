@@ -1,3 +1,13 @@
+# :white_check_mark: [0.0.5](https://gitlab.com/waktukita-new/wakutkita-class-new-frontend/-/tags/0.0.5)
+> ## :calendar: **20 Agustus 2021 - Release**
+>
+> ### **Bug Fixing**
+> - Fix Form Contact Interface
+>
+> ### **New Features**
+> - Add HubungiKami connection service
+> - Add HubungiKami POST method at Contact Page
+---
 # :white_check_mark: [0.0.4](https://gitlab.com/waktukita-new/wakutkita-class-new-frontend/-/tags/0.0.4)
 > ## :calendar: **15 Agustus 2021 - Release**
 >
